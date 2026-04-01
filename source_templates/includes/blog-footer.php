@@ -9,9 +9,9 @@
                 </span>
             </div>
             <div class="flex space-x-6 text-xs uppercase tracking-widest text-gray-400 font-semibold">
-                <a href="../index.html" class="hover:text-primary transition-colors">Home</a>
-                <a href="../blog.html" class="hover:text-primary transition-colors">Blog</a>
-                <a href="../contact.html" class="hover:text-primary transition-colors">Contact</a>
+                <a href="../index.html" class="hover:text-primary transition-colors" title="Back to Sheet Metal Design Home">Home</a>
+                <a href="../blog.html" class="hover:text-primary transition-colors" title="Browse Our Latest Engineering Insights">Blog</a>
+                <a href="../contact.html" class="hover:text-primary transition-colors" title="Contact Our Engineering Team">Contact</a>
             </div>
         </div>
     </footer>

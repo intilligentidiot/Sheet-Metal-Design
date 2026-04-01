@@ -1,24 +1,24 @@
 <?php
 /**
  * source_templates/build.php
- * Local Static Site Generator for Cloudflare Pages
+ * Local Static Site Generator for Vercel Deployment
  * 
  * Instructions: Run 'php build.php' inside the source_templates folder.
  */
 
 // 1. Define the pages to build (Source => Destination relative to root)
 $pages = [
-    'index.php' => '../index.html',
-    'blog.php' => '../blog.html',
-    'contact.php' => '../contact.html',
-    '404.php' => '../404.html',
-    'thank-you.php' => '../thank-you.html'
+    'index.php' => '../public/index.html',
+    'blog.php' => '../public/blog.html',
+    'contact.php' => '../public/contact.html',
+    '404.php' => '../public/404.html',
+    'thank-you.php' => '../public/thank-you.html'
 ];
 
 $php_binary = 'C:\xampp\php\php.exe';
 
 // 2. Build Root Pages
-echo "🚀 Starting Static Build from source_templates...\n";
+echo "🚀 Starting Static Build for /public directory...\n";
 
 foreach ($pages as $source => $dest) {
     echo "  Generating {$dest} from {$source}... ";
@@ -37,18 +37,14 @@ foreach ($pages as $source => $dest) {
 // 3. Build Blog Posts
 $blog_dir = 'blog/';
 $blog_files = glob($blog_dir . "*.php");
-$output_blog_dir = '../blog/';
-
-if (!is_dir($output_blog_dir)) {
-    mkdir($output_blog_dir, 0777, true);
-}
+$output_blog_dir = '../public/blog/';
 
 echo "\n📦 Building Blog Articles...\n";
 
 foreach ($blog_files as $source) {
-    $file_name = basename($source);
-    if ($file_name == 'index.php') continue;
+    if (basename($source) == 'index.php') continue;
     
+    $file_name = basename($source);
     $dest = $output_blog_dir . str_replace('.php', '.html', $file_name);
     echo "  Generating {$dest}... ";
     
@@ -63,6 +59,6 @@ foreach ($blog_files as $source) {
     }
 }
 
-echo "\n✨ Build Complete! All HTML files are generated in the root directory.\n";
-echo "💡 Tip: Only push the .html files and assets to Cloudflare; keep source_templates local.\n";
+echo "\n✨ Build Complete! All HTML files are generated in the /public folder.\n";
+echo "💡 Tip: Push your entire folder to Vercel and set the 'Build Command' to NONE and 'Output Directory' to public.\n";
 ?>

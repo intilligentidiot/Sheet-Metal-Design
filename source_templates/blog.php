@@ -1,8 +1,8 @@
 <?php
 $page_title = "Insights & Engineering Blog | TMD Services";
 $page_description = "Exploring the latest trends in sheet metal fabrication, CNC machining, and industrial design innovation. Technical guides on DFM, bend allowance, andCAD modeling.";
-$page_canonical = "https://sheetmetal.teslamechanicaldesigns.com/blog";
-$page_og_image = "https://sheetmetal.teslamechanicaldesigns.com/assets/manufacturing_floor.png";
+$page_canonical = "https://sheet-metal-design-alpha.vercel.app/blog";
+$page_og_image = "https://sheet-metal-design-alpha.vercel.app/assets/manufacturing_floor.png";
 $page_keywords = "Sheet Metal Blog, Engineering Insights, DFM Tips, CAD Tutorials, Industrial Design Blog, TMD Services";
 include 'includes/header.php';
 require_once 'includes/blog-posts.php';
@@ -28,7 +28,7 @@ require_once 'includes/blog-posts.php';
                 <article class="flex flex-col bg-darkBg border border-white/10 rounded-custom overflow-hidden group hover:border-primary/50 transition-colors">
                     <div class="aspect-video overflow-hidden relative">
                          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors z-10"></div>
-                        <img alt="Engineering Insight: <?= htmlspecialchars($post['title']) ?>" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105" src="<?= htmlspecialchars($post['image']) ?>"/>
+                        <img alt="Engineering Insight: <?= htmlspecialchars($post['title']) ?>" title="<?= htmlspecialchars($post['title']) ?>" loading="lazy" width="600" height="400" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105" src="<?= htmlspecialchars($post['image']) ?>"/>
                     </div>
                     <div class="p-6 flex flex-col flex-grow">
                         <span class="text-primary text-xs font-bold uppercase tracking-widest mb-3">Engineering</span>
@@ -36,7 +36,7 @@ require_once 'includes/blog-posts.php';
                         <p class="text-gray-400 font-light text-sm mb-6 flex-grow"><?= htmlspecialchars($post['excerpt']) ?></p>
                         <div class="flex items-center justify-between mt-auto pt-4 border-t border-white/10">
                             <span class="text-xs text-gray-500 font-bold tracking-widest uppercase"><?= date('M d, Y', strtotime($post['date'])) ?></span>
-                            <a class="text-xs font-bold uppercase tracking-widest text-primary hover:text-white transition-colors" href="blog/<?= htmlspecialchars($post['slug']) ?>">Read More +</a>
+                            <a class="text-xs font-bold uppercase tracking-widest text-primary hover:text-white transition-colors" href="blog/<?= htmlspecialchars($post['slug']) ?>" title="Read full article: <?= htmlspecialchars($post['title']) ?>">Read More +</a>
                         </div>
                     </div>
                 </article>
@@ -72,12 +72,12 @@ require_once 'includes/blog-posts.php';
                     Engineering Toolkit
                 </h2>
                 <div class="space-y-4">
-                    <a href="tools/bend-calculator.html" class="flex flex-col items-center justify-center p-6 bg-surface border border-primary/30 hover:border-primary rounded-custom text-center transition-all group">
+                    <a href="tools/bend-calculator.html" class="flex flex-col items-center justify-center p-6 bg-surface border border-primary/30 hover:border-primary rounded-custom text-center transition-all group" title="Open Our Free Sheet Metal Bend Allowance Calculator">
                         <span class="material-symbols-outlined text-3xl text-gray-400 group-hover:text-white mb-2 transition-colors">calculate</span>
                         <span class="text-sm font-bold uppercase tracking-widest text-white group-hover:text-primary transition-colors">Bend Allowance Calculator</span>
                         <span class="text-xs text-gray-400 font-light mt-2">Free Technical Tool</span>
                     </a>
-                    <a href="#" class="flex flex-col items-center justify-center p-6 bg-primary hover:bg-red-700 text-white rounded-custom text-center transition-all group shadow-lg shadow-primary/20">
+                    <a href="#" class="flex flex-col items-center justify-center p-6 bg-primary hover:bg-red-700 text-white rounded-custom text-center transition-all group shadow-lg shadow-primary/20" title="Download Our Professional DFM Checklist (PDF)">
                         <span class="material-symbols-outlined text-3xl mb-2">download</span>
                         <span class="text-sm font-bold uppercase tracking-widest">Download DFM Checklist</span>
                         <span class="text-xs text-white/70 font-light mt-2">PDF Lead Magnet</span>

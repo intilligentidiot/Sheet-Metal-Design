@@ -1,8 +1,8 @@
 <?php
 $page_title = "Sheet Metal Design Services | Tesla Mechanical Designs";
 $page_description = "Professional sheet metal design services including DFM analysis, precision drafting in SolidWorks & Inventor, custom enclosure design, and bend allowance optimization. ISO 9001:2015 certified.";
-$page_canonical = "https://tesla-mechanical-designs.vercel.app/";
-$page_og_image = "https://tesla-mechanical-designs.vercel.app/assets/manufacturing_floor.png";
+$page_canonical = "https://sheet-metal-design-alpha.vercel.app/";
+$page_og_image = "https://sheet-metal-design-alpha.vercel.app/assets/manufacturing_floor.png";
 $google_verification = "peGaVW4dWKprW75k902Xs6NBPiUE8XStJt3n8t6Ser8";
 $extra_head_content = '
 <!-- FAQ Schema -->
@@ -41,7 +41,7 @@ include 'includes/header.php';
         <header class="relative h-screen flex items-center justify-center overflow-hidden bg-darkBg" id="hero">
             <!-- Background: Video Placeholder (replace src with actual video tag when ready) -->
             <div class="absolute inset-0 w-full h-full z-0">
-                <img src="assets/manufacturing_floor.png" alt="Precision sheet metal manufacturing floor with CNC machines and laser cutting equipment" class="w-full h-full object-cover" aria-hidden="true">
+                <img src="assets/manufacturing_floor.png" alt="Precision sheet metal manufacturing floor with CNC machines and laser cutting equipment" title="TMD Services - Precision Manufacturing Facility" width="1920" height="1080" class="w-full h-full object-cover" aria-hidden="true">
             </div>
             <!-- Dark Gradient Overlay -->
             <div
@@ -69,11 +69,13 @@ include 'includes/header.php';
                 </p>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                     <a href="contact.html"
-                        class="w-full sm:w-auto bg-primary hover:bg-red-700 text-white px-10 py-5 rounded-custom text-lg font-bold uppercase transition-all duration-300 shadow-lg shadow-primary/20">
+                        class="w-full sm:w-auto bg-primary hover:bg-red-700 text-white px-10 py-5 rounded-custom text-lg font-bold uppercase transition-all duration-300 shadow-lg shadow-primary/20"
+                        title="Request a Custom Engineering Quote for Your Project">
                         Get a Quote
                     </a>
                     <a href="tools/bend-calculator.html"
-                        class="w-full sm:w-auto border border-brand hover:border-brand/50 bg-brand/5 backdrop-blur-sm text-brand hover:text-white px-10 py-5 rounded-custom text-lg font-bold uppercase transition-all duration-300">
+                        class="w-full sm:w-auto border border-brand hover:border-brand/50 bg-brand/5 backdrop-blur-sm text-brand hover:text-white px-10 py-5 rounded-custom text-lg font-bold uppercase transition-all duration-300"
+                        title="Use Our Professional Sheet Metal Bend Allowance Calculator">
                         Bend Allowance Calculator
                     </a>
                 </div>
@@ -210,8 +212,8 @@ include 'includes/header.php';
                     class="aspect-video bg-industrial-900 border border-white/10 rounded-custom relative flex items-center justify-center shadow-2xl shadow-black/50 group cursor-pointer overflow-hidden mb-6 w-full"
                     onclick="loadVideo()" aria-label="Play DFM Process Video">
                     <!-- Thumbnail image shown before play -->
-                    <div id="video-thumbnail" class="absolute inset-0 w-full h-full">
-                        <img src="assets/cad_screenshot.png" alt="DFM Process Video Thumbnail"
+                    <div id="video-thumbnail" class="absolute inset-0 w-full h-full" title="Watch Our Sheet Metal Design & DFM Process">
+                        <img src="assets/cad_screenshot.png" alt="DFM Process Video Thumbnail" title="Sheet Metal Design CAD Process" loading="lazy" width="1280" height="720"
                             class="w-full h-full object-cover">
                         <!-- Dark overlay on thumbnail -->
                         <div
@@ -382,7 +384,8 @@ include 'includes/header.php';
                     Connect with our engineering team today for a comprehensive technical review and competitive quote.
                 </p>
                 <a href="contact.html"
-                    class="inline-block bg-primary hover:bg-red-700 text-white px-12 py-5 rounded-custom text-xl font-bold uppercase transition-all duration-300 shadow-xl shadow-primary/20">
+                    class="inline-block bg-primary hover:bg-red-700 text-white px-12 py-5 rounded-custom text-xl font-bold uppercase transition-all duration-300 shadow-xl shadow-primary/20"
+                    title="Connect With Our Engineering Team Today">
                     Contact Us Today
                 </a>
             </div>

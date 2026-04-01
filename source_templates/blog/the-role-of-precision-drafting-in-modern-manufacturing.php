@@ -10,8 +10,8 @@ include '../includes/blog-header.php';
 
 <main class="pt-28 pb-16 px-4 md:px-8 max-w-4xl mx-auto">
     <nav class="flex items-center text-xs text-gray-400 mb-8 uppercase tracking-widest font-bold" aria-label="Breadcrumb">
-        <a href="../index.html" class="hover:text-primary transition-colors">Home</a><span class="mx-2">&gt;</span>
-        <a href="../blog.html" class="hover:text-primary transition-colors">Insights</a><span class="mx-2">&gt;</span>
+        <a href="../index.html" class="hover:text-primary transition-colors" title="Back to Sheet Metal Design Home">Home</a><span class="mx-2">&gt;</span>
+        <a href="../blog.html" class="hover:text-primary transition-colors" title="Browse Our Latest Engineering Insights">Insights</a><span class="mx-2">&gt;</span>
         <span class="text-white">Article</span>
     </nav>
 
@@ -25,7 +25,7 @@ include '../includes/blog-header.php';
     </header>
 
     <div class="aspect-video bg-surface rounded-custom mb-12 flex items-center justify-center border border-white/10 overflow-hidden">
-        <img src="../assets/manufacturing_floor.png" alt="Manufacturing floor with precision-drafted parts" class="w-full h-full object-cover">
+        <img src="../assets/manufacturing_floor.png" alt="Manufacturing floor with precision-drafted parts" title="Precision Manufacturing for Sheet Metal" loading="lazy" width="1280" height="720" class="w-full h-full object-cover">
     </div>
 
     <article class="prose-dark max-w-none mt-8">
@@ -66,10 +66,10 @@ include '../includes/blog-header.php';
         <p class="text-lg font-bold uppercase mb-2">Need production-ready drawings?</p>
         <p class="text-gray-400 font-light mb-6">Our precision drafting team delivers ISO/ASME compliant drawing packages.</p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="../contact.html" class="bg-primary hover:bg-red-700 text-white px-8 py-3 rounded-custom font-bold uppercase text-sm transition-all duration-300 shadow-lg shadow-primary/20">
+            <a href="../contact.html" class="bg-primary hover:bg-red-700 text-white px-8 py-3 rounded-custom font-bold uppercase text-sm transition-all duration-300 shadow-lg shadow-primary/20" title="Request a Technical DFM Review of Your Designs">
                 Request DFM Review
             </a>
-            <a href="../blog.html" class="border border-white/10 hover:border-primary text-white hover:text-primary px-8 py-3 rounded-custom font-bold uppercase text-sm transition-all duration-300">
+            <a href="../blog.html" class="border border-white/10 hover:border-primary text-white hover:text-primary px-8 py-3 rounded-custom font-bold uppercase text-sm transition-all duration-300" title="Browse More Engineering Articles and Guides">
                 More Insights
             </a>
         </div>

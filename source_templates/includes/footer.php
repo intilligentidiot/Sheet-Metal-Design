@@ -9,9 +9,9 @@
                 </span>
             </div>
             <div class="flex space-x-6 text-xs uppercase tracking-widest text-gray-400 font-semibold">
-                <a href="#" class="hover:text-primary transition-colors">Privacy</a>
-                <a href="#" class="hover:text-primary transition-colors">Terms</a>
-                <a href="contact.html" class="hover:text-primary transition-colors">Contact</a>
+                <a href="#" class="hover:text-primary transition-colors" title="Privacy Policy and Data Protection">Privacy</a>
+                <a href="#" class="hover:text-primary transition-colors" title="Terms of Service and Legal Agreement">Terms</a>
+                <a href="contact.html" class="hover:text-primary transition-colors" title="Contact TMD Services for Your Sheet Metal Needs">Contact</a>
             </div>
         </div>
     </footer>

@@ -16,6 +16,7 @@ require_once '../includes/config.php';
     <meta name="keywords" content="<?= htmlspecialchars($page_keywords) ?>">
     <meta name="author" content="<?= htmlspecialchars($site_name) ?>">
     <meta name="robots" content="<?= htmlspecialchars($page_robots) ?>">
+    <meta name="theme-color" content="#c2410c">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="<?= htmlspecialchars($page_canonical) ?>">
@@ -136,19 +137,19 @@ require_once '../includes/config.php';
                         d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
                     </path>
                 </svg>
-                <a href="../index.html" class="text-xl font-bold tracking-tight uppercase" title="TMD Services - Sheet Metal Design">
+                <a href="../index.html" class="text-xl font-bold tracking-tight uppercase" title="TMD Services - Precision Sheet Metal Home">
                     TMD <span class="text-primary">Services</span>
                 </a>
             </div>
             <div class="hidden md:flex space-x-8 text-sm font-medium tracking-wide uppercase">
-                <a href="../index.html#services" class="hover:text-primary transition-colors" title="Sheet Metal Design Services">Services</a>
-                <a href="../blog.html" class="text-primary transition-colors" title="Sheet Metal Engineering Blog">Insights (Blog)</a>
-                <a href="../tools/bend-calculator.html" class="hover:text-primary transition-colors" title="Free Bend Allowance Calculator Tool">Tools</a>
+                <a href="../index.html#services" class="hover:text-primary transition-colors" title="Explore Our Sheet Metal Design Capabilities">Services</a>
+                <a href="../blog.html" class="text-primary transition-colors" title="Read Our Latest Engineering Insights">Insights (Blog)</a>
+                <a href="../tools/bend-calculator.html" class="hover:text-primary transition-colors" title="Use Our Free Bend Allowance Calculator">Tools</a>
             </div>
             <div>
                 <a href="../contact.html"
                     class="inline-block bg-primary hover:bg-red-700 text-white px-6 py-2 rounded-custom text-sm font-bold uppercase transition-all duration-300"
-                    title="Get a Free Sheet Metal Design Quote">
+                    title="Request a Detailed Project Quote">
                     Contact Us
                 </a>
             </div>

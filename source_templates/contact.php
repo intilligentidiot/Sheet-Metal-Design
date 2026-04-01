@@ -1,8 +1,8 @@
 <?php
 $page_title = "Contact Us for Sheet Metal Design Quote | Tesla Mechanical Designs";
 $page_description = "Request a free engineering technical review and competitive quote for your sheet metal design project. DFM analysis, precision drafting, and custom enclosure design.";
-$page_canonical = "https://sheetmetal.teslamechanicaldesigns.com/contact";
-$page_og_image = "https://sheetmetal.teslamechanicaldesigns.com/assets/cad_screenshot.png";
+$page_canonical = "https://sheet-metal-design-alpha.vercel.app/contact";
+$page_og_image = "https://sheet-metal-design-alpha.vercel.app/assets/cad_screenshot.png";
 $page_keywords = "Contact TMD, Sheet Metal Quote, DFM Analysis Request, Engineering Technical Review, Sheet Metal Design Services";
 $extra_head_content = '<script src="https://www.google.com/recaptcha/api.js" async defer></script>';
 include 'includes/header.php';
@@ -64,7 +64,8 @@ include 'includes/header.php';
                 </div>
 
                 <button type="submit"
-                    class="w-full bg-primary hover:bg-red-700 text-white px-8 py-4 rounded-custom text-lg font-bold uppercase transition-all duration-300 shadow-xl shadow-primary/20">
+                    class="w-full bg-primary hover:bg-red-700 text-white px-8 py-4 rounded-custom text-lg font-bold uppercase transition-all duration-300 shadow-xl shadow-primary/20"
+                    title="Send Your Project Technical Inquiry to TMD Services">
                     Submit Inquiry
                 </button>
             </form>

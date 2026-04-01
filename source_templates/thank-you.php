@@ -2,7 +2,7 @@
 $page_title = "Inquiry Received | Tesla Mechanical Designs";
 $page_description = "Thank you for contacting Tesla Mechanical Designs. Your inquiry has been received and our engineering team will get back to you shortly.";
 $page_robots = "noindex, nofollow";
-$page_canonical = "https://sheetmetal.teslamechanicaldesigns.com/thank-you";
+$page_canonical = "https://sheet-metal-design-alpha.vercel.app/thank-you";
 include 'includes/header.php';
 ?>
 
@@ -16,7 +16,8 @@ include 'includes/header.php';
                 Your message has been received successfully. Our engineering team will review your inquiry and get back to you shortly.
             </p>
             <a href="index.html"
-                class="inline-block border border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 rounded-custom text-lg font-bold uppercase transition-all duration-300 shadow-xl shadow-primary/20">
+                class="inline-block bg-primary hover:bg-red-700 text-white px-8 py-3 rounded-custom font-bold uppercase text-sm transition-all duration-300 shadow-lg shadow-primary/20"
+                title="Explore More Sheet Metal Services or Read Our Blog">
                 Back to Homepage
             </a>
         </div>
