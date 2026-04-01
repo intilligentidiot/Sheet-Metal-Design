@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Block access to server-side includes and config
+Disallow: /includes/
+Disallow: /assets/js/tailwind-config.js
+
+Sitemap: https://sheetmetal.teslamechanicaldesigns.com/sitemap.xml
