@@ -230,8 +230,10 @@
             <section class="bg-darkBg p-6 border border-white/10 rounded-custom" data-purpose="newsletter-widget">
                 <h2 class="text-lg font-bold mb-2 uppercase">Technical Briefing</h2>
                 <p class="text-gray-400 font-light text-sm mb-4">Get quarterly engineering insights delivered to your inbox.</p>
-                <form class="space-y-3" action="#" method="POST">
-                    <input type="email" placeholder="email@company.com" required class="w-full bg-surface border-white/10 text-sm focus:ring-primary focus:border-primary rounded-custom text-white">
+                <form class="space-y-3" action="https://formspree.io/f/REPLACE_WITH_YOUR_ID" method="POST">
+                    <input type="hidden" name="_next" value="https://sheet-metal-design-alpha.vercel.app/thank-you.html">
+                    <input type="hidden" name="_subject" value="New Newsletter Subscription from TMD Insights">
+                    <input type="email" name="email" placeholder="email@company.com" required class="w-full bg-surface border-white/10 text-sm focus:ring-primary focus:border-primary rounded-custom text-white">
                     <button type="submit" class="w-full bg-primary hover:bg-red-700 transition-colors py-3 text-sm font-bold uppercase tracking-widest rounded-custom text-white shadow-lg shadow-primary/20">Subscribe</button>
                 </form>
             </section>

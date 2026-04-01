@@ -159,8 +159,10 @@
 
         <div class="bg-surface p-8 md:p-12 rounded-custom border border-white/10 shadow-2xl">
             <!-- Static Form Handler: Formspree (Free for static sites) -->
-            <!-- Replace 'YOUR_FORMSPREE_ENDPOINT' with your actual endpoint from formspree.io -->
-            <form action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST" class="space-y-6">
+            <form action="https://formspree.io/f/REPLACE_WITH_YOUR_ID" method="POST" class="space-y-6">
+                <!-- Redirect to thank-you.html after submission -->
+                <input type="hidden" name="_next" value="https://sheet-metal-design-alpha.vercel.app/thank-you.html">
+                <input type="hidden" name="_subject" value="New Inquiry from TMD Sheet Metal">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label for="firstName" class="block text-sm font-medium text-gray-400 uppercase tracking-widest mb-2">First Name</label>
