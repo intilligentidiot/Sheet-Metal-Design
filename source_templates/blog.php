@@ -23,7 +23,7 @@ require_once 'includes/blog-posts.php';
     <div class="max-w-7xl mx-auto px-4 md:px-8 py-12 flex flex-col lg:flex-row gap-12" data-purpose="main-layout">
         
         <div class="lg:w-2/3" data-purpose="article-listing">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div id="blog-posts-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <?php foreach ($blog_posts as $post): ?>
                 <article class="flex flex-col bg-darkBg border border-white/10 rounded-custom overflow-hidden group hover:border-primary/50 transition-colors">
                     <div class="aspect-video overflow-hidden relative">
@@ -42,6 +42,12 @@ require_once 'includes/blog-posts.php';
                 </article>
                 <?php endforeach; ?>
             </div>
+            <!-- No results message -->
+            <div id="no-results" class="hidden py-24 text-center">
+                <span class="material-symbols-outlined text-6xl text-gray-700 mb-4 block">search_off</span>
+                <p class="text-xl text-gray-400 font-light">No engineering insights found for that query.</p>
+                <button onclick="document.getElementById('blog-search').value=''; document.getElementById('blog-search').dispatchEvent(new Event('input'));" class="mt-6 text-primary hover:text-white uppercase tracking-widest text-sm font-bold transition-colors">Clear Search</button>
+            </div>
         </div>
 
         <!-- Sidebar -->
@@ -51,7 +57,7 @@ require_once 'includes/blog-posts.php';
                     <span class="w-2 h-4 bg-primary mr-2"></span> Search Insights
                 </h2>
                 <div class="relative">
-                    <input type="text" placeholder="Type keywords..." class="w-full bg-darkBg border border-white/10 focus:ring-primary focus:border-primary text-white rounded-custom py-3 px-4 transition-colors">
+                    <input type="text" id="blog-search" placeholder="Type keywords..." class="w-full bg-darkBg border border-white/10 focus:ring-primary focus:border-primary text-white rounded-custom py-3 px-4 transition-colors">
                 </div>
             </section>
 
@@ -167,3 +173,4 @@ require_once 'includes/blog-posts.php';
     </section>
 
 <?php include 'includes/footer.php'; ?>
+<script src="assets/js/blog-search.js"></script>
