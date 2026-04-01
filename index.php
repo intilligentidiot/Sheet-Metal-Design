@@ -1,5 +1,38 @@
 <?php
 $page_title = "Sheet Metal Design Services | Tesla Mechanical Designs";
+$page_description = "Professional sheet metal design services including DFM analysis, precision drafting in SolidWorks & Inventor, custom enclosure design, and bend allowance optimization. ISO 9001:2015 certified.";
+$page_canonical = "https://sheetmetal.teslamechanicaldesigns.com/";
+$page_og_image = "https://sheetmetal.teslamechanicaldesigns.com/assets/manufacturing_floor.png";
+$extra_head_content = '
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "What is the standard tolerance for sheet metal design?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Standard tolerances for sheet metal design typically range from +/- 0.005 inches to +/- 0.015 inches, depending on the material thickness and specific fabrication processes like laser cutting or CNC bending."
+    }
+  }, {
+    "@type": "Question",
+    "name": "How does bend allowance affect manufacturing costs?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Accurate bend allowance calculations reduce scrap rates and eliminate the need for trial-and-error prototypes, significantly lowering overall material and labor costs."
+    }
+  }, {
+    "@type": "Question",
+    "name": "Which materials are best for outdoor enclosures?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "For outdoor enclosures, Aluminum and Stainless Steel are preferred due to their natural corrosion resistance. Galvanized steel or steel with powder coating can also be used effectively depending on the specific environmental requirements."
+    }
+  }]
+}
+</script>';
 include 'includes/header.php';
 ?>
 
@@ -7,7 +40,7 @@ include 'includes/header.php';
         <header class="relative h-screen flex items-center justify-center overflow-hidden bg-darkBg" id="hero">
             <!-- Background: Video Placeholder (replace src with actual video tag when ready) -->
             <div class="absolute inset-0 w-full h-full z-0">
-                <img src="assets/manufacturing_floor.png" alt="" class="w-full h-full object-cover" aria-hidden="true">
+                <img src="assets/manufacturing_floor.png" alt="Precision sheet metal manufacturing floor with CNC machines and laser cutting equipment" class="w-full h-full object-cover" aria-hidden="true">
             </div>
             <!-- Dark Gradient Overlay -->
             <div

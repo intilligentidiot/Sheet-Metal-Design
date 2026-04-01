@@ -1,5 +1,8 @@
 <?php
-$page_title = "404 Not Found | Tesla Mechanical Designs";
+$page_title = "404 Page Not Found | Tesla Mechanical Designs";
+$page_description = "The page you are looking for does not exist or has been moved. Return to the Tesla Mechanical Designs homepage.";
+$page_robots = "noindex, nofollow";
+$page_canonical = "https://sheetmetal.teslamechanicaldesigns.com/404";
 include 'includes/header.php';
 ?>
 

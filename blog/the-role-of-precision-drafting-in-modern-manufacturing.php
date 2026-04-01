@@ -1,8 +1,10 @@
 <?php
 $page_title = "The Role of Precision Drafting in Modern Manufacturing | TMD Services";
-$page_description = "How high-fidelity SolidWorks models translate into flawless shop floor execution and reduced error rates.";
+$page_description = "How high-fidelity SolidWorks models translate into flawless shop floor execution and reduced error rates in sheet metal manufacturing.";
+$page_canonical = "https://sheetmetal.teslamechanicaldesigns.com/blog/the-role-of-precision-drafting-in-modern-manufacturing";
+$page_og_image = "https://sheetmetal.teslamechanicaldesigns.com/assets/manufacturing_floor.png";
+$breadcrumb_title = "Precision Drafting";
 $article_published_date = "2024-01-10";
-$page_og_image = "../assets/manufacturing_floor.png";
 include '../includes/blog-header.php';
 ?>
 

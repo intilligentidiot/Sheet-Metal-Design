@@ -1,6 +1,9 @@
 <?php
 $page_title = "Insights & Engineering Blog | TMD Services";
-$page_description = "Exploring the latest trends in sheet metal fabrication, CNC machining, and industrial design innovation.";
+$page_description = "Exploring the latest trends in sheet metal fabrication, CNC machining, and industrial design innovation. Technical guides on DFM, bend allowance, andCAD modeling.";
+$page_canonical = "https://sheetmetal.teslamechanicaldesigns.com/blog";
+$page_og_image = "https://sheetmetal.teslamechanicaldesigns.com/assets/manufacturing_floor.png";
+$page_keywords = "Sheet Metal Blog, Engineering Insights, DFM Tips, CAD Tutorials, Industrial Design Blog, TMD Services";
 include 'includes/header.php';
 require_once 'includes/blog-posts.php';
 ?>
@@ -25,7 +28,7 @@ require_once 'includes/blog-posts.php';
                 <article class="flex flex-col bg-darkBg border border-white/10 rounded-custom overflow-hidden group hover:border-primary/50 transition-colors">
                     <div class="aspect-video overflow-hidden relative">
                          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors z-10"></div>
-                        <img alt="<?= htmlspecialchars($post['title']) ?>" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105" src="<?= htmlspecialchars($post['image']) ?>"/>
+                        <img alt="Engineering Insight: <?= htmlspecialchars($post['title']) ?>" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105" src="<?= htmlspecialchars($post['image']) ?>"/>
                     </div>
                     <div class="p-6 flex flex-col flex-grow">
                         <span class="text-primary text-xs font-bold uppercase tracking-widest mb-3">Engineering</span>

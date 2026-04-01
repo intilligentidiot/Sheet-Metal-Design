@@ -1,8 +1,10 @@
 <?php
 $page_title = "Understanding Bend Deduction and Bend Allowance in CAD | TMD Services";
 $page_description = "A deep dive into why relying solely on K-Factors isn't enough, and how accurate bend deductions ensure tolerance consistency in sheet metal CAD.";
+$page_canonical = "https://sheetmetal.teslamechanicaldesigns.com/blog/understanding-bend-deduction-and-bend-allowance-in-cad";
+$page_og_image = "https://sheetmetal.teslamechanicaldesigns.com/assets/cad_screenshot.png";
+$breadcrumb_title = "Bend Allowance Math";
 $article_published_date = "2024-03-05";
-$page_og_image = "../assets/cad_screenshot.png";
 include '../includes/blog-header.php';
 ?>
 

@@ -1,5 +1,8 @@
 <?php
-$page_title = "Thank You | Tesla Mechanical Designs";
+$page_title = "Inquiry Received | Tesla Mechanical Designs";
+$page_description = "Thank you for contacting Tesla Mechanical Designs. Your inquiry has been received and our engineering team will get back to you shortly.";
+$page_robots = "noindex, nofollow";
+$page_canonical = "https://sheetmetal.teslamechanicaldesigns.com/thank-you";
 include 'includes/header.php';
 ?>
 

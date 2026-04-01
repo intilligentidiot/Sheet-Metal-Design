@@ -28,7 +28,7 @@
         <priority>0.7</priority>
     </url>
 
-    <!-- Tools -->
+    <!-- Tools (Static HTML for now) -->
     <url>
         <loc>https://sheetmetal.teslamechanicaldesigns.com/tools/bend-calculator.html</loc>
         <lastmod>2026-04-01</lastmod>
@@ -36,22 +36,22 @@
         <priority>0.6</priority>
     </url>
 
-    <!-- Blog Articles -->
+    <!-- Blog Articles (Clean URLs) -->
     <url>
         <loc>https://sheetmetal.teslamechanicaldesigns.com/blog/understanding-bend-deduction-and-bend-allowance-in-cad</loc>
-        <lastmod>2026-03-05</lastmod>
+        <lastmod>2024-03-05</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://sheetmetal.teslamechanicaldesigns.com/blog/top-5-dfm-principles-for-cost-effective-sheet-metal-design</loc>
-        <lastmod>2026-03-12</lastmod>
+        <lastmod>2024-03-15</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://sheetmetal.teslamechanicaldesigns.com/blog/the-role-of-precision-drafting-in-modern-manufacturing</loc>
-        <lastmod>2026-02-22</lastmod>
+        <lastmod>2024-01-10</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.7</priority>
     </url>

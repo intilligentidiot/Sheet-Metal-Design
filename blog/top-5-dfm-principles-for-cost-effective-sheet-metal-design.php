@@ -1,8 +1,10 @@
 <?php
 $page_title = "Top 5 DFM Principles for Cost-Effective Sheet Metal Design | TMD Services";
-$page_description = "Learn how to optimize your sheet metal designs for manufacturing, reducing costs and lead times without sacrificing quality.";
+$page_description = "Optimize your sheet metal designs for manufacturing with these top 5 DFM principles. Reduce costs, material waste, and lead times with precision engineering.";
+$page_canonical = "https://sheetmetal.teslamechanicaldesigns.com/blog/top-5-dfm-principles-for-cost-effective-sheet-metal-design";
+$page_og_image = "https://sheetmetal.teslamechanicaldesigns.com/assets/sheet_metal_model.png";
+$breadcrumb_title = "DFM Principles";
 $article_published_date = "2024-03-15";
-$page_og_image = "../assets/sheet_metal_model.png";
 include '../includes/blog-header.php';
 ?>
 
