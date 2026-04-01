@@ -15,7 +15,7 @@ include 'includes/header.php';
             <p class="text-lg text-gray-400 mb-10 max-w-lg mx-auto font-light">
                 Your message has been received successfully. Our engineering team will review your inquiry and get back to you shortly.
             </p>
-            <a href="index.php"
+            <a href="index.html"
                 class="inline-block border border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 rounded-custom text-lg font-bold uppercase transition-all duration-300 shadow-xl shadow-primary/20">
                 Back to Homepage
             </a>

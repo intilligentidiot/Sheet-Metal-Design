@@ -12,25 +12,12 @@ include 'includes/header.php';
         <div class="text-center mb-16">
             <h1 class="text-4xl md:text-5xl font-bold tracking-tighter uppercase mb-4">Get In <span class="text-primary">Touch</span></h1>
             <p class="text-gray-400 font-light mb-6">Request an engineering technical review and competitive quote for your project.</p>
-
-            <?php if (isset($_GET['error'])): ?>
-            <div class="bg-red-500/10 border border-red-500/50 text-red-500 px-6 py-4 rounded-custom text-sm font-bold uppercase tracking-widest max-w-md mx-auto mb-8 animate-pulse">
-                <?php
-                switch($_GET['error']) {
-                    case 'empty_fields': echo "Error: Please fill in all required fields."; break;
-                    case 'invalid_email': echo "Error: Please enter a valid email address."; break;
-                    case 'captcha_failed': echo "Error: reCAPTCHA verification failed. Please try again."; break;
-                    case 'mail_error': echo "Error: Server failed to send message. Please try again later."; break;
-                    default: echo "Error: An unknown problem occurred."; break;
-                }
-                ?>
-            </div>
-            <?php endif; ?>
         </div>
 
         <div class="bg-surface p-8 md:p-12 rounded-custom border border-white/10 shadow-2xl">
-            <!-- Backend handler: process-contact.php -->
-            <form action="process-contact.php" method="POST" class="space-y-6">
+            <!-- Static Form Handler: Formspree (Free for static sites) -->
+            <!-- Replace 'YOUR_FORMSPREE_ENDPOINT' with your actual endpoint from formspree.io -->
+            <form action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST" class="space-y-6">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label for="firstName" class="block text-sm font-medium text-gray-400 uppercase tracking-widest mb-2">First Name</label>

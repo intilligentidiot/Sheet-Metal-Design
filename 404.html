@@ -1,33 +1,32 @@
-<?php include_once 'config.php'; ?>
 <!DOCTYPE html>
-<html lang="en" class="<?= $is_dark_mode ? 'dark' : '' ?>">
+<html lang="en" class="dark">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= htmlspecialchars($page_title) ?></title>
-    <meta name="description" content="<?= htmlspecialchars($page_description) ?>">
-    <meta name="keywords" content="<?= htmlspecialchars($page_keywords) ?>">
-    <meta name="author" content="<?= htmlspecialchars($site_name) ?>">
-    <meta name="robots" content="<?= htmlspecialchars($page_robots) ?>">
+    <title>404 Page Not Found | Tesla Mechanical Designs</title>
+    <meta name="description" content="The page you are looking for does not exist or has been moved. Return to the Tesla Mechanical Designs homepage.">
+    <meta name="keywords" content="Sheet Metal Design, DFM Analysis, Sheet Metal Fabrication, CNC Machining, Laser Cutting, Prototyping, Bend Allowance, Flat Pattern, Tesla Mechanical Designs">
+    <meta name="author" content="Tesla Mechanical Designs">
+    <meta name="robots" content="noindex, nofollow">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="<?= htmlspecialchars($page_canonical) ?>">
+    <link rel="canonical" href="https://sheetmetal.teslamechanicaldesigns.com/404">
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:site_name" content="<?= htmlspecialchars($site_name) ?>">
-    <meta property="og:title" content="<?= htmlspecialchars($page_title) ?>">
-    <meta property="og:description" content="<?= htmlspecialchars($page_description) ?>">
-    <meta property="og:type" content="<?= htmlspecialchars($page_og_type) ?>">
-    <meta property="og:url" content="<?= htmlspecialchars($page_canonical) ?>">
-    <meta property="og:image" content="<?= htmlspecialchars($page_og_image) ?>">
+    <meta property="og:site_name" content="Tesla Mechanical Designs">
+    <meta property="og:title" content="404 Page Not Found | Tesla Mechanical Designs">
+    <meta property="og:description" content="The page you are looking for does not exist or has been moved. Return to the Tesla Mechanical Designs homepage.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sheetmetal.teslamechanicaldesigns.com/404">
+    <meta property="og:image" content="https://sheetmetal.teslamechanicaldesigns.com/assets/cad_screenshot.png">
     <meta property="og:locale" content="en_US">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="<?= htmlspecialchars($page_title) ?>">
-    <meta name="twitter:description" content="<?= htmlspecialchars($page_description) ?>">
-    <meta name="twitter:image" content="<?= htmlspecialchars($page_og_image) ?>">
+    <meta name="twitter:title" content="404 Page Not Found | Tesla Mechanical Designs">
+    <meta name="twitter:description" content="The page you are looking for does not exist or has been moved. Return to the Tesla Mechanical Designs homepage.">
+    <meta name="twitter:image" content="https://sheetmetal.teslamechanicaldesigns.com/assets/cad_screenshot.png">
 
     <meta name="google-site-verification" content="JAMFTOz1ORjmAuDj3Pgnx6dB6LMqozt3NPqr1cqVHNg" />
 
@@ -91,13 +90,13 @@
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Tesla Mechanical Designs",
-        "url": "<?= $site_url ?>",
-        "logo": "<?= $site_url ?>/apple-touch-icon.png",
+        "url": "https://sheetmetal.teslamechanicaldesigns.com",
+        "logo": "https://sheetmetal.teslamechanicaldesigns.com/apple-touch-icon.png",
         "description": "High-end engineering solutions for complex sheet metal components. DFM analysis, precision drafting, and custom enclosure design.",
         "contactPoint": {
             "@type": "ContactPoint",
             "contactType": "sales",
-            "url": "<?= $site_url ?>/contact"
+            "url": "https://sheetmetal.teslamechanicaldesigns.com/contact"
         },
         "sameAs": [
             "https://www.teslamechanicaldesigns.com"
@@ -105,8 +104,7 @@
     }
     </script>
 
-    <?php if (isset($extra_head_content)) echo $extra_head_content; ?>
-</head>
+    </head>
 
 <body>
 
@@ -119,17 +117,17 @@
                         d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
                     </path>
                 </svg>
-                <a href="index.php" class="text-xl font-bold tracking-tight uppercase" title="TMD Services - Sheet Metal Design">
+                <a href="index.html" class="text-xl font-bold tracking-tight uppercase" title="TMD Services - Sheet Metal Design">
                     TMD <span class="text-primary">Services</span>
                 </a>
             </div>
             <div class="hidden md:flex space-x-8 text-sm font-medium tracking-wide uppercase">
-                <a href="index.php#services" class="hover:text-primary transition-colors" title="Sheet Metal Design Services">Services</a>
-                <a href="blog.php" class="hover:text-primary transition-colors" title="Sheet Metal Engineering Blog">Insights (Blog)</a>
+                <a href="index.html#services" class="hover:text-primary transition-colors" title="Sheet Metal Design Services">Services</a>
+                <a href="blog.html" class="hover:text-primary transition-colors" title="Sheet Metal Engineering Blog">Insights (Blog)</a>
                 <a href="tools/bend-calculator.html" class="hover:text-primary transition-colors" title="Free Bend Allowance Calculator Tool">Tools</a>
             </div>
             <div>
-                <a href="contact.php"
+                <a href="contact.html"
                     class="inline-block bg-primary hover:bg-red-700 text-white px-6 py-2 rounded-custom text-sm font-bold uppercase transition-all duration-300"
                     title="Get a Free Sheet Metal Design Quote">
                     Contact Us
@@ -137,3 +135,34 @@
             </div>
         </div>
     </nav>
+
+    <main class="h-screen flex items-center justify-center text-center px-6">
+        <div>
+            <h1 class="text-7xl md:text-9xl font-bold text-primary mb-6 tracking-tighter uppercase">404</h1>
+            <h2 class="text-3xl md:text-5xl font-bold mb-6 uppercase">Page Not Found</h2>
+            <p class="text-lg text-gray-400 mb-10 max-w-lg mx-auto font-light">
+                The page you are looking for does not exist, has been removed, had its name changed, or is temporarily unavailable.
+            </p>
+            <a href="index.php"
+                class="inline-block bg-primary hover:bg-red-700 text-white px-8 py-4 rounded-custom text-lg font-bold uppercase transition-all duration-300 shadow-xl shadow-primary/20">
+                Return to Homepage
+            </a>
+        </div>
+    </main>
+
+<!-- includes/footer.php -->
+    <footer class="bg-darkBg py-12 thin-border-t mt-auto w-full" aria-label="Footer">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center space-x-2">
+                <span class="text-lg font-bold tracking-tight uppercase">TMD <span
+                        class="text-primary">Services</span></span>
+                <span class="text-gray-600 ml-4 pl-4 border-l border-white/10 text-xs text-center">&copy;
+                    2026 Tesla Mechanical Designs                </span>
+            </div>
+            <div class="flex space-x-6 text-xs uppercase tracking-widest text-gray-400 font-semibold">
+                <a href="#" class="hover:text-primary transition-colors">Privacy</a>
+                <a href="#" class="hover:text-primary transition-colors">Terms</a>
+                <a href="contact.html" class="hover:text-primary transition-colors">Contact</a>
+            </div>
+        </div>
+    </footer>

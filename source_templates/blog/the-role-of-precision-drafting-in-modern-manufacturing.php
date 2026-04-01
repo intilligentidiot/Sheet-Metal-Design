@@ -10,8 +10,8 @@ include '../includes/blog-header.php';
 
 <main class="pt-28 pb-16 px-4 md:px-8 max-w-4xl mx-auto">
     <nav class="flex items-center text-xs text-gray-400 mb-8 uppercase tracking-widest font-bold" aria-label="Breadcrumb">
-        <a href="../index.php" class="hover:text-primary transition-colors">Home</a><span class="mx-2">&gt;</span>
-        <a href="../blog.php" class="hover:text-primary transition-colors">Insights</a><span class="mx-2">&gt;</span>
+        <a href="../index.html" class="hover:text-primary transition-colors">Home</a><span class="mx-2">&gt;</span>
+        <a href="../blog.html" class="hover:text-primary transition-colors">Insights</a><span class="mx-2">&gt;</span>
         <span class="text-white">Article</span>
     </nav>
 
