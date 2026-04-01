@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights & Engineering Blog | TMD Services</title>
+    <meta name="description" content="Exploring the latest trends in sheet metal fabrication, CNC machining, and industrial design innovation.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#cc0000', brand: { DEFAULT: '#cc0000', dark: '#990000', light: '#ff3333', }, darkBg: '#0a0a0a', surface: '#141414', industrial: { 900: '#0a0a0a', 800: '#171717', 700: '#262626', 600: '#404040', 400: '#a3a3a3', } }, fontFamily: { sans: ['Space Grotesk', 'sans-serif'], }, borderRadius: { 'custom': '1rem', } } } }
+    </script>
+    <style>
+        body { background-color: #0a0a0a; color: #fff; font-family: "Space Grotesk", sans-serif; -webkit-font-smoothing: antialiased; }
+        .thin-border { border: 1px solid rgba(255,255,255,0.1); }
+        .thin-border-b { border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .thin-border-t { border-top: 1px solid rgba(255,255,255,0.1); }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #262626; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #404040; }
+        .cad-bg {
+            background-image: linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.85)), url('assets/manufacturing_floor.png');
+            background-size: cover; background-position: center;
+        }
+    </style>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What is the standard tolerance for sheet metal design?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Standard tolerances for sheet metal design typically range from +/- 0.005 inches to +/- 0.015 inches, depending on the material thickness and specific fabrication processes like laser cutting or CNC bending."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How does bend allowance affect manufacturing costs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Accurate bend allowance calculations reduce scrap rates and eliminate the need for trial-and-error prototypes, significantly lowering overall material and labor costs."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Which materials are best for outdoor enclosures?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For outdoor enclosures, Aluminum and Stainless Steel are preferred due to their natural corrosion resistance. Galvanized steel or steel with powder coating can also be used effectively depending on the specific environmental requirements."
+        }
+      }]
+    }
+    </script>
+</head>
+<body>
+
+<nav class="fixed top-0 w-full z-50 bg-darkBg/80 backdrop-blur-md thin-border-b" aria-label="Main Navigation">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <div class="flex items-center space-x-2">
+            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+            <a href="index.html" class="text-xl font-bold tracking-tight uppercase">TMD <span class="text-primary">Services</span></a>
+        </div>
+        <div class="hidden md:flex space-x-8 text-sm font-medium tracking-wide uppercase">
+            <a href="index.html#services" class="hover:text-primary transition-colors">Services</a>
+            <a href="blog.html" class="text-primary transition-colors">Insights (Blog)</a>
+            <a href="tools/bend-calculator.html" class="hover:text-primary transition-colors">Tools</a>
+        </div>
+        <div><a href="https://www.teslamechanicaldesigns.com/contact-us.php" class="inline-block bg-primary hover:bg-red-700 text-white px-6 py-2 rounded-custom text-sm font-bold uppercase transition-all duration-300">Contact Us</a></div>
+    </div>
+</nav>
+
+<main class="pt-20">
+    <header class="py-16 md:py-24 px-4 md:px-8 bg-industrial-900 thin-border-b cad-bg" data-purpose="page-hero">
+        <div class="max-w-6xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                Engineering <span class="text-brand">Insights</span>
+            </h1>
+            <p class="text-industrial-400 max-w-2xl text-lg">
+                Exploring the latest methodologies in sheet metal DFM, bend allowances, and precision drafting.
+            </p>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 md:px-8 py-12 flex flex-col lg:flex-row gap-12" data-purpose="main-layout">
+        
+        <div class="lg:w-2/3" data-purpose="article-listing">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Blog Card 1 -->
+                <article class="flex flex-col bg-industrial-900 thin-border rounded-custom overflow-hidden group hover:border-brand/50 transition-colors">
+                    <div class="aspect-video overflow-hidden bg-industrial-800 relative">
+                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors z-10"></div>
+                        <img alt="3D Sheet Metal Model" class="w-full h-full object-cover transition-all duration-500" src="assets/sheet_metal_model.png"/>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-brand text-xs font-bold uppercase tracking-widest mb-3">DFM Strategy</span>
+                        <h2 class="text-xl font-bold text-white mb-3 group-hover:text-brand transition-colors">Top 5 DFM Principles for Cost-Effective Sheet Metal Design</h2>
+                        <p class="text-industrial-400 text-sm mb-6 flex-grow">Maximize efficiency and reduce manufacturing costs by applying core Design for Manufacturability principles in your next sheet metal project.</p>
+                        <div class="flex items-center justify-between mt-auto pt-4 thin-border-t border-industrial-800">
+                            <span class="text-xs text-industrial-600">Mar 12, 2024</span>
+                            <a class="text-xs font-bold uppercase tracking-tighter hover:text-brand" href="blog/top-5-dfm-principles-for-cost-effective-sheet-metal-design.html">Read More +</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Card 2 -->
+                <article class="flex flex-col bg-industrial-900 thin-border rounded-custom overflow-hidden group hover:border-brand/50 transition-colors">
+                    <div class="aspect-video overflow-hidden bg-industrial-800 relative">
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors z-10"></div>
+                        <img alt="CAD Screenshot" class="w-full h-full object-cover transition-all duration-500" src="assets/cad_screenshot.png"/>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-brand text-xs font-bold uppercase tracking-widest mb-3">CAD Engineering</span>
+                        <h2 class="text-xl font-bold text-white mb-3 group-hover:text-brand transition-colors">Understanding Bend Deduction and Bend Allowance in CAD</h2>
+                        <p class="text-industrial-400 text-sm mb-6 flex-grow">A deep dive into why relying solely on K-Factors isn't enough, and how accurate bend deductions ensure tolerance consistency.</p>
+                        <div class="flex items-center justify-between mt-auto pt-4 thin-border-t border-industrial-800">
+                            <span class="text-xs text-industrial-600">Mar 05, 2024</span>
+                            <a class="text-xs font-bold uppercase tracking-tighter hover:text-brand" href="blog/understanding-bend-deduction-and-bend-allowance-in-cad.html">Read More +</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Card 3 -->
+                <article class="flex flex-col bg-industrial-900 thin-border rounded-custom overflow-hidden group hover:border-brand/50 transition-colors">
+                    <div class="aspect-video overflow-hidden bg-industrial-800 relative">
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors z-10"></div>
+                        <img alt="Manufacturing Floor" class="w-full h-full object-cover transition-all duration-500" src="assets/manufacturing_floor.png"/>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-brand text-xs font-bold uppercase tracking-widest mb-3">Drafting</span>
+                        <h2 class="text-xl font-bold text-white mb-3 group-hover:text-brand transition-colors">The Role of Precision Drafting in Modern Manufacturing</h2>
+                        <p class="text-industrial-400 text-sm mb-6 flex-grow">Exploring the direct link between highly detailed 2D/3D manufacturing drawings and reduced shop floor error rates.</p>
+                        <div class="flex items-center justify-between mt-auto pt-4 thin-border-t border-industrial-800">
+                            <span class="text-xs text-industrial-600">Feb 22, 2024</span>
+                            <a class="text-xs font-bold uppercase tracking-tighter hover:text-brand" href="blog/the-role-of-precision-drafting-in-modern-manufacturing.html">Read More +</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="lg:w-1/3 space-y-12">
+            <section data-purpose="search-widget" aria-label="Search Blog">
+                <h2 class="text-sm font-bold uppercase tracking-widest mb-4 flex items-center">
+                    <span class="w-2 h-4 bg-brand mr-2"></span> Search Insights
+                </h2>
+                <div class="relative">
+                    <input type="text" placeholder="Type keywords..." class="w-full bg-industrial-800 border-industrial-700 focus:ring-brand focus:border-brand text-white rounded-custom py-3 px-4">
+                </div>
+            </section>
+
+            <!-- Newsletter CTA -->
+            <section class="bg-industrial-800 p-6 rounded-custom thin-border" data-purpose="newsletter-widget">
+                <h2 class="text-lg font-bold mb-2">Technical Briefing</h2>
+                <p class="text-industrial-400 text-xs mb-4">Get quarterly engineering insights delivered to your inbox.</p>
+                <form class="space-y-3" action="#" method="POST">
+                    <input type="email" placeholder="email@company.com" required class="w-full bg-industrial-900 border-industrial-700 text-xs focus:ring-brand focus:border-brand rounded-custom">
+                    <button type="submit" class="w-full bg-brand hover:bg-brand-dark transition-colors py-2 text-xs font-bold uppercase tracking-widest rounded-custom text-white">Subscribe</button>
+                </form>
+            </section>
+
+            <!-- Engineering Toolkit -->
+            <section class="bg-industrial-800 p-6 rounded-custom thin-border" data-purpose="engineering-toolkit">
+                <h2 class="text-lg font-bold mb-4 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-brand">handyman</span>
+                    Engineering Toolkit
+                </h2>
+                <div class="space-y-4">
+                    <a href="tools/bend-calculator.html" class="flex flex-col items-center justify-center p-4 bg-industrial-900 border border-brand/30 hover:border-brand rounded-custom text-center transition-all group">
+                        <span class="material-symbols-outlined text-3xl text-gray-400 group-hover:text-white mb-2 transition-colors">calculate</span>
+                        <span class="text-sm font-bold text-white group-hover:text-brand transition-colors">Bend Allowance Calculator</span>
+                        <span class="text-xs text-industrial-400 mt-1">Free Technical Tool</span>
+                    </a>
+                    <a href="#" class="flex flex-col items-center justify-center p-4 bg-brand hover:bg-brand-dark text-white rounded-custom text-center transition-all group shadow-lg shadow-brand/20">
+                        <span class="material-symbols-outlined text-3xl mb-2">download</span>
+                        <span class="text-sm font-bold uppercase tracking-widest">Download DFM Checklist</span>
+                        <span class="text-xs text-brand-light mt-1">PDF Lead Magnet</span>
+                    </a>
+                </div>
+            </section>
+        </aside>
+    </div>
+</main>
+
+    <!-- Interactive FAQ Section -->
+    <section class="py-24 bg-surface thin-border-t" id="faq">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="mb-12 text-center">
+                <h2 class="text-3xl font-bold uppercase tracking-tight mb-4">Frequently Asked Questions</h2>
+                <div class="h-1 w-20 bg-primary mx-auto"></div>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <details class="group bg-darkBg border border-white/10 rounded-custom overflow-hidden transition-all duration-300">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-lg hover:text-primary transition-colors">
+                        <span>What is the standard tolerance for sheet metal design?</span>
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="text-gray-400 font-light mt-0 p-6 pt-0 leading-relaxed border-t border-white/5">
+                        Standard tolerances for sheet metal design typically range from +/- 0.005 inches to +/- 0.015 inches, depending on the material thickness and specific fabrication processes like laser cutting or CNC bending.
+                    </div>
+                </details>
+                <!-- FAQ Item 2 -->
+                <details class="group bg-darkBg border border-white/10 rounded-custom overflow-hidden transition-all duration-300">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-lg hover:text-primary transition-colors">
+                        <span>How does bend allowance affect manufacturing costs?</span>
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="text-gray-400 font-light mt-0 p-6 pt-0 leading-relaxed border-t border-white/5">
+                        Accurate bend allowance calculations reduce scrap rates and eliminate the need for trial-and-error prototypes, significantly lowering overall material and labor costs.
+                    </div>
+                </details>
+                <!-- FAQ Item 3 -->
+                <details class="group bg-darkBg border border-white/10 rounded-custom overflow-hidden transition-all duration-300">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-lg hover:text-primary transition-colors">
+                        <span>Which materials are best for outdoor enclosures?</span>
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="text-gray-400 font-light mt-0 p-6 pt-0 leading-relaxed border-t border-white/5">
+                        For outdoor enclosures, Aluminum and Stainless Steel are preferred due to their natural corrosion resistance. Galvanized steel or steel with powder coating can also be used effectively depending on the specific environmental requirements.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Standards -->
+    <section class="py-12 bg-industrial-900 thin-border-t border-b border-black">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col items-center">
+            <h3 class="text-xs uppercase tracking-widest text-industrial-500 font-bold mb-8 text-center">Industry Certifications & Standards</h3>
+            <div class="flex flex-wrap justify-center gap-12 items-center opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-4xl">workspace_premium</span>
+                    <span class="font-bold text-xl tracking-tight">ISO 9001:2015</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-4xl">local_fire_department</span>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-lg leading-none tracking-tight">AWS</span>
+                        <span class="text-[10px] uppercase font-bold tracking-widest">Certified Welding</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-4xl">verified_user</span>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-lg leading-none tracking-tight">AS9100</span>
+                        <span class="text-[10px] uppercase font-bold tracking-widest">Aerospace Std</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<footer class="bg-darkBg py-12 thin-border-t" aria-label="Footer">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="flex items-center space-x-2">
+            <span class="text-lg font-bold tracking-tight uppercase">TMD <span class="text-primary">Services</span></span>
+            <span class="text-gray-600 ml-4 pl-4 border-l border-white/10 text-xs text-center">&copy; <script>document.write(new Date().getFullYear())</script> Tesla Mechanical Designs</span>
+        </div>
+        <div class="flex space-x-6 text-xs uppercase tracking-widest text-gray-400 font-semibold">
+            <a href="#" class="hover:text-primary transition-colors">Privacy</a>
+            <a href="https://www.teslamechanicaldesigns.com/contact-us.php" class="hover:text-primary transition-colors">Contact</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
