@@ -1,135 +1,7 @@
-<!DOCTYPE html>
-<html lang="en" class="dark">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sheet Metal Design Services | Tesla Mechanical Designs</title>
-    <meta name="description"
-        content="High-end engineering solutions for complex sheet metal components. From conceptual DFM to functional prototyping with extreme tolerances.">
-    <meta name="keywords"
-        content="Sheet Metal, DFM, Fabrication, CNC Machining, Laser Cutting, Prototyping, Tesla Mechanical Designs">
-    <meta name="author" content="Tesla Mechanical Designs">
-
-    <meta property="og:title" content="Precision Sheet Metal Design">
-    <meta property="og:description"
-        content="High-end engineering solutions for complex sheet metal components. From conceptual DFM to functional prototyping with extreme tolerances.">
-    <meta property="og:type" content="website">
-<meta name="google-site-verification" content="JAMFTOz1ORjmAuDj3Pgnx6dB6LMqozt3NPqr1cqVHNg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script>
-        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#cc0000', darkBg: '#0a0a0a', surface: '#141414', }, fontFamily: { sans: ['Space Grotesk', 'sans-serif'], }, borderRadius: { 'custom': '1rem', } } } }
-    </script>
-    <style>
-        body {
-            background-color: #0a0a0a;
-            color: #fff;
-            font-family: "Space Grotesk", sans-serif;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .cad-bg {
-            background-image: linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.85)), url('assets/cad_screenshot.png');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-
-        .grid-overlay {
-            background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-            background-size: 40px 40px;
-        }
-
-        .carousel-track {
-            display: flex;
-            width: calc(250px * 10);
-            animation: scroll 40s linear infinite;
-        }
-
-        @keyframes scroll {
-            0% {
-                transform: translateX(0);
-            }
-
-            100% {
-                transform: translateX(calc(-250px * 5));
-            }
-        }
-
-        .thin-border-b {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .thin-border-t {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-    </style>
-
-    <!-- FAQ Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "What is the standard tolerance for sheet metal design?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Standard tolerances for sheet metal design typically range from +/- 0.005 inches to +/- 0.015 inches, depending on the material thickness and specific fabrication processes like laser cutting or CNC bending."
-        }
-      }, {
-        "@type": "Question",
-        "name": "How does bend allowance affect manufacturing costs?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Accurate bend allowance calculations reduce scrap rates and eliminate the need for trial-and-error prototypes, significantly lowering overall material and labor costs."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Which materials are best for outdoor enclosures?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "For outdoor enclosures, Aluminum and Stainless Steel are preferred due to their natural corrosion resistance. Galvanized steel or steel with powder coating can also be used effectively depending on the specific environmental requirements."
-        }
-      }]
-    }
-    </script>
-</head>
-
-<body>
-
-    <nav class="fixed top-0 w-full z-50 bg-darkBg/80 backdrop-blur-md thin-border-b" aria-label="Main Navigation">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-2">
-                <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
-                    </path>
-                </svg>
-                <a href="index.html" class="text-xl font-bold tracking-tight uppercase">
-                    TMD <span class="text-primary">Services</span>
-                </a>
-            </div>
-            <div class="hidden md:flex space-x-8 text-sm font-medium tracking-wide uppercase">
-                <a href="#services" class="hover:text-primary transition-colors">Services</a>
-                <a href="blog.html" class="hover:text-primary transition-colors">Insights (Blog)</a>
-                <a href="tools/bend-calculator.html" class="hover:text-primary transition-colors">Tools</a>
-            </div>
-            <div>
-                <a href="contact.html"
-                    class="inline-block bg-primary hover:bg-red-700 text-white px-6 py-2 rounded-custom text-sm font-bold uppercase transition-all duration-300">
-                    Contact Us
-                </a>
-            </div>
-        </div>
-    </nav>
+<?php
+$page_title = "Sheet Metal Design Services | Tesla Mechanical Designs";
+include 'includes/header.php';
+?>
 
     <main>
         <header class="relative h-screen flex items-center justify-center overflow-hidden bg-darkBg" id="hero">
@@ -162,7 +34,7 @@
                     prototyping with extreme tolerances.
                 </p>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="contact.html"
+                    <a href="contact.php"
                         class="w-full sm:w-auto bg-primary hover:bg-red-700 text-white px-10 py-5 rounded-custom text-lg font-bold uppercase transition-all duration-300 shadow-lg shadow-primary/20">
                         Get a Quote
                     </a>
@@ -390,6 +262,8 @@
                 </div>
             </div>
         </section>
+        
+        <?php include 'includes/latest-blog.php'; ?>
 
         <!-- Interactive FAQ Section -->
         <section class="py-24 bg-surface thin-border-t" id="faq">
@@ -473,7 +347,7 @@
                 <p class="text-gray-400 text-lg mb-12 max-w-2xl mx-auto font-light">
                     Connect with our engineering team today for a comprehensive technical review and competitive quote.
                 </p>
-                <a href="contact.html"
+                <a href="contact.php"
                     class="inline-block bg-primary hover:bg-red-700 text-white px-12 py-5 rounded-custom text-xl font-bold uppercase transition-all duration-300 shadow-xl shadow-primary/20">
                     Contact Us Today
                 </a>
@@ -510,24 +384,4 @@
         </div>
     </section>
 
-    <footer class="bg-darkBg py-12 thin-border-t" aria-label="Footer">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="flex items-center space-x-2">
-                <span class="text-lg font-bold tracking-tight uppercase">TMD <span
-                        class="text-primary">Services</span></span>
-                <span class="text-gray-600 ml-4 pl-4 border-l border-white/10 text-xs text-center">&copy;
-                    <script>document.write(new Date().getFullYear())</script> Tesla Mechanical Designs
-                </span>
-            </div>
-            <div class="flex space-x-6 text-xs uppercase tracking-widest text-gray-400 font-semibold">
-                <a href="#" class="hover:text-primary transition-colors">Privacy</a>
-                <a href="#" class="hover:text-primary transition-colors">Terms</a>
-                <a href="contact.html"
-                    class="hover:text-primary transition-colors">Contact</a>
-            </div>
-        </div>
-    </footer>
-
-</body>
-
-</html>
+<?php include 'includes/footer.php'; ?>
