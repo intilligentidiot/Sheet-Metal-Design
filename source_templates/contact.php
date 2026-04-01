@@ -15,11 +15,10 @@ include 'includes/header.php';
         </div>
 
         <div class="bg-surface p-8 md:p-12 rounded-custom border border-white/10 shadow-2xl">
-            <!-- Static Form Handler: Formspree (Free for static sites) -->
-            <form action="https://formspree.io/f/REPLACE_WITH_YOUR_ID" method="POST" class="space-y-6">
-                <!-- Redirect to thank-you.html after submission -->
-                <input type="hidden" name="_next" value="https://sheet-metal-design-alpha.vercel.app/thank-you.html">
-                <input type="hidden" name="_subject" value="New Inquiry from TMD Sheet Metal">
+            <!-- Custom Serverless API Backend (Vercel) -->
+            <form action="/api/contact" method="POST" class="space-y-6">
+                <!-- Data for backend processing -->
+                <input type="hidden" name="form_name" value="General Contact">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label for="firstName" class="block text-sm font-medium text-gray-400 uppercase tracking-widest mb-2">First Name</label>
@@ -55,9 +54,9 @@ include 'includes/header.php';
                         class="w-full bg-darkBg border border-white/10 rounded-lg px-4 py-3 text-white focus:ring-primary focus:border-primary transition-colors"></textarea>
                 </div>
 
-                <!-- Google reCAPTCHA v2 Placeholder -->
+                <!-- Google reCAPTCHA v2 -->
                 <div class="py-2">
-                    <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY_HERE" style="transform:scale(0.85);-webkit-transform:scale(0.85);transform-origin:0 0;-webkit-transform-origin:0 0;">
+                    <div class="g-recaptcha" data-sitekey="6Lexl6EsAAAAAL1FlWIrCfDJ5XpjLjWtDci3aVmU" style="transform:scale(0.85);-webkit-transform:scale(0.85);transform-origin:0 0;-webkit-transform-origin:0 0;">
                         <!-- Fallback visual block if script not loaded -->
                         <div class="bg-darkBg border border-white/10 rounded px-4 py-6 text-sm text-gray-500 uppercase tracking-widest flex items-center justify-center">
                             [ Google reCAPTCHA v2 Component ]

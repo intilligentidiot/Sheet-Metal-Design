@@ -10,7 +10,7 @@ $latest_posts = array_slice($blog_posts, 0, 3);
                 <h2 class="text-3xl font-bold uppercase tracking-tight mb-4">Latest Insights</h2>
                 <div class="h-1 w-20 bg-primary"></div>
             </div>
-            <a href="blog.php" class="text-primary hover:text-white uppercase tracking-widest text-sm font-bold transition-colors" title="Browse Our Complete Engineering Insights Collection">View All &rarr;</a>
+            <a href="blog.html" class="text-primary hover:text-white uppercase tracking-widest text-sm font-bold transition-colors" title="Browse Our Complete Engineering Insights Collection">View All &rarr;</a>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">

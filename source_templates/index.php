@@ -102,7 +102,7 @@ include 'includes/header.php';
                     <span class="text-primary text-xs font-bold tracking-[0.2em] uppercase">DFM Optimized
                         Design</span>
                 </div>
-                <h1 class="text-5xl md:text-8xl font-bold text-white mb-8 tracking-tighter uppercase leading-[0.9]">
+                <h1 class="text-4xl md:text-7xl lg:text-8xl font-bold text-white mb-8 tracking-tighter uppercase leading-[0.9]">
                     Precision <br /><span class="text-primary">Sheet Metal</span> Design
                 </h1>
                 <p class="max-w-2xl mx-auto text-lg md:text-xl text-gray-300 mb-10 font-light leading-relaxed">
@@ -424,11 +424,11 @@ include 'includes/header.php';
                 <p class="text-gray-400 text-lg mb-12 max-w-2xl mx-auto font-light">
                     Connect with our engineering team today for a comprehensive technical review and competitive quote.
                 </p>
-                <a href="contact.html"
-                    class="inline-block bg-primary hover:bg-red-700 text-white px-12 py-5 rounded-custom text-xl font-bold uppercase transition-all duration-300 shadow-xl shadow-primary/20"
-                    title="Connect With Our Engineering Team Today">
-                    Contact Us Today
-                </a>
+                <a href="blog.html"
+                class="inline-block border border-white/10 hover:border-primary text-gray-500 hover:text-primary px-8 py-3 rounded-custom font-bold uppercase text-xs tracking-widest transition-all duration-300"
+                title="Browse All Engineering Insights and Guides">
+                View All Insights
+            </a>
             </div>
         </section>
     </main>

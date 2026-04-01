@@ -11,7 +11,7 @@ require_once 'includes/blog-posts.php';
 <main class="pt-20">
     <header class="py-16 md:py-24 px-4 md:px-8 bg-industrial-900 thin-border-b cad-bg" data-purpose="page-hero">
         <div class="max-w-6xl mx-auto">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight uppercase tracking-tight">
                 Engineering <span class="text-primary">Insights</span>
             </h1>
             <p class="text-gray-400 max-w-2xl text-lg">

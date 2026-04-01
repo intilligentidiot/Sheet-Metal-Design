@@ -208,20 +208,71 @@
                     TMD <span class="text-primary">Services</span>
                 </a>
             </div>
+            
+            <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-8 text-sm font-medium tracking-wide uppercase">
                 <a href="index.html#services" class="hover:text-primary transition-colors" title="Explore Our Sheet Metal Design Capabilities">Services</a>
                 <a href="blog.html" class="hover:text-primary transition-colors" title="Read Our Latest Engineering Insights">Insights (Blog)</a>
                 <a href="tools/bend-calculator.html" class="hover:text-primary transition-colors" title="Use Our Free Bend Allowance Calculator">Tools</a>
             </div>
-            <div>
+            
+            <!-- Desktop CTA -->
+            <div class="hidden md:block">
                 <a href="contact.html"
                     class="inline-block bg-primary hover:bg-red-700 text-white px-6 py-2 rounded-custom text-sm font-bold uppercase transition-all duration-300"
                     title="Request a Detailed Project Quote">
                     Contact Us
                 </a>
             </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none" aria-label="Toggle Navigation Menu">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 bg-darkBg z-[60] flex flex-col p-8 transition-transform duration-300 translate-x-full md:hidden">
+            <div class="flex justify-between items-center mb-12">
+                <span class="text-xl font-bold tracking-tight uppercase">TMD <span class="text-primary">Services</span></span>
+                <button id="mobile-menu-close" class="text-white">
+                    <span class="material-symbols-outlined text-3xl">close</span>
+                </button>
+            </div>
+            <nav class="flex flex-col space-y-8 text-2xl font-bold uppercase tracking-widest">
+                <a href="index.html#services" class="hover:text-primary transition-colors mobile-menu-link">Services</a>
+                <a href="blog.html" class="hover:text-primary transition-colors mobile-menu-link">Insights</a>
+                <a href="tools/bend-calculator.html" class="hover:text-primary transition-colors mobile-menu-link">Tools</a>
+                <a href="contact.html" class="text-primary hover:text-white transition-colors mobile-menu-link">Contact</a>
+            </nav>
+            <div class="mt-auto pb-12 border-t border-white/10 pt-8">
+                <p class="text-gray-500 text-xs uppercase tracking-[0.2em] mb-4 font-bold">Engineering Support</p>
+                <a href="mailto:support@teslamechanicaldesigns.com" class="text-lg text-white font-medium">support@teslamechanicaldesigns.com</a>
+            </div>
         </div>
     </nav>
+
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const menuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuLinks = document.querySelectorAll('.mobile-menu-link');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('translate-x-full');
+            document.body.classList.toggle('overflow-hidden');
+        }
+
+        if (menuBtn) menuBtn.addEventListener('click', toggleMenu);
+        if (menuClose) menuClose.addEventListener('click', toggleMenu);
+        
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+                document.body.classList.remove('overflow-hidden');
+            });
+        });
+    </script>
 
     <main>
         <header class="relative h-screen flex items-center justify-center overflow-hidden bg-darkBg" id="hero">
@@ -246,7 +297,7 @@
                     <span class="text-primary text-xs font-bold tracking-[0.2em] uppercase">DFM Optimized
                         Design</span>
                 </div>
-                <h1 class="text-5xl md:text-8xl font-bold text-white mb-8 tracking-tighter uppercase leading-[0.9]">
+                <h1 class="text-4xl md:text-7xl lg:text-8xl font-bold text-white mb-8 tracking-tighter uppercase leading-[0.9]">
                     Precision <br /><span class="text-primary">Sheet Metal</span> Design
                 </h1>
                 <p class="max-w-2xl mx-auto text-lg md:text-xl text-gray-300 mb-10 font-light leading-relaxed">
@@ -491,7 +542,7 @@
                 <h2 class="text-3xl font-bold uppercase tracking-tight mb-4">Latest Insights</h2>
                 <div class="h-1 w-20 bg-primary"></div>
             </div>
-            <a href="blog.php" class="text-primary hover:text-white uppercase tracking-widest text-sm font-bold transition-colors" title="Browse Our Complete Engineering Insights Collection">View All &rarr;</a>
+            <a href="blog.html" class="text-primary hover:text-white uppercase tracking-widest text-sm font-bold transition-colors" title="Browse Our Complete Engineering Insights Collection">View All &rarr;</a>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -635,11 +686,11 @@
                 <p class="text-gray-400 text-lg mb-12 max-w-2xl mx-auto font-light">
                     Connect with our engineering team today for a comprehensive technical review and competitive quote.
                 </p>
-                <a href="contact.html"
-                    class="inline-block bg-primary hover:bg-red-700 text-white px-12 py-5 rounded-custom text-xl font-bold uppercase transition-all duration-300 shadow-xl shadow-primary/20"
-                    title="Connect With Our Engineering Team Today">
-                    Contact Us Today
-                </a>
+                <a href="blog.html"
+                class="inline-block border border-white/10 hover:border-primary text-gray-500 hover:text-primary px-8 py-3 rounded-custom font-bold uppercase text-xs tracking-widest transition-all duration-300"
+                title="Browse All Engineering Insights and Guides">
+                View All Insights
+            </a>
             </div>
         </section>
     </main>

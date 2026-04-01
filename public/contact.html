@@ -136,20 +136,71 @@
                     TMD <span class="text-primary">Services</span>
                 </a>
             </div>
+            
+            <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-8 text-sm font-medium tracking-wide uppercase">
                 <a href="index.html#services" class="hover:text-primary transition-colors" title="Explore Our Sheet Metal Design Capabilities">Services</a>
                 <a href="blog.html" class="hover:text-primary transition-colors" title="Read Our Latest Engineering Insights">Insights (Blog)</a>
                 <a href="tools/bend-calculator.html" class="hover:text-primary transition-colors" title="Use Our Free Bend Allowance Calculator">Tools</a>
             </div>
-            <div>
+            
+            <!-- Desktop CTA -->
+            <div class="hidden md:block">
                 <a href="contact.html"
                     class="inline-block bg-primary hover:bg-red-700 text-white px-6 py-2 rounded-custom text-sm font-bold uppercase transition-all duration-300"
                     title="Request a Detailed Project Quote">
                     Contact Us
                 </a>
             </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none" aria-label="Toggle Navigation Menu">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 bg-darkBg z-[60] flex flex-col p-8 transition-transform duration-300 translate-x-full md:hidden">
+            <div class="flex justify-between items-center mb-12">
+                <span class="text-xl font-bold tracking-tight uppercase">TMD <span class="text-primary">Services</span></span>
+                <button id="mobile-menu-close" class="text-white">
+                    <span class="material-symbols-outlined text-3xl">close</span>
+                </button>
+            </div>
+            <nav class="flex flex-col space-y-8 text-2xl font-bold uppercase tracking-widest">
+                <a href="index.html#services" class="hover:text-primary transition-colors mobile-menu-link">Services</a>
+                <a href="blog.html" class="hover:text-primary transition-colors mobile-menu-link">Insights</a>
+                <a href="tools/bend-calculator.html" class="hover:text-primary transition-colors mobile-menu-link">Tools</a>
+                <a href="contact.html" class="text-primary hover:text-white transition-colors mobile-menu-link">Contact</a>
+            </nav>
+            <div class="mt-auto pb-12 border-t border-white/10 pt-8">
+                <p class="text-gray-500 text-xs uppercase tracking-[0.2em] mb-4 font-bold">Engineering Support</p>
+                <a href="mailto:support@teslamechanicaldesigns.com" class="text-lg text-white font-medium">support@teslamechanicaldesigns.com</a>
+            </div>
         </div>
     </nav>
+
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const menuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuLinks = document.querySelectorAll('.mobile-menu-link');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('translate-x-full');
+            document.body.classList.toggle('overflow-hidden');
+        }
+
+        if (menuBtn) menuBtn.addEventListener('click', toggleMenu);
+        if (menuClose) menuClose.addEventListener('click', toggleMenu);
+        
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+                document.body.classList.remove('overflow-hidden');
+            });
+        });
+    </script>
 
     <main class="pt-32 pb-24 min-h-screen px-6 max-w-4xl mx-auto">
         <div class="text-center mb-16">
@@ -158,11 +209,10 @@
         </div>
 
         <div class="bg-surface p-8 md:p-12 rounded-custom border border-white/10 shadow-2xl">
-            <!-- Static Form Handler: Formspree (Free for static sites) -->
-            <form action="https://formspree.io/f/REPLACE_WITH_YOUR_ID" method="POST" class="space-y-6">
-                <!-- Redirect to thank-you.html after submission -->
-                <input type="hidden" name="_next" value="https://sheet-metal-design-alpha.vercel.app/thank-you.html">
-                <input type="hidden" name="_subject" value="New Inquiry from TMD Sheet Metal">
+            <!-- Custom Serverless API Backend (Vercel) -->
+            <form action="/api/contact" method="POST" class="space-y-6">
+                <!-- Data for backend processing -->
+                <input type="hidden" name="form_name" value="General Contact">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label for="firstName" class="block text-sm font-medium text-gray-400 uppercase tracking-widest mb-2">First Name</label>
@@ -198,9 +248,9 @@
                         class="w-full bg-darkBg border border-white/10 rounded-lg px-4 py-3 text-white focus:ring-primary focus:border-primary transition-colors"></textarea>
                 </div>
 
-                <!-- Google reCAPTCHA v2 Placeholder -->
+                <!-- Google reCAPTCHA v2 -->
                 <div class="py-2">
-                    <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY_HERE" style="transform:scale(0.85);-webkit-transform:scale(0.85);transform-origin:0 0;-webkit-transform-origin:0 0;">
+                    <div class="g-recaptcha" data-sitekey="6Lexl6EsAAAAAL1FlWIrCfDJ5XpjLjWtDci3aVmU" style="transform:scale(0.85);-webkit-transform:scale(0.85);transform-origin:0 0;-webkit-transform-origin:0 0;">
                         <!-- Fallback visual block if script not loaded -->
                         <div class="bg-darkBg border border-white/10 rounded px-4 py-6 text-sm text-gray-500 uppercase tracking-widest flex items-center justify-center">
                             [ Google reCAPTCHA v2 Component ]
