@@ -1,8 +1,8 @@
 <?php
 $page_title = "Top 5 DFM Principles for Cost-Effective Sheet Metal Design | TMD Services";
 $page_description = "Optimize your sheet metal designs for manufacturing with these top 5 DFM principles. Reduce costs, material waste, and lead times with precision engineering.";
-$page_canonical = "https://sheetmetal.teslamechanicaldesigns.com/blog/top-5-dfm-principles-for-cost-effective-sheet-metal-design";
-$page_og_image = "https://sheetmetal.teslamechanicaldesigns.com/assets/sheet_metal_model.png";
+$page_canonical = "https://sheet-metal-design-alpha.vercel.app/blog/top-5-dfm-principles-for-cost-effective-sheet-metal-design";
+$page_og_image = "https://sheet-metal-design-alpha.vercel.app/assets/sheet_metal_model.png";
 $breadcrumb_title = "DFM Principles";
 $article_published_date = "2024-03-15";
 include '../includes/blog-header.php';
@@ -65,10 +65,10 @@ include '../includes/blog-header.php';
         <p class="text-lg font-bold uppercase mb-2">Ready to optimize your design?</p>
         <p class="text-gray-400 font-light mb-6">Our engineers can perform a full DFM review on your sheet metal project.</p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="../contact.php" class="bg-primary hover:bg-red-700 text-white px-8 py-3 rounded-custom font-bold uppercase text-sm transition-all duration-300 shadow-lg shadow-primary/20">
+            <a href="../contact.html" class="bg-primary hover:bg-red-700 text-white px-8 py-3 rounded-custom font-bold uppercase text-sm transition-all duration-300 shadow-lg shadow-primary/20">
                 Request DFM Review
             </a>
-            <a href="../blog.php" class="border border-white/10 hover:border-primary text-white hover:text-primary px-8 py-3 rounded-custom font-bold uppercase text-sm transition-all duration-300">
+            <a href="../blog.html" class="border border-white/10 hover:border-primary text-white hover:text-primary px-8 py-3 rounded-custom font-bold uppercase text-sm transition-all duration-300">
                 More Insights
             </a>
         </div>

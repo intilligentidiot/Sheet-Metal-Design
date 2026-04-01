@@ -1,8 +1,8 @@
 <?php
 $page_title = "Understanding Bend Deduction and Bend Allowance in CAD | TMD Services";
 $page_description = "A deep dive into why relying solely on K-Factors isn't enough, and how accurate bend deductions ensure tolerance consistency in sheet metal CAD.";
-$page_canonical = "https://sheetmetal.teslamechanicaldesigns.com/blog/understanding-bend-deduction-and-bend-allowance-in-cad";
-$page_og_image = "https://sheetmetal.teslamechanicaldesigns.com/assets/cad_screenshot.png";
+$page_canonical = "https://sheet-metal-design-alpha.vercel.app/blog/understanding-bend-deduction-and-bend-allowance-in-cad";
+$page_og_image = "https://sheet-metal-design-alpha.vercel.app/assets/cad_screenshot.png";
 $breadcrumb_title = "Bend Allowance Math";
 $article_published_date = "2024-03-05";
 include '../includes/blog-header.php';
@@ -67,11 +67,11 @@ include '../includes/blog-header.php';
         <p class="text-lg font-bold uppercase mb-2">Need help with bend calculations?</p>
         <p class="text-gray-400 font-light mb-6">Try our free Bend Allowance Calculator or contact our engineering team.</p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="../tools/bend-calculator.html" class="bg-primary hover:bg-red-700 text-white px-8 py-3 rounded-custom font-bold uppercase text-sm transition-all duration-300 shadow-lg shadow-primary/20">
-                Open Calculator
+            <a href="../contact.html" class="bg-primary hover:bg-red-700 text-white px-8 py-3 rounded-custom font-bold uppercase text-sm transition-all duration-300 shadow-lg shadow-primary/20">
+                Request DFM Review
             </a>
-            <a href="../contact.php" class="border border-white/10 hover:border-primary text-white hover:text-primary px-8 py-3 rounded-custom font-bold uppercase text-sm transition-all duration-300">
-                Contact Us
+            <a href="../blog.html" class="border border-white/10 hover:border-primary text-white hover:text-primary px-8 py-3 rounded-custom font-bold uppercase text-sm transition-all duration-300">
+                More Insights
             </a>
         </div>
     </div>

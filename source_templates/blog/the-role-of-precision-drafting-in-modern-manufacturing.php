@@ -1,8 +1,8 @@
 <?php
 $page_title = "The Role of Precision Drafting in Modern Manufacturing | TMD Services";
 $page_description = "How high-fidelity SolidWorks models translate into flawless shop floor execution and reduced error rates in sheet metal manufacturing.";
-$page_canonical = "https://sheetmetal.teslamechanicaldesigns.com/blog/the-role-of-precision-drafting-in-modern-manufacturing";
-$page_og_image = "https://sheetmetal.teslamechanicaldesigns.com/assets/manufacturing_floor.png";
+$page_canonical = "https://sheet-metal-design-alpha.vercel.app/blog/the-role-of-precision-drafting-in-modern-manufacturing";
+$page_og_image = "https://sheet-metal-design-alpha.vercel.app/assets/manufacturing_floor.png";
 $breadcrumb_title = "Precision Drafting";
 $article_published_date = "2024-01-10";
 include '../includes/blog-header.php';
@@ -66,10 +66,10 @@ include '../includes/blog-header.php';
         <p class="text-lg font-bold uppercase mb-2">Need production-ready drawings?</p>
         <p class="text-gray-400 font-light mb-6">Our precision drafting team delivers ISO/ASME compliant drawing packages.</p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="../contact.php" class="bg-primary hover:bg-red-700 text-white px-8 py-3 rounded-custom font-bold uppercase text-sm transition-all duration-300 shadow-lg shadow-primary/20">
-                Get a Quote
+            <a href="../contact.html" class="bg-primary hover:bg-red-700 text-white px-8 py-3 rounded-custom font-bold uppercase text-sm transition-all duration-300 shadow-lg shadow-primary/20">
+                Request DFM Review
             </a>
-            <a href="../blog.php" class="border border-white/10 hover:border-primary text-white hover:text-primary px-8 py-3 rounded-custom font-bold uppercase text-sm transition-all duration-300">
+            <a href="../blog.html" class="border border-white/10 hover:border-primary text-white hover:text-primary px-8 py-3 rounded-custom font-bold uppercase text-sm transition-all duration-300">
                 More Insights
             </a>
         </div>
