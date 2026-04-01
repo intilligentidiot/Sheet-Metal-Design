@@ -1,6 +1,6 @@
 <?php
 $page_title = "Sheet Metal Design Services | Tesla Mechanical Designs";
-$page_description = "Professional sheet metal design services including DFM analysis, precision drafting in SolidWorks & Inventor, custom enclosure design, and bend allowance optimization. ISO 9001:2015 certified.";
+$page_description = "Professional sheet metal design services including DFM analysis, precision drafting in SolidWorks & Inventor, custom enclosure design, and bend allowance optimization.";
 $page_canonical = "https://sheet-metal-design-alpha.vercel.app/";
 $page_og_image = "https://sheet-metal-design-alpha.vercel.app/assets/manufacturing_floor.png";
 $google_verification = "peGaVW4dWKprW75k902Xs6NBPiUE8XStJt3n8t6Ser8";
@@ -57,8 +57,8 @@ include 'includes/header.php';
             <div class="grid-overlay absolute inset-0 pointer-events-none z-[2]" aria-hidden="true"></div>
             <div class="container mx-auto px-6 relative z-10 text-center">
                 <div class="inline-block px-4 py-1.5 mb-6 border border-primary/40 bg-primary/10 rounded-full">
-                    <span class="text-primary text-xs font-bold tracking-[0.2em] uppercase">ISO 9001:2015
-                        Certified</span>
+                    <span class="text-primary text-xs font-bold tracking-[0.2em] uppercase">DFM Optimized
+                        Design</span>
                 </div>
                 <h1 class="text-5xl md:text-8xl font-bold text-white mb-8 tracking-tighter uppercase leading-[0.9]">
                     Precision <br /><span class="text-primary">Sheet Metal</span> Design
@@ -188,8 +188,8 @@ include 'includes/header.php';
                         <div class="text-xs uppercase tracking-widest text-gray-400 font-semibold">Precision Rate</div>
                     </div>
                     <div class="border-l border-primary/40 pl-8 py-4">
-                        <div class="text-4xl font-bold mb-2 text-white">ISO 9001</div>
-                        <div class="text-xs uppercase tracking-widest text-gray-400 font-semibold">Certified Facility
+                        <div class="text-4xl font-bold mb-2 text-white">100%</div>
+                        <div class="text-xs uppercase tracking-widest text-gray-400 font-semibold">Technical Precision
                         </div>
                     </div>
                     <div class="border-l border-primary/40 pl-8 py-4">
@@ -292,8 +292,7 @@ include 'includes/header.php';
                                 class="text-3xl font-bold text-industrial-500 group-hover:text-primary transition-colors">3</span>
                         </div>
                         <h3 class="text-xl font-bold uppercase mb-3 text-white">Final Production</h3>
-                        <p class="text-gray-400 text-sm font-light">High-volume fabrication executing under certified
-                            ISO 9001 quality controls.</p>
+                        <p class="text-gray-400 text-sm font-light">High-volume fabrication executing under rigorous quality controls.</p>
                     </div>
                 </div>
             </div>
@@ -400,8 +399,8 @@ include 'includes/header.php';
             <div
                 class="flex flex-wrap justify-center gap-12 items-center opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
                 <div class="flex items-center gap-3">
-                    <span class="material-symbols-outlined text-4xl">workspace_premium</span>
-                    <span class="font-bold text-xl tracking-tight">ISO 9001:2015</span>
+                    <span class="material-symbols-outlined text-4xl">precision_manufacturing</span>
+                    <span class="font-bold text-xl tracking-tight">Precision Focused</span>
                 </div>
                 <div class="flex items-center gap-3">
                     <span class="material-symbols-outlined text-4xl">local_fire_department</span>
