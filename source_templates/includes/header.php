@@ -108,6 +108,21 @@
     }
     </script>
 
+    <!-- WebSite Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "TMD Services",
+      "url": "<?= $site_url ?>",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "<?= $site_url ?>/blog?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
     <?php if (isset($extra_head_content)) echo $extra_head_content; ?>
 </head>
 

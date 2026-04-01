@@ -105,6 +105,21 @@
     }
     </script>
 
+    <!-- WebSite Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "TMD Services",
+      "url": "https://sheet-metal-design-alpha.vercel.app/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://sheet-metal-design-alpha.vercel.app//blog?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
     
 <!-- FAQ Schema -->
 <script type="application/ld+json">
@@ -133,6 +148,48 @@
       "text": "For outdoor enclosures, Aluminum and Stainless Steel are preferred due to their natural corrosion resistance. Galvanized steel or steel with powder coating can also be used effectively depending on the specific environmental requirements."
     }
   }]
+}
+</script>
+
+<!-- Service Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Sheet Metal Design Services",
+  "provider": {
+    "@type": "Organization",
+    "name": "Tesla Mechanical Designs",
+    "url": "https://sheet-metal-design-alpha.vercel.app/"
+  },
+  "areaServed": "Worldwide",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Engineering Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "DFM Analysis for Sheet Metal"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Precision CAD Drafting"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Custom Enclosure Design"
+        }
+      }
+    ]
+  }
 }
 </script></head>
 

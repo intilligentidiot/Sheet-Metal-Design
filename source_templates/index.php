@@ -33,6 +33,48 @@ $extra_head_content = '
     }
   }]
 }
+</script>
+
+<!-- Service Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Sheet Metal Design Services",
+  "provider": {
+    "@type": "Organization",
+    "name": "Tesla Mechanical Designs",
+    "url": "https://sheet-metal-design-alpha.vercel.app/"
+  },
+  "areaServed": "Worldwide",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Engineering Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "DFM Analysis for Sheet Metal"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Precision CAD Drafting"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Custom Enclosure Design"
+        }
+      }
+    ]
+  }
+}
 </script>';
 include 'includes/header.php';
 ?>
