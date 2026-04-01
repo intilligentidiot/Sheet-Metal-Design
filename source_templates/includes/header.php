@@ -29,7 +29,9 @@
     <meta name="twitter:description" content="<?= htmlspecialchars($page_description) ?>">
     <meta name="twitter:image" content="<?= htmlspecialchars($page_og_image) ?>">
 
-    <meta name="google-site-verification" content="JAMFTOz1ORjmAuDj3Pgnx6dB6LMqozt3NPqr1cqVHNg" />
+    <?php if (isset($google_verification)): ?>
+    <meta name="google-site-verification" content="<?= htmlspecialchars($google_verification) ?>" />
+    <?php endif; ?>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">

@@ -3,6 +3,7 @@ $page_title = "Sheet Metal Design Services | Tesla Mechanical Designs";
 $page_description = "Professional sheet metal design services including DFM analysis, precision drafting in SolidWorks & Inventor, custom enclosure design, and bend allowance optimization. ISO 9001:2015 certified.";
 $page_canonical = "https://sheetmetal.teslamechanicaldesigns.com/";
 $page_og_image = "https://sheetmetal.teslamechanicaldesigns.com/assets/manufacturing_floor.png";
+$google_verification = "peGaVW4dWKprW75k902Xs6NBPiUE8XStJt3n8t6Ser8";
 $extra_head_content = '
 <!-- FAQ Schema -->
 <script type="application/ld+json">

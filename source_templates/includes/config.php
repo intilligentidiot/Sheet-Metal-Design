@@ -2,7 +2,7 @@
 // config.php - Central configuration file
 
 $site_name = "Tesla Mechanical Designs";
-$site_url = "https://sheetmetal.teslamechanicaldesigns.com";
+$site_url = "https://sheet-metal-design-alpha.vercel.app/";
 $is_dark_mode = true;
 
 // Default SEO values (can be overridden in individual pages BEFORE including header.php)
