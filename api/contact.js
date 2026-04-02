@@ -1,6 +1,6 @@
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const RESEND_API_KEY = process.env.RESEND_API_KEY;
 const RECAPTCHA_SECRET_KEY = process.env.RECAPTCHA_SECRET_KEY;
 
 export default async function handler(req, res) {
@@ -9,13 +9,24 @@ export default async function handler(req, res) {
   }
 
   try {
-    // 1. Parse Form Body
-    // Vercel auto-parses JSON and URL-encoded bodies in Node.js
-    const body = req.body;
-    const captchaToken = body['g-recaptcha-response'];
+    // 0. Environment Check
+    if (!RESEND_API_KEY || !RECAPTCHA_SECRET_KEY) {
+      console.error('Environment variables missing: RESEND_API_KEY or RECAPTCHA_SECRET_KEY');
+      return res.status(500).json({ 
+        error: 'Backend configuration error. Please ensure environment variables are set in Vercel.',
+        details: 'Missing Required API Keys'
+      });
+    }
 
+    // 1. Parse Form Body
+    const body = req.body;
+    if (!body || typeof body !== 'object') {
+      return res.status(400).json({ error: 'Invalid request body' });
+    }
+
+    const captchaToken = body['g-recaptcha-response'];
     if (!captchaToken) {
-      return res.status(400).send('reCAPTCHA token is missing. Please try again.');
+      return res.status(400).json({ error: 'reCAPTCHA token is missing. Please complete the captcha.' });
     }
 
     // 2. Verify reCAPTCHA with Google
@@ -25,14 +36,18 @@ export default async function handler(req, res) {
 
     if (!recaptchaJson.success) {
       console.error('reCAPTCHA failed:', recaptchaJson['error-codes']);
-      return res.status(403).send('Verification failed. Bot detected.');
+      return res.status(403).json({ 
+        error: 'Verification failed. Please try the captcha again.',
+        codes: recaptchaJson['error-codes']
+      });
     }
 
     // 3. Send Email via Resend
     const { firstName, lastName, email, subject, message } = body;
+    const resend = new Resend(RESEND_API_KEY);
     
-    await resend.emails.send({
-      from: 'Contact Form <onboarding@resend.dev>', // Update this after domain verification
+    const { error: sendError } = await resend.emails.send({
+      from: 'TMD Contact Form <onboarding@resend.dev>', // Update this after domain verification
       to: 'support@teslamechanicaldesigns.com', // Your target email
       subject: `TMD Inquiry: ${subject}`,
       html: `
@@ -45,11 +60,19 @@ export default async function handler(req, res) {
       `
     });
 
+    if (sendError) {
+      console.error('Resend Error:', sendError);
+      return res.status(500).json({ error: 'Email delivery failed. Please contact us directly.' });
+    }
+
     // 4. Redirect on Success
     return res.redirect(303, '/thank-you.html');
 
   } catch (error) {
     console.error('Submission Error:', error);
-    return res.status(500).send('Internal Server Error. Please try again later.');
+    return res.status(500).json({ 
+      error: 'An unexpected error occurred.',
+      message: error.message 
+    });
   }
 }
