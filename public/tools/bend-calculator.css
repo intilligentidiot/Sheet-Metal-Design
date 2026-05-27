@@ -951,3 +951,39 @@ a:hover {
     color: #FBAF03;
     font-weight: 700;
 }
+
+
+/* ---------- FIXES ---------- */
+
+/* Dropdown Option Colors */
+select option {
+    color: #000000;
+    background: #ffffff;
+}
+
+/* Print Button Styling */
+.print-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-size: 0.85rem;
+    font-family: var(--font-body);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.print-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(204, 0, 0, 0.05);
+}
+
+.print-btn svg {
+    flex-shrink: 0;
+}
