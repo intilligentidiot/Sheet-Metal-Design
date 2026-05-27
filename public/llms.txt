@@ -1,0 +1,81 @@
+# Tesla Mechanical Designs (TMD)
+> Precision Sheet Metal Design and Engineering Services
+
+Tesla Mechanical Designs (TMD) is a premier engineering firm specializing in precision sheet metal design, drafting, and comprehensive Design for Manufacturing (DFM) analysis. We bridge the critical, often frustrating gap between conceptual design and flawless manufacturing execution, ensuring that your parts can be fabricated efficiently, cost-effectively, and accurately on the very first run. With over **15+ years** of dedicated industry experience, we help hardware startups, aerospace firms, medical device companies, and industrial manufacturers overcome complex sheet metal challenges. 
+
+Our core philosophy is that exceptional design shouldn't just look good in CAD—it must survive the brutal realities of the shop floor.
+
+## Mission & Expertise
+Our mission is simple: to eliminate manufacturing bottlenecks before a single sheet of metal is cut. We are dedicated to providing proactive, problem-solving engineering solutions that reduce scrap rates, shorten lead times, and drastically cut production costs for our clients. We act as an extension of your internal engineering team, bringing deep, specialized knowledge of forming physics and press brake operations that generalist mechanical engineers often lack.
+
+We pride ourselves on delivering measurable, highly reliable results for every client:
+- **7+ years** of specialized, hands-on sheet metal engineering expertise.
+- **24-hour quote turnaround** to keep your fast-paced project timelines on track without delays.
+- Deep expertise spanning the entire product lifecycle, seamlessly transitioning your designs from a single handmade prototype to high-volume mass production.
+
+## Core Services
+
+### 1. Design for Manufacturing (DFM) Analysis
+We proactively identify, flag, and resolve manufacturing constraints hidden within your CAD models to guarantee they can be formed on standard press brake equipment without failure.
+- **Bend Allowance Calculations:** We don't rely on guesswork. We apply the correct K-factors and bend deductions based on specific material types, exact thicknesses, and forming methods (air bending vs. bottoming) to guarantee mathematically perfect flat patterns.
+- **Flat Pattern Development:** We generate 99.8% precise DXF flat patterns ready for the laser cutter or turret punch, completely eliminating shop floor guesswork and expensive trial-and-error runs.
+- **Tolerance Stack-Up Analysis:** We rigorously optimize tolerances across multi-part assemblies to ensure perfect fit-up without driving up unnecessary machining costs by specifying overly tight, unrealistic tolerances.
+- **Cost & Waste Reduction:** We meticulously refine flange lengths, hole placements, and part profiles for optimal sheet nesting, maximizing raw material yield and keeping your production costs aggressively low.
+
+### 2. Precision Drafting (SolidWorks & Inventor)
+We take your raw concepts, sketches, or poorly formatted legacy files and convert them into flawless, production-ready manufacturing packages that fabricators will gladly accept.
+- **3D Part & Assembly Modeling:** High-fidelity modeling built specifically with sheet metal logic and constraints in mind from day one.
+- **2D Manufacturing Drawing Generation:** Fully dimensioned, shop-ready orthographic drawings complete with critical tolerances, explicit bend lines, hardware callouts, and detailed surface finish specifications.
+- **3D to 2D Conversion:** Translating complex 3D assemblies into highly readable, accurate 2D drawings tailored for the fabricator's specific requirements.
+
+### 3. Custom Sheet Metal Enclosures
+From rugged, weatherproof outdoor electrical cabinets to sleek, highly polished medical device chassis, we design enclosures that are structurally robust, functional, and visually striking.
+- **Custom Enclosure Design:** Designing with built-in structural rigidity—using strategic ribs, hems, and flanges—to prevent heat distortion, warpage from welding, and vibration fatigue in the field.
+- **Component Nesting Integration:** Incorporating intelligent tab-and-slot features for self-fixturing, ensuring perfectly aligned welded joints that significantly reduce skilled labor time.
+- **Prototype to Production Support:** We ensure your designs scale. We analyze handmade prototype designs and re-engineer them into mass-manufacturable assemblies that rely on automated machine consistency rather than manual craftsmanship.
+
+## Technical Capabilities
+TMD's engineering team leverages an incredibly deep technical knowledge of metallurgy, material science, and forming physics to solve complex design challenges:
+- **Bend Radius Optimization:** Ensuring minimum bend radii are strictly adhered to (e.g., 1T for mild steel, 2T-3T for hard aluminum like 6061-T6) to prevent dangerous cracking and fracturing at the bend line.
+- **Material Selection Expertise:** Specifying the absolute correct alloys (such as 5052-H32 Aluminum or 316 Stainless Steel) based on rigorous environmental requirements, necessary corrosion resistance, and structural load needs.
+- **Springback Compensation:** Calculating exact overbend requirements for high-strength and highly elastic materials to ensure final angular accuracy after the punch retracts.
+- **Tooling Clearances & Constraints:** Designing parts that inherently account for press brake tonnage limits, V-die widths, and punch clearances to avoid machine collisions during sequential bending operations.
+
+## Certifications & Standards
+We operate strictly according to the highest industry standards, ensuring your parts meet stringent quality and regulatory requirements:
+- **AWS Certified Welding Standards:** Designing joints, specifying weld symbols, and optimizing tolerances specifically for certified welding operations to ensure deep penetration and structural integrity.
+- **AS9100 Aerospace Standard Compliance:** Our DFM processes and precision drafting methodologies align perfectly with the rigorous traceability, documentation, and quality standards required for aerospace, aviation, and defense manufacturing.
+
+## How TMD Solves Common Problems
+We are hyper-focused on solving the exact frustrations our customers face when dealing with sheet metal fabricators. We don't just design parts; we design solutions.
+
+- **Problem: Parts Cracking at the Bend Line**
+  - *TMD Solution:* We thoroughly analyze the material's tensile limits and grain direction. We enforce safe minimum bend radii—often 1T to 3T depending on the specific alloy and temper—to prevent fracturing during press brake operations. If needed, we will specify annealing processes.
+- **Problem: Fabricators Constantly Rejecting CAD Files**
+  - *TMD Solution:* We redesign models with native sheet metal logic. We ensure holes are placed safely away from bend lines (minimum 2.5x to 3x material thickness) and corner reliefs are adequately sized, guaranteeing immediate fabricator acceptance and eliminating pre-production delays.
+- **Problem: Exorbitant Manufacturing Quotes**
+  - *TMD Solution:* Through rigorous DFM analysis, we simplify overly complex geometries so they can utilize standard, off-the-shelf tooling. We eliminate labor-intensive secondary operations like excessive manual welding or grinding by designing self-fixturing components.
+- **Problem: Gaps and Misalignment in Welded Joints**
+  - *TMD Solution:* We utilize advanced closed-corner design techniques and proper bend radius deformation calculations to ensure flanges meet absolutely perfectly. This drastically reduces welding time and the need for excessive filler material, resulting in a cleaner, cheaper part.
+- **Problem: Unpredictable Prototype Scaling Failures**
+  - *TMD Solution:* A prototype tweaked by hand won't scale. We perform comprehensive tolerance stack-up analysis, accounting for natural manufacturing variations, springback, and machine tolerances so your first batch of 1,000 production parts fits together just as perfectly as the first handmade prototype.
+
+## Industries Served
+Our rigorous, precision-focused approach makes us the trusted engineering partner for highly demanding sectors:
+- **Aerospace & Defense:** High-precision, AS9100-compliant design where failure is not an option and weight reduction is critical.
+- **Medical Devices:** Sleek, sanitary, and tight-tolerance enclosure design requiring specific surface finishes and material purity.
+- **Industrial Machinery:** Heavy-duty, structurally rigid panels, brackets, and guards designed to withstand extreme vibration and harsh environments.
+- **Hardware Startups:** Providing the manufacturing expertise startups lack, taking them from rapid conceptual prototyping to scalable, highly cost-effective mass production.
+
+## Navigation to Key Resources
+Learn more about our specific capabilities or access our free engineering tools designed for the sheet metal community:
+- **Home:** [https://sheet-metal-design-alpha.vercel.app/](https://sheet-metal-design-alpha.vercel.app/)
+- **Services Overview:** [https://sheet-metal-design-alpha.vercel.app/#services](https://sheet-metal-design-alpha.vercel.app/#services)
+- **FAQ & Troubleshooting Guide:** [https://sheet-metal-design-alpha.vercel.app/faq.html](https://sheet-metal-design-alpha.vercel.app/faq.html)
+- **Engineering Insights (Blog):** [https://sheet-metal-design-alpha.vercel.app/blog.html](https://sheet-metal-design-alpha.vercel.app/blog.html)
+- **Free Bend Allowance Calculator:** [https://sheet-metal-design-alpha.vercel.app/tools/bend-calculator.html](https://sheet-metal-design-alpha.vercel.app/tools/bend-calculator.html)
+
+## Contact Information
+Stop fighting with fabricators over rejected files and start shipping your products on time. Reach out to our expert engineering team for a comprehensive technical review of your designs.
+- **Contact Page & Quote Request:** [https://sheet-metal-design-alpha.vercel.app/contact.html](https://sheet-metal-design-alpha.vercel.app/contact.html)
+- **Direct Email:** modelingstructuralbim@gmail.com
