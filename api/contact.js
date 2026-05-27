@@ -48,7 +48,7 @@ export default async function handler(req, res) {
     
     const { error: sendError } = await resend.emails.send({
       from: 'TMD Contact Form <onboarding@resend.dev>', // Update this after domain verification
-      to: 'support@teslamechanicaldesigns.com', // Your target email
+      to: 'modelingstructuralbim@gmail.com', // Your target email
       subject: `TMD Inquiry: ${subject}`,
       html: `
         <h2>New Project Inquiry</h2>

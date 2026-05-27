@@ -120,7 +120,7 @@
     </script>
 
 
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 </head>
 
 <body>
@@ -142,7 +142,8 @@
             <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-8 text-sm font-medium tracking-wide uppercase">
                 <a href="index.html#services" class="hover:text-primary transition-colors" title="Explore Our Sheet Metal Design Capabilities">Services</a>
-                <a href="blog.html" class="hover:text-primary transition-colors" title="Read Our Latest Engineering Insights">Insights (Blog)</a>
+                <a href="faq.html" class="hover:text-primary transition-colors" title="Frequently Asked Questions">FAQ</a>
+                 <a href="blog.html" class="hover:text-primary transition-colors" title="Read Our Latest Engineering Insights">Insights (Blog)</a>
                 <a href="tools/bend-calculator.html" class="hover:text-primary transition-colors" title="Use Our Free Bend Allowance Calculator">Tools</a>
             </div>
             
@@ -171,13 +172,14 @@
             </div>
             <nav class="flex flex-col space-y-8 text-2xl font-bold uppercase tracking-widest">
                 <a href="index.html#services" class="hover:text-primary transition-colors mobile-menu-link">Services</a>
+                <a href="faq.html" class="hover:text-primary transition-colors mobile-menu-link">FAQ</a>
                 <a href="blog.html" class="hover:text-primary transition-colors mobile-menu-link">Insights</a>
                 <a href="tools/bend-calculator.html" class="hover:text-primary transition-colors mobile-menu-link">Tools</a>
                 <a href="contact.html" class="text-primary hover:text-white transition-colors mobile-menu-link">Contact</a>
             </nav>
             <div class="mt-auto pb-12 border-t border-white/10 pt-8">
                 <p class="text-gray-500 text-xs uppercase tracking-[0.2em] mb-4 font-bold">Engineering Support</p>
-                <a href="mailto:support@teslamechanicaldesigns.com" class="text-lg text-white font-medium">support@teslamechanicaldesigns.com</a>
+                <a href="mailto:modelingstructuralbim@gmail.com" class="text-lg text-white font-medium">modelingstructuralbim@gmail.com</a>
             </div>
         </div>
     </nav>
@@ -211,9 +213,9 @@
         </div>
 
         <div class="bg-surface p-8 md:p-12 rounded-custom border border-white/10 shadow-2xl">
-            <!-- Custom Serverless API Backend (Vercel) -->
-            <form action="/api/contact" method="POST" class="space-y-6">
+            <form action="https://formspree.io/f/xbdbpbry" method="POST" class="space-y-6">
                 <!-- Data for backend processing -->
+                <input type="hidden" name="_next" value="https://sheet-metal-design-alpha.vercel.app/thank-you.html">
                 <input type="hidden" name="form_name" value="General Contact">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
@@ -250,10 +252,7 @@
                         class="w-full bg-darkBg border border-white/10 rounded-lg px-4 py-3 text-white focus:ring-primary focus:border-primary transition-colors"></textarea>
                 </div>
 
-                <!-- Google reCAPTCHA v2 -->
-                <div class="py-2">
-                    <div class="g-recaptcha" data-sitekey="6Lexl6EsAAAAAL1FlWIrCfDJ5XpjLjWtDci3aVmU" style="transform:scale(0.85);-webkit-transform:scale(0.85);transform-origin:0 0;-webkit-transform-origin:0 0;"></div>
-                </div>
+
 
                 <button type="submit"
                     class="w-full bg-primary hover:bg-red-700 text-white px-8 py-4 rounded-custom text-lg font-bold uppercase transition-all duration-300 shadow-xl shadow-primary/20"
