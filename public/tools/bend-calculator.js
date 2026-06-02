@@ -501,13 +501,15 @@
     }
 
     // ──────── MODAL LOGIC ────────
-    dom.ctaButton.addEventListener('click', () => {
-        dom.emailModal.hidden = false;
-        dom.emailModal.removeAttribute('hidden');
-        requestAnimationFrame(() => {
-            dom.emailModal.classList.add('visible');
+    if (dom.ctaButton) {
+        dom.ctaButton.addEventListener('click', () => {
+            dom.emailModal.hidden = false;
+            dom.emailModal.removeAttribute('hidden');
+            requestAnimationFrame(() => {
+                dom.emailModal.classList.add('visible');
+            });
         });
-    });
+    }
 
     dom.printBtn.addEventListener('click', () => {
         const vals = validate();

@@ -71,11 +71,12 @@ Our rigorous, precision-focused approach makes us the trusted engineering partne
 Learn more about our specific capabilities or access our free engineering tools designed for the sheet metal community:
 - **Home:** [https://sheet-metal-design-alpha.vercel.app/](https://sheet-metal-design-alpha.vercel.app/)
 - **Services Overview:** [https://sheet-metal-design-alpha.vercel.app/#services](https://sheet-metal-design-alpha.vercel.app/#services)
-- **FAQ & Troubleshooting Guide:** [https://sheet-metal-design-alpha.vercel.app/faq.html](https://sheet-metal-design-alpha.vercel.app/faq.html)
-- **Engineering Insights (Blog):** [https://sheet-metal-design-alpha.vercel.app/blog.html](https://sheet-metal-design-alpha.vercel.app/blog.html)
-- **Free Bend Allowance Calculator:** [https://sheet-metal-design-alpha.vercel.app/tools/bend-calculator.html](https://sheet-metal-design-alpha.vercel.app/tools/bend-calculator.html)
+- **FAQ & Troubleshooting Guide:** [https://sheet-metal-design-alpha.vercel.app/faq](https://sheet-metal-design-alpha.vercel.app/faq)
+- **Engineering Insights (Blog):** [https://sheet-metal-design-alpha.vercel.app/blog](https://sheet-metal-design-alpha.vercel.app/blog)
+- **Free Bend Allowance Calculator:** [https://sheet-metal-design-alpha.vercel.app/tools/bend-calculator](https://sheet-metal-design-alpha.vercel.app/tools/bend-calculator)
 
 ## Contact Information
 Stop fighting with fabricators over rejected files and start shipping your products on time. Reach out to our expert engineering team for a comprehensive technical review of your designs.
-- **Contact Page & Quote Request:** [https://sheet-metal-design-alpha.vercel.app/contact.html](https://sheet-metal-design-alpha.vercel.app/contact.html)
+- **Contact Page & Quote Request:** [https://sheet-metal-design-alpha.vercel.app/contact](https://sheet-metal-design-alpha.vercel.app/contact)
 - **Direct Email:** modelingstructuralbim@gmail.com
+
