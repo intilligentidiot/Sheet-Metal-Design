@@ -173,7 +173,7 @@
     </script>
 </head>
 
-<body class="overflow-x-hidden font-sans text-gray-100 antialiased selection:bg-primary/30">
+<body class="font-sans text-gray-100 antialiased selection:bg-primary/30">
     <nav class="fixed top-0 w-full z-50 bg-darkBg/80 backdrop-blur-md thin-border-b" aria-label="Main Navigation">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center space-x-2">
@@ -216,7 +216,9 @@
             </button>
         </div>
 
-        <!-- Mobile Menu Overlay -->
+        </nav>
+
+    <!-- Mobile Menu Overlay -->
         <div id="mobile-menu"
             class="fixed inset-0 bg-darkBg z-[60] flex flex-col p-8 transition-transform duration-300 translate-x-full md:hidden">
             <div class="flex justify-between items-center mb-12">
@@ -242,7 +244,7 @@
                     class="text-lg text-white font-medium">modelingstructuralbim@gmail.com</a>
             </div>
         </div>
-    </nav>
+    
 
     <script>
         const menuBtn = document.getElementById('mobile-menu-button');
@@ -288,7 +290,7 @@
 
         <div class="flex flex-col md:flex-row gap-8 lg:gap-12 items-start">
         <!-- Sidebar (Left) -->
-        <aside class="w-full md:w-64 lg:w-80 relative md:sticky top-32 shrink-0 md:pr-6 xl:pr-12 mb-8 md:mb-0 z-40">
+        <aside class="w-full md:w-64 lg:w-80 relative md:sticky md:top-32 shrink-0 md:pr-6 xl:pr-12 mb-8 md:mb-0 z-40">
             <div class="bg-[#111] backdrop-blur-md border border-white/5 border-l-4 border-l-primary rounded-xl p-6 shadow-2xl relative overflow-hidden group">
                 <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
                 
