@@ -121,7 +121,7 @@
 
     </head>
 
-<body>
+<body class="overflow-x-hidden font-sans text-gray-100 antialiased selection:bg-primary/30">
 
     <nav class="fixed top-0 w-full z-50 bg-darkBg/80 backdrop-blur-md thin-border-b" aria-label="Main Navigation">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
@@ -161,7 +161,7 @@
         </div>
 
         <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu" class="fixed inset-0 bg-darkBg z-[60] flex flex-col p-8 transition-transform duration-300 translate-x-full md:hidden">
+        <div id="mobile-menu" class="fixed inset-0 bg-darkBg z-[60] flex flex-col p-8 transition-transform duration-300 translate-x-full md:hidden overflow-y-auto">
             <div class="flex justify-between items-center mb-12">
                 <span class="text-xl font-bold tracking-tight uppercase">TMD <span class="text-primary">Services</span></span>
                 <button id="mobile-menu-close" class="text-white">
@@ -205,7 +205,7 @@
     </script>
 
 <main class="pt-20">
-    <header class="py-16 md:py-24 px-4 md:px-8 bg-industrial-900 thin-border-b cad-bg" data-purpose="page-hero">
+    <header class="py-16 md:py-16 md:py-24 px-4 md:px-8 bg-industrial-900 thin-border-b cad-bg" data-purpose="page-hero">
         <div class="max-w-6xl mx-auto">
             <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight uppercase tracking-tight">
                 Engineering <span class="text-primary">Insights</span>
@@ -220,6 +220,21 @@
         
         <div class="lg:w-2/3" data-purpose="article-listing">
             <div id="blog-posts-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <article class="flex flex-col bg-darkBg border border-white/10 rounded-custom overflow-hidden group hover:border-primary/50 transition-colors">
+                    <div class="aspect-video overflow-hidden relative">
+                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors z-10"></div>
+                        <img alt="Engineering Insight: Why Your Complex Sheet Metal Part Costs Far More Than It Should" title="Why Your Complex Sheet Metal Part Costs Far More Than It Should" loading="lazy" width="600" height="400" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105" src="assets/why-your-complex-sheet-metal-part-consts-far-more-than-it-should.png"/>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-primary text-xs font-bold uppercase tracking-widest mb-3">DFM Strategy</span>
+                        <h2 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors">Why Your Complex Sheet Metal Part Costs Far More Than It Should (And How Better DFM Fixes It)</h2>
+                        <p class="text-gray-400 font-light text-sm mb-6 flex-grow">Discover the real reasons your sheet metal parts cost too much and how applying Design for Manufacturability (DFM) early can significantly reduce fabrication costs.</p>
+                        <div class="flex items-center justify-between mt-auto pt-4 border-t border-white/10">
+                            <span class="text-xs text-gray-500 font-bold tracking-widest uppercase">Jun 24, 2026</span>
+                            <a class="text-xs font-bold uppercase tracking-widest text-primary hover:text-white transition-colors" href="blog/why-your-complex-sheet-metal-part-costs-far-more-than-it-should" title="Read full article: Why Your Complex Sheet Metal Part Costs Far More Than It Should (And How Better DFM Fixes It)">Read More +</a>
+                        </div>
+                    </div>
+                </article>
                                 <article class="flex flex-col bg-darkBg border border-white/10 rounded-custom overflow-hidden group hover:border-primary/50 transition-colors">
                     <div class="aspect-video overflow-hidden relative">
                          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors z-10"></div>
@@ -282,7 +297,7 @@
                 </article>
                             </div>
             <!-- No results message -->
-            <div id="no-results" class="hidden py-24 text-center">
+            <div id="no-results" class="hidden py-16 md:py-24 text-center">
                 <span class="material-symbols-outlined text-6xl text-gray-700 mb-4 block">search_off</span>
                 <p class="text-xl text-gray-400 font-light">No engineering insights found for that query.</p>
                 <button onclick="document.getElementById('blog-search').value=''; document.getElementById('blog-search').dispatchEvent(new Event('input'));" class="mt-6 text-primary hover:text-white uppercase tracking-widest text-sm font-bold transition-colors">Clear Search</button>
@@ -336,7 +351,7 @@
 </main>
 
     <!-- Interactive FAQ Section -->
-    <section class="py-24 bg-surface thin-border-t" id="faq">
+    <section class="py-16 md:py-24 bg-surface thin-border-t" id="faq">
         <div class="max-w-3xl mx-auto px-6">
             <div class="mb-12 text-center">
                 <h2 class="text-3xl font-bold uppercase tracking-tight mb-4">Frequently Asked Questions</h2>
@@ -413,7 +428,7 @@
 
 <!-- includes/footer.php -->
     <footer class="bg-darkBg py-12 thin-border-t mt-auto w-full" aria-label="Footer">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="max-w-7xl mx-auto px-6  flex flex-col md:flex-row justify-between items-center gap-8">
             <div class="flex items-center space-x-2">
                 <span class="text-lg font-bold tracking-tight uppercase">TMD <span
                         class="text-primary">Services</span></span>

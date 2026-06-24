@@ -173,7 +173,7 @@
     </script>
 </head>
 
-<body>
+<body class="overflow-x-hidden font-sans text-gray-100 antialiased selection:bg-primary/30">
     <nav class="fixed top-0 w-full z-50 bg-darkBg/80 backdrop-blur-md thin-border-b" aria-label="Main Navigation">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center space-x-2">
@@ -266,7 +266,7 @@
         });
     </script>
 
-    <main class="pt-28 pb-16 px-4 md:px-8 max-w-4xl mx-auto">
+    <main class="pt-28 pb-16 px-4 md:px-8 max-w-7xl mx-auto">
         <nav class="flex items-center text-xs text-gray-400 mb-8 uppercase tracking-widest font-bold"
             aria-label="Breadcrumb">
             <a href="../" class="hover:text-primary transition-colors"
@@ -286,7 +286,44 @@
             </div>
         </header>
 
-        <div
+        <div class="flex flex-col md:flex-row gap-8 lg:gap-12 items-start">
+        <!-- Sidebar (Left) -->
+        <aside class="w-full md:w-64 lg:w-80 relative md:sticky top-32 shrink-0 md:pr-6 xl:pr-12 mb-8 md:mb-0 z-40">
+            <div class="bg-[#111] backdrop-blur-md border border-white/5 border-l-4 border-l-primary rounded-xl p-6 shadow-2xl relative overflow-hidden group">
+                <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                
+                <h3 class="text-xs font-bold uppercase tracking-widest mb-6 text-white flex items-center gap-3">
+                    <i class="fa-solid fa-list-ul text-primary"></i> 
+                    Table of Contents
+                </h3>
+                
+                <nav id="toc" class="flex flex-col space-y-4 relative z-10">
+                    <a href="#heading-0" class="hover:text-white hover:translate-x-1 transition-all duration-300 block font-medium leading-relaxed text-gray-300 border-l-2 border-transparent hover:border-primary pl-2 -ml-2">
+                        Why the Bend Zone Fails First
+                    </a>
+                    <a href="#heading-1" class="hover:text-white hover:translate-x-1 transition-all duration-300 block font-medium leading-relaxed text-gray-300 border-l-2 border-transparent hover:border-primary pl-2 -ml-2">
+                        The Most Common Causes - With Accurate Numbers
+                    </a>
+                    <a href="#heading-7" class="hover:text-white hover:translate-x-1 transition-all duration-300 block font-medium leading-relaxed text-gray-300 border-l-2 border-transparent hover:border-primary pl-2 -ml-2">
+                        Springback: The Numbers Behind the Compensation
+                    </a>
+                    <a href="#heading-8" class="hover:text-white hover:translate-x-1 transition-all duration-300 block font-medium leading-relaxed text-gray-300 border-l-2 border-transparent hover:border-primary pl-2 -ml-2">
+                        Design Rules That Prevent Bend-Zone Failures
+                    </a>
+                    <a href="#heading-9" class="hover:text-white hover:translate-x-1 transition-all duration-300 block font-medium leading-relaxed text-gray-300 border-l-2 border-transparent hover:border-primary pl-2 -ml-2">
+                        Fixes That Actually Work
+                    </a>
+                    <a href="#heading-10" class="hover:text-white hover:translate-x-1 transition-all duration-300 block font-medium leading-relaxed text-gray-300 border-l-2 border-transparent hover:border-primary pl-2 -ml-2">
+                        A Note on the Numbers in This Article
+                    </a>
+                    <a href="#heading-11" class="hover:text-white hover:translate-x-1 transition-all duration-300 block font-medium leading-relaxed text-gray-300 border-l-2 border-transparent hover:border-primary pl-2 -ml-2">
+                        The Bottom Line
+                    </a>
+                </nav>
+            </div>
+        </aside>
+            <div class="flex-1 min-w-0 w-full">
+                <div
             class="aspect-video bg-surface rounded-custom mb-12 flex items-center justify-center border border-white/10 overflow-hidden">
             <img src="../assets/crack_prevention.png" alt="Stress analysis showing sheet metal bend limit simulation"
                 title="Sheet Metal Stress Analysis at the Bend Line" loading="lazy" width="1280" height="720"
@@ -309,7 +346,7 @@
                     target="_blank" rel="noopener noreferrer">Why Does Our Sheet Metal Part Keep Failing at the Bend,
                     and How Do We Fix It?</a></p>
 
-            <h2>Why the Bend Zone Fails First</h2>
+            <h2 id="heading-0">Why the Bend Zone Fails First</h2>
             <p>When a sheet is bent, the outer surface is pulled in tension while the inner surface is compressed. The
                 material must handle both forces simultaneously across a very small zone. If the bend radius is too
                 tight for the material's ductility, the outer fibers exceed their elongation limit: <a
@@ -319,9 +356,9 @@
             <p>Understanding this mechanism is essential because every fix ultimately traces back to reducing or
                 redistributing that stress.</p>
 
-            <h2>The Most Common Causes - With Accurate Numbers</h2>
+            <h2 id="heading-1">The Most Common Causes - With Accurate Numbers</h2>
 
-            <h3>1. Bend Radius Too Tight for the Material</h3>
+            <h3 id="heading-2">1. Bend Radius Too Tight for the Material</h3>
             <p>This is the leading cause of bend failure, and the minimum radius is <strong>not the same for every
                     material</strong>. Industry standards—including Machinery's Handbook (31st Edition)—specify
                 different ratios based on material type and thickness:</p>
@@ -368,7 +405,7 @@
                 supplier's certified data sheet before finalizing a design—especially for safety-critical or high-volume
                 applications.</blockquote>
 
-            <h3>2. Bending Parallel to the Grain Direction</h3>
+            <h3 id="heading-3">2. Bending Parallel to the Grain Direction</h3>
             <p>Sheet metal is rolled during manufacturing, which creates a directional grain structure. Bending
                 <em>parallel</em> to the grain concentrates stress along the fiber direction, dramatically increasing
                 crack risk—especially in aluminum and high-strength steels.
@@ -382,7 +419,7 @@
                         target="_blank" rel="noopener noreferrer">The Fabricator — Minimum Inside Bend Radius vs. What's
                         Recommended (Steve Benson, FMA)</a></strong></p>
 
-            <h3>3. Incorrect V-Die Opening</h3>
+            <h3 id="heading-4">3. Incorrect V-Die Opening</h3>
             <p>The V-die opening controls how bending force is distributed. Use one that's too narrow and you
                 concentrate excessive stress, cause die marks, and risk cracking.</p>
             <p>The industry-standard starting point:</p>
@@ -396,7 +433,7 @@
             <p>For a 3mm mild steel sheet, that means an 18-24mm die opening as a baseline, adjusted from there based on
                 material grade and punch radius.</p>
 
-            <h3>4. Poor Material Quality</h3>
+            <h3 id="heading-5">4. Poor Material Quality</h3>
             <p>Low-grade material can contain internal voids, manganese sulfide inclusions, or surface contamination
                 that create hidden weak points exactly where bending stress concentrates. If your parts are failing with
                 irregular fracture patterns under examination—especially with voids running longitudinally near the
@@ -405,7 +442,7 @@
                 reduction %) costs more upfront but almost always costs less overall once you account for scrap rates
                 and rework labor.</p>
 
-            <h3>5. Coining When Air Forming Is the Better Choice</h3>
+            <h3 id="heading-6">5. Coining When Air Forming Is the Better Choice</h3>
             <p>Coining (where the punch forces the material fully into the die) can produce sharp bends but places
                 enormous stress on both the material and the machine. The die marks on your parts are often the first
                 symptom of excessive coining pressure.</p>
@@ -414,7 +451,7 @@
                 tonnage, preserves material integrity, and with a properly matched punch nose radius produces bends
                 equivalent in quality to coining for the vast majority of use cases.</p>
 
-            <h2>Springback: The Numbers Behind the Compensation</h2>
+            <h2 id="heading-7">Springback: The Numbers Behind the Compensation</h2>
             <p>Springback is elastic recovery after the punch retracts. It isn't just an angle accuracy
                 problem—persistent mismatch between process springback and compensation indicates a deeper setup issue.
             </p>
@@ -460,7 +497,7 @@
                 measurement handle this systematically, which is one of the strongest arguments for modern CNC equipment
                 in production environments.</p>
 
-            <h2>Design Rules That Prevent Bend-Zone Failures</h2>
+            <h2 id="heading-8">Design Rules That Prevent Bend-Zone Failures</h2>
             <p><strong>Hole-to-bend-line distance:</strong> Placing holes too close to a bend line is one of the most
                 common and costly DFM errors. The bending force deforms material for roughly 2× thickness on each side
                 of the bend line. Any hole within that zone will distort—stretching from round into oval and shifting
@@ -481,7 +518,7 @@
             <p><strong>Flange height minimum:</strong> Keep flange height above 3× material thickness—otherwise the
                 punch can't engage the material properly and you'll get inconsistent, poorly formed bends.</p>
 
-            <h2>Fixes That Actually Work</h2>
+            <h2 id="heading-9">Fixes That Actually Work</h2>
             <ul>
                 <li><strong>Increase bend radius first.</strong> If parts are cracking, this is your primary adjustment.
                     Check your material's actual minimum radius from supplier data—not a generic rule of thumb—and
@@ -502,7 +539,7 @@
                     High-volume operations should have scheduled tooling inspection intervals.</li>
             </ul>
 
-            <h2>A Note on the Numbers in This Article</h2>
+            <h2 id="heading-10">A Note on the Numbers in This Article</h2>
             <p>The figures in this post are drawn from Machinery's Handbook (31st Edition), ASM Handbook Vol. 14B, DIN
                 6935, FMA Precision Press Brake standards, and multiple verified fabrication industry sources. They
                 represent production-safe guidelines—not theoretical minimums.</p>
@@ -512,7 +549,7 @@
                 point—and always validate against your material supplier's certified data and your fabrication partner's
                 process capabilities before committing to production.</p>
 
-            <h2>The Bottom Line</h2>
+            <h2 id="heading-11">The Bottom Line</h2>
             <p>Bend failures in sheet metal fabrication consistently trace back to a small set of root causes: bend
                 radius relative to material type, grain direction, die selection, forming method, and material quality.
                 None are mysterious once you know the correct numbers for your specific material—and none require
@@ -541,12 +578,17 @@
                     More Insights
                 </a>
             </div>
-        </div>
-    </main>
+            </div>
+            
+            <!-- Sidebar -->
+    </div>
+</main>
+
+
 
     <!-- Footer -->
     <footer class="bg-darkBg py-12 thin-border-t mt-auto w-full" aria-label="Footer">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="max-w-7xl mx-auto px-6  flex flex-col md:flex-row justify-between items-center gap-8">
             <div class="flex items-center space-x-2">
                 <span class="text-lg font-bold tracking-tight uppercase">TMD <span
                         class="text-primary">Services</span></span>

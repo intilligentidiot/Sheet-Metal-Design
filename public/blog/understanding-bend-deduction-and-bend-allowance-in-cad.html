@@ -114,7 +114,7 @@
     
     </head>
 
-<body>
+<body class="overflow-x-hidden font-sans text-gray-100 antialiased selection:bg-primary/30">
     <nav class="fixed top-0 w-full z-50 bg-darkBg/80 backdrop-blur-md thin-border-b" aria-label="Main Navigation">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center space-x-2">
@@ -152,7 +152,7 @@
         </div>
 
         <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu" class="fixed inset-0 bg-darkBg z-[60] flex flex-col p-8 transition-transform duration-300 translate-x-full md:hidden">
+        <div id="mobile-menu" class="fixed inset-0 bg-darkBg z-[60] flex flex-col p-8 transition-transform duration-300 translate-x-full md:hidden overflow-y-auto">
             <div class="flex justify-between items-center mb-12">
                 <span class="text-xl font-bold tracking-tight uppercase">TMD <span class="text-primary">Services</span></span>
                 <button id="mobile-menu-close" class="text-white">
@@ -195,7 +195,7 @@
         });
     </script>
 
-<main class="pt-28 pb-16 px-4 md:px-8 max-w-4xl mx-auto">
+<main class="pt-28 pb-16 px-4 md:px-8 max-w-7xl mx-auto">
     <nav class="flex items-center text-xs text-gray-400 mb-8 uppercase tracking-widest font-bold" aria-label="Breadcrumb">
         <a href="../" class="hover:text-primary transition-colors" title="Back to Sheet Metal Design Home">Home</a><span class="mx-2">&gt;</span>
         <a href="../blog" class="hover:text-primary transition-colors" title="Browse Our Latest Engineering Insights">Insights</a><span class="mx-2">&gt;</span>
@@ -211,24 +211,55 @@
         </div>
     </header>
 
-    <div class="aspect-video bg-surface rounded-custom mb-12 flex items-center justify-center border border-white/10 overflow-hidden">
+    <div class="flex flex-col md:flex-row gap-8 lg:gap-12 items-start">
+        <!-- Sidebar (Left) -->
+        <aside class="w-full md:w-64 lg:w-80 relative md:sticky top-32 shrink-0 md:pr-6 xl:pr-12 mb-8 md:mb-0 z-40">
+            <div class="bg-[#111] backdrop-blur-md border border-white/5 border-l-4 border-l-primary rounded-xl p-6 shadow-2xl relative overflow-hidden group">
+                <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                
+                <h3 class="text-xs font-bold uppercase tracking-widest mb-6 text-white flex items-center gap-3">
+                    <i class="fa-solid fa-list-ul text-primary"></i> 
+                    Table of Contents
+                </h3>
+                
+                <nav id="toc" class="flex flex-col space-y-4 relative z-10">
+                    <a href="#heading-0" class="hover:text-white hover:translate-x-1 transition-all duration-300 block font-medium leading-relaxed text-gray-300 border-l-2 border-transparent hover:border-primary pl-2 -ml-2">
+                        The Problem with Generic K-Factors
+                    </a>
+                    <a href="#heading-1" class="hover:text-white hover:translate-x-1 transition-all duration-300 block font-medium leading-relaxed text-gray-300 border-l-2 border-transparent hover:border-primary pl-2 -ml-2">
+                        Bend Allowance vs. Bend Deduction
+                    </a>
+                    <a href="#heading-2" class="hover:text-white hover:translate-x-1 transition-all duration-300 block font-medium leading-relaxed text-gray-300 border-l-2 border-transparent hover:border-primary pl-2 -ml-2">
+                        Why This Matters for DFM
+                    </a>
+                    <a href="#heading-3" class="hover:text-white hover:translate-x-1 transition-all duration-300 block font-medium leading-relaxed text-gray-300 border-l-2 border-transparent hover:border-primary pl-2 -ml-2">
+                        Best Practices
+                    </a>
+                    <a href="#heading-4" class="hover:text-white hover:translate-x-1 transition-all duration-300 block font-medium leading-relaxed text-gray-300 border-l-2 border-transparent hover:border-primary pl-2 -ml-2">
+                        Conclusion
+                    </a>
+                </nav>
+            </div>
+        </aside>
+        <div class="flex-1 min-w-0 w-full">
+            <div class="aspect-video bg-surface rounded-custom mb-12 flex items-center justify-center border border-white/10 overflow-hidden">
         <img src="../assets/cad_screenshot.png" alt="CAD bend allowance analysis screenshot" title="Sheet Metal Bend Allowance Analysis in CAD" loading="lazy" width="1280" height="720" class="w-full h-full object-cover">
     </div>
 
     <article class="prose-dark max-w-none mt-8">
         <p class="text-xl mb-8 text-white font-medium leading-relaxed">A deep dive into why relying solely on K-Factors isn't enough, and how accurate bend deductions ensure tolerance consistency.</p>
 
-        <h2>The Problem with Generic K-Factors</h2>
+        <h2 id="heading-0">The Problem with Generic K-Factors</h2>
         <p>When converting 3D models into flat patterns, understanding the difference between Bend Allowance and Bend Deduction is critical for determining precise blank sizes. Errors at the CAD level compound exponentially on the shop floor, leading to scrapped parts and blown budgets.</p>
         <p>Most CAD software provides default K-Factor values (typically 0.44 for air bending), but these generic numbers rarely reflect real-world conditions. Material properties, grain direction, tooling radius, and press brake tonnage all influence the actual deformation zone.</p>
 
-        <h2>Bend Allowance vs. Bend Deduction</h2>
+        <h2 id="heading-1">Bend Allowance vs. Bend Deduction</h2>
         <p><strong>Bend Allowance (BA)</strong> is the length of the neutral axis arc through the bend zone. It represents the amount of material consumed by the bend itself:</p>
         <blockquote>BA = π / 180 × Bend Angle × (Inside Radius + K-Factor × Material Thickness)</blockquote>
         <p><strong>Bend Deduction (BD)</strong> is the difference between the total of the outside mold lines and the actual flat pattern length. It tells you how much to subtract from the total outside dimensions to get the correct flat size:</p>
         <blockquote>BD = 2 × (Inside Radius + Material Thickness) × tan(Bend Angle / 2) − BA</blockquote>
 
-        <h2>Why This Matters for DFM</h2>
+        <h2 id="heading-2">Why This Matters for DFM</h2>
         <p>In production runs, even a 0.5mm discrepancy in the flat pattern can cascade into:</p>
         <ul>
             <li>Misaligned hole patterns on assembly</li>
@@ -237,7 +268,7 @@
             <li>Increased scrap rates and rework cycles</li>
         </ul>
 
-        <h2>Best Practices</h2>
+        <h2 id="heading-3">Best Practices</h2>
         <ul>
             <li>Always request bend test data from your fabricator for the specific material and tooling combination</li>
             <li>Use measured K-Factors rather than software defaults whenever possible</li>
@@ -245,7 +276,7 @@
             <li>Document all bend parameters in your drawing notes for shop floor clarity</li>
         </ul>
 
-        <h2>Conclusion</h2>
+        <h2 id="heading-4">Conclusion</h2>
         <p>Accurate bend calculations are the foundation of reliable sheet metal design. By investing time upfront in proper bend allowance and deduction analysis, you eliminate costly rework downstream and deliver parts that fit right the first time.</p>
     </article>
 
@@ -261,12 +292,17 @@
                 More Insights
             </a>
         </div>
+        </div>
+        
+        <!-- Sidebar -->
     </div>
 </main>
 
+
+
 <!-- includes/blog-footer.php -->
     <footer class="bg-darkBg py-12 thin-border-t mt-auto w-full" aria-label="Footer">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="max-w-7xl mx-auto px-6  flex flex-col md:flex-row justify-between items-center gap-8">
             <div class="flex items-center space-x-2">
                 <span class="text-lg font-bold tracking-tight uppercase">TMD <span
                         class="text-primary">Services</span></span>
