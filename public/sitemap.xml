@@ -54,5 +54,17 @@
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://sheet-metal-design-alpha.vercel.app/blog/why-your-complex-sheet-metal-part-costs-far-more-than-it-should</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sheet-metal-design-alpha.vercel.app/blog/mastering-sheet-metal-bend-allowances-the-ultimate-design-guide</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
 
