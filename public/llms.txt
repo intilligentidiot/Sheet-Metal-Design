@@ -1,7 +1,7 @@
-# Tesla Mechanical Designs (TMD)
+# Sheet Metal Design Experts (SMDE)
 > Precision Sheet Metal Design and Engineering Services
 
-Tesla Mechanical Designs (TMD) is a premier engineering firm specializing in precision sheet metal design, drafting, and comprehensive Design for Manufacturing (DFM) analysis. We bridge the critical, often frustrating gap between conceptual design and flawless manufacturing execution, ensuring that your parts can be fabricated efficiently, cost-effectively, and accurately on the very first run. With over **15+ years** of dedicated industry experience, we help hardware startups, aerospace firms, medical device companies, and industrial manufacturers overcome complex sheet metal challenges. 
+Sheet Metal Design Experts (SMDE) is a premier engineering firm specializing in precision sheet metal design, drafting, and comprehensive Design for Manufacturing (DFM) analysis. We bridge the critical, often frustrating gap between conceptual design and flawless manufacturing execution, ensuring that your parts can be fabricated efficiently, cost-effectively, and accurately on the very first run. With over **15+ years** of dedicated industry experience, we help hardware startups, aerospace firms, medical device companies, and industrial manufacturers overcome complex sheet metal challenges. 
 
 Our core philosophy is that exceptional design shouldn't just look good in CAD—it must survive the brutal realities of the shop floor.
 
@@ -35,7 +35,7 @@ From rugged, weatherproof outdoor electrical cabinets to sleek, highly polished 
 - **Prototype to Production Support:** We ensure your designs scale. We analyze handmade prototype designs and re-engineer them into mass-manufacturable assemblies that rely on automated machine consistency rather than manual craftsmanship.
 
 ## Technical Capabilities
-TMD's engineering team leverages an incredibly deep technical knowledge of metallurgy, material science, and forming physics to solve complex design challenges:
+SMDE's engineering team leverages an incredibly deep technical knowledge of metallurgy, material science, and forming physics to solve complex design challenges:
 - **Bend Radius Optimization:** Ensuring minimum bend radii are strictly adhered to (e.g., 1T for mild steel, 2T-3T for hard aluminum like 6061-T6) to prevent dangerous cracking and fracturing at the bend line.
 - **Material Selection Expertise:** Specifying the absolute correct alloys (such as 5052-H32 Aluminum or 316 Stainless Steel) based on rigorous environmental requirements, necessary corrosion resistance, and structural load needs.
 - **Springback Compensation:** Calculating exact overbend requirements for high-strength and highly elastic materials to ensure final angular accuracy after the punch retracts.
@@ -46,19 +46,19 @@ We operate strictly according to the highest industry standards, ensuring your p
 - **AWS Certified Welding Standards:** Designing joints, specifying weld symbols, and optimizing tolerances specifically for certified welding operations to ensure deep penetration and structural integrity.
 - **AS9100 Aerospace Standard Compliance:** Our DFM processes and precision drafting methodologies align perfectly with the rigorous traceability, documentation, and quality standards required for aerospace, aviation, and defense manufacturing.
 
-## How TMD Solves Common Problems
+## How SMDE Solves Common Problems
 We are hyper-focused on solving the exact frustrations our customers face when dealing with sheet metal fabricators. We don't just design parts; we design solutions.
 
 - **Problem: Parts Cracking at the Bend Line**
-  - *TMD Solution:* We thoroughly analyze the material's tensile limits and grain direction. We enforce safe minimum bend radii—often 1T to 3T depending on the specific alloy and temper—to prevent fracturing during press brake operations. If needed, we will specify annealing processes.
+  - *SMDE Solution:* We thoroughly analyze the material's tensile limits and grain direction. We enforce safe minimum bend radii—often 1T to 3T depending on the specific alloy and temper—to prevent fracturing during press brake operations. If needed, we will specify annealing processes.
 - **Problem: Fabricators Constantly Rejecting CAD Files**
-  - *TMD Solution:* We redesign models with native sheet metal logic. We ensure holes are placed safely away from bend lines (minimum 2.5x to 3x material thickness) and corner reliefs are adequately sized, guaranteeing immediate fabricator acceptance and eliminating pre-production delays.
+  - *SMDE Solution:* We redesign models with native sheet metal logic. We ensure holes are placed safely away from bend lines (minimum 2.5x to 3x material thickness) and corner reliefs are adequately sized, guaranteeing immediate fabricator acceptance and eliminating pre-production delays.
 - **Problem: Exorbitant Manufacturing Quotes**
-  - *TMD Solution:* Through rigorous DFM analysis, we simplify overly complex geometries so they can utilize standard, off-the-shelf tooling. We eliminate labor-intensive secondary operations like excessive manual welding or grinding by designing self-fixturing components.
+  - *SMDE Solution:* Through rigorous DFM analysis, we simplify overly complex geometries so they can utilize standard, off-the-shelf tooling. We eliminate labor-intensive secondary operations like excessive manual welding or grinding by designing self-fixturing components.
 - **Problem: Gaps and Misalignment in Welded Joints**
-  - *TMD Solution:* We utilize advanced closed-corner design techniques and proper bend radius deformation calculations to ensure flanges meet absolutely perfectly. This drastically reduces welding time and the need for excessive filler material, resulting in a cleaner, cheaper part.
+  - *SMDE Solution:* We utilize advanced closed-corner design techniques and proper bend radius deformation calculations to ensure flanges meet absolutely perfectly. This drastically reduces welding time and the need for excessive filler material, resulting in a cleaner, cheaper part.
 - **Problem: Unpredictable Prototype Scaling Failures**
-  - *TMD Solution:* A prototype tweaked by hand won't scale. We perform comprehensive tolerance stack-up analysis, accounting for natural manufacturing variations, springback, and machine tolerances so your first batch of 1,000 production parts fits together just as perfectly as the first handmade prototype.
+  - *SMDE Solution:* A prototype tweaked by hand won't scale. We perform comprehensive tolerance stack-up analysis, accounting for natural manufacturing variations, springback, and machine tolerances so your first batch of 1,000 production parts fits together just as perfectly as the first handmade prototype.
 
 ## Industries Served
 Our rigorous, precision-focused approach makes us the trusted engineering partner for highly demanding sectors:

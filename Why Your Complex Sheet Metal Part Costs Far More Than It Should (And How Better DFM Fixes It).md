@@ -4,7 +4,7 @@ You have a complex sheet metal part. The CAD model looks right. The tolerances a
 
 Sound familiar? You are not dealing with a pricing problem. You are dealing with a design problem disguised as one.
 
-The cause, in most cases, is a failure to [design for manufacturability](https://www.teslamechanicaldesigns.com/blog/7-basic-principles-of-design-for-manufacturing-dfm-every-designer-should-know/) DFM for short. DFM means making deliberate design decisions that reduce the cost, effort, and risk of fabricating a part, without compromising its function. It is not a checklist you run at the end of a project. It is a discipline you apply from the moment a part concept takes shape.
+The cause, in most cases, is a failure to [design for manufacturability](/ DFM for short. DFM means making deliberate design decisions that reduce the cost, effort, and risk of fabricating a part, without compromising its function. It is not a checklist you run at the end of a project. It is a discipline you apply from the moment a part concept takes shape.
 
 We provide sheet metal design services to engineering teams across the US, UK, Europe, Canada, and Australia. The industries vary. The core mistakes do not.
 
@@ -74,7 +74,7 @@ We produces sheet metal shop drawings to this standard as a core part of every d
 
 A client came to us with a 14-bend sheet metal enclosure for an industrial control unit. The original design had been quoted by two fabricators, both returning prices significantly above budget. The drawings specified machining-level tolerances across all dimensions, a bend radius that required a custom punch, and a louver pattern positioned too close to a bend line.
 
-After a [DFM review](https://www.teslamechanicaldesigns.com/blog/top-design-tips-for-design-for-manufacturing-dfm/), we made three changes: tolerances were relaxed on non-critical dimensions, the bend radius was adjusted to match the fabricator's standard tooling, and the louver pattern was repositioned. The part geometry and function did not change. The fabrication cost dropped substantially and the part went into production within the original timeline.
+After a [DFM review](/ we made three changes: tolerances were relaxed on non-critical dimensions, the bend radius was adjusted to match the fabricator's standard tooling, and the louver pattern was repositioned. The part geometry and function did not change. The fabrication cost dropped substantially and the part went into production within the original timeline.
 
 This is not an unusual outcome. It is what DFM applied early consistently produces.
 
