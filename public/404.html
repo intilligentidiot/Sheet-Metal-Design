@@ -204,16 +204,46 @@
         });
     </script>
 
-    <main class="h-screen flex items-center justify-center text-center px-6">
-        <div>
-            <h1 class="text-7xl md:text-9xl font-bold text-primary mb-6 tracking-tighter uppercase">404</h1>
-            <h2 class="text-3xl md:text-5xl font-bold mb-6 uppercase">Page Not Found</h2>
-            <p class="text-lg text-gray-400 mb-10 max-w-lg mx-auto font-light">
-                The page you are looking for does not exist, has been removed, had its name changed, or is temporarily unavailable.
-            </p>
-            <a href="/" class="inline-block bg-primary hover:bg-red-700 text-white px-8 py-3 rounded-custom font-bold uppercase text-sm transition-all duration-300 shadow-lg shadow-primary/20" title="SMDE Services - Precision Sheet Metal Design Home">
-                Back to Home
-            </a>
+    <main class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 px-6">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 z-0">
+            <img src="assets/cad_screenshot.png" alt="Background" class="w-full h-full object-cover opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-b from-darkBg via-darkBg/90 to-darkBg"></div>
+            <div class="absolute inset-0 grid-overlay opacity-20"></div>
+        </div>
+
+        <div class="relative z-10 text-center w-full max-w-5xl mx-auto flex flex-col items-center">
+            <!-- Glitch / Creative 404 Text -->
+            <div class="relative w-full flex justify-center mb-4">
+                <h1 class="text-[12rem] md:text-[20rem] font-bold leading-none tracking-tighter select-none bg-clip-text text-transparent"
+                    style="background-image: url('assets/manufacturing_floor.png'); background-size: cover; background-position: center; -webkit-background-clip: text; color: rgba(255,255,255,0.05);">
+                    404
+                </h1>
+                <!-- Overlay outline -->
+                <h1 class="absolute top-0 text-[12rem] md:text-[20rem] font-bold leading-none tracking-tighter select-none text-transparent"
+                    style="-webkit-text-stroke: 2px #c2410c; opacity: 0.8;">
+                    404
+                </h1>
+            </div>
+
+            <div class="bg-surface/60 backdrop-blur-md border border-white/10 p-8 md:p-12 rounded-2xl max-w-2xl w-full shadow-2xl relative -mt-16 md:-mt-24 z-20">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-red-500/10 text-primary rounded-full mb-6 border border-red-500/20">
+                    <span class="material-symbols-outlined text-4xl">warning</span>
+                </div>
+                
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 uppercase tracking-tight">Signal Lost</h2>
+                <div class="h-1 w-16 bg-primary mx-auto mb-6"></div>
+                
+                <p class="text-lg text-gray-400 mb-8 font-light leading-relaxed">
+                    The requested coordinates could not be located. The page may have been relocated, deleted, or you might have entered an incorrect path.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/" class="inline-block bg-primary hover:bg-red-700 text-white px-8 py-4 rounded-custom font-bold uppercase tracking-widest text-sm transition-all duration-300 shadow-lg shadow-primary/20">
+                        Initiate Recovery (Home)
+                    </a>
+                </div>
+            </div>
         </div>
     </main>
 
