@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tolerance Callout That Turns a $200 Bracket Into a $2,000 Rework | SMDE Services</title>
+    <meta name="description"
+        content="Learn how a single mismatched tolerance callout on a weldment drawing can turn a simple $200 bracket into a $2,000 rework—and how to prevent it with proper GD&T and ISO 13920 practices.">
+    <meta name="keywords"
+        content="Sheet Metal Design, Weldment Tolerances, GD&T, ISO 13920, DFM Analysis, Weld Rework, Position Tolerance, Sheet Metal Design Experts">
+    <meta name="author" content="Sheet Metal Design Experts">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#c2410c">
+
+    <!-- Canonical URL -->
+    <link rel="canonical"
+        href="https://sheet-metal-design-alpha.vercel.app/blog/the-tolerance-callout-that-turns-a-200-bracket-into-a-2000-rework">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:site_name" content="Sheet Metal Design Experts">
+    <meta property="og:title" content="The Tolerance Callout That Turns a $200 Bracket Into a $2,000 Rework | SMDE Services">
+    <meta property="og:description"
+        content="Learn how a single mismatched tolerance callout on a weldment drawing can turn a simple $200 bracket into a $2,000 rework—and how to prevent it with proper GD&T and ISO 13920 practices.">
+    <meta property="og:type" content="article">
+    <meta property="og:url"
+        content="https://sheet-metal-design-alpha.vercel.app/blog/the-tolerance-callout-that-turns-a-200-bracket-into-a-2000-rework">
+    <meta property="og:image" content="https://sheet-metal-design-alpha.vercel.app/assets/the-tolerance-callout-that-turns-a-200-bracket-into-a-2000-rework.png">
+    <meta property="og:locale" content="en_US">
+    <meta property="article:published_time" content="2026-10-02">
+    <meta property="article:author" content="Sheet Metal Design Experts">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Tolerance Callout That Turns a $200 Bracket Into a $2,000 Rework | SMDE Services">
+    <meta name="twitter:description"
+        content="Learn how a single mismatched tolerance callout on a weldment drawing can turn a simple $200 bracket into a $2,000 rework—and how to prevent it with proper GD&T and ISO 13920 practices.">
+    <meta name="twitter:image" content="https://sheet-metal-design-alpha.vercel.app/assets/the-tolerance-callout-that-turns-a-200-bracket-into-a-2000-rework.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link class="rounded-custom" rel="apple-touch-icon" href="../apple-touch-icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script src="../assets/js/tailwind-config.js"></script>
+
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #fff;
+            font-family: "Space Grotesk", sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .thin-border-b {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .thin-border-t {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Prose overrides for dark mode article content */
+        .prose-dark h2 {
+            color: #ffffff;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .prose-dark h3 {
+            color: #e5e5e5;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .prose-dark p {
+            color: #a3a3a3;
+            font-weight: 300;
+            line-height: 1.85;
+            margin-bottom: 1.25rem;
+        }
+
+        .prose-dark strong {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .prose-dark ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .prose-dark ul li::before {
+            content: "▸ ";
+            color: #cc0000;
+            font-weight: bold;
+        }
+
+        .prose-dark ul li {
+            color: #a3a3a3;
+            margin-bottom: 0.5rem;
+        }
+
+        .prose-dark a {
+            color: #cc0000;
+            text-decoration: underline;
+        }
+
+        .prose-dark blockquote {
+            border-left: 3px solid #cc0000;
+            padding-left: 1.25rem;
+            color: #737373;
+            font-style: italic;
+        }
+    </style>
+
+    <!-- Article Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "The Tolerance Callout That Turns a $200 Bracket Into a $2,000 Rework",
+        "description": "Learn how a single mismatched tolerance callout on a weldment drawing can turn a simple $200 bracket into a $2,000 rework—and how to prevent it with proper GD&T and ISO 13920 practices.",
+        "image": "https://sheet-metal-design-alpha.vercel.app/assets/the-tolerance-callout-that-turns-a-200-bracket-into-a-2000-rework.png",
+        "datePublished": "2026-10-02",
+        "author": {
+            "@type": "Organization",
+            "name": "Sheet Metal Design Experts",
+            "url": "https://sheet-metal-design-alpha.vercel.app/"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Sheet Metal Design Experts",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://sheet-metal-design-alpha.vercel.app/apple-touch-icon.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://sheet-metal-design-alpha.vercel.app/blog/the-tolerance-callout-that-turns-a-200-bracket-into-a-2000-rework"
+        }
+    }
+    </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://sheet-metal-design-alpha.vercel.app/" },
+            { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://sheet-metal-design-alpha.vercel.app/blog" },
+            { "@type": "ListItem", "position": 3, "name": "Tolerance Callout Rework" }
+        ]
+    }
+    </script>
+</head>
+
+<body class="font-sans text-gray-100 antialiased selection:bg-primary/30">
+    <nav class="fixed top-0 w-full z-50 bg-darkBg/80 backdrop-blur-md thin-border-b" aria-label="Main Navigation">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                    </path>
+                </svg>
+                <a href="../" class="text-xl font-bold tracking-tight uppercase" title="SMDE Services - Precision Sheet Metal Design Home">
+                    SMDE <span class="text-primary">Services</span>
+                </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 text-sm font-medium tracking-wide uppercase">
+                <a href="../index.html#services" class="hover:text-primary transition-colors" title="Explore Our Precision Sheet Metal Design &amp; Engineering Services">Services</a>
+                <a href="../faq" class="hover:text-primary transition-colors" title="Answers to Common Questions About Sheet Metal Design">FAQ</a>
+                 <a href="../blog" class="text-primary transition-colors" title="Read Our Latest Engineering Insights &amp; DFM Strategies">Insights (Blog)</a>
+                <a href="../tools/bend-calculator" class="hover:text-primary transition-colors" title="Free Sheet Metal Bend Allowance &amp; Deduction Calculator">Tools</a>
+            </div>
+
+            <!-- Desktop CTA -->
+            <div class="hidden md:block">
+                <a href="../contact" class="inline-block bg-primary hover:bg-red-700 text-white px-6 py-2 rounded-custom text-sm font-bold uppercase transition-all duration-300" title="Contact SMDE Services to Discuss Your Sheet Metal Project">
+                    Contact Us
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none"
+                aria-label="Toggle Navigation Menu">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+        </div>
+
+        </nav>
+
+    <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-darkBg z-[60] flex flex-col p-8 transition-transform duration-300 translate-x-full md:hidden">
+            <div class="flex justify-between items-center mb-12">
+                <span class="text-xl font-bold tracking-tight uppercase">SMDE <span
+                        class="text-primary">Services</span></span>
+                <button id="mobile-menu-close" class="text-white">
+                    <span class="material-symbols-outlined text-3xl">close</span>
+                </button>
+            </div>
+            <nav class="flex flex-col space-y-8 text-2xl font-bold uppercase tracking-widest">
+                <a href="../index.html#services" class="hover:text-primary transition-colors mobile-menu-link" title="Explore Our Precision Sheet Metal Design &amp; Engineering Services">Services</a>
+                <a href="../faq" class="hover:text-primary transition-colors mobile-menu-link" title="Answers to Common Questions About Sheet Metal Design">FAQ</a>
+                <a href="../blog" class="hover:text-primary transition-colors mobile-menu-link" title="Read Our Latest Engineering Insights &amp; DFM Strategies">Insights</a>
+                <a href="../tools/bend-calculator" class="hover:text-primary transition-colors mobile-menu-link" title="Free Sheet Metal Bend Allowance &amp; Deduction Calculator">Tools</a>
+                <a href="../contact" class="text-primary hover:text-white transition-colors mobile-menu-link" title="Contact SMDE Services to Discuss Your Sheet Metal Project">Contact</a>
+            </nav>
+            <div class="mt-auto pb-12 border-t border-white/10 pt-8">
+                <p class="text-gray-500 text-xs uppercase tracking-[0.2em] mb-4 font-bold">Engineering Support</p>
+                <a href="mailto:modelingstructuralbim@gmail.com" class="text-lg text-white font-medium" title="Email SMDE Services Engineering Team Directly">modelingstructuralbim@gmail.com</a>
+            </div>
+        </div>
+    
+
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const menuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuLinks = document.querySelectorAll('.mobile-menu-link');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('translate-x-full');
+            document.body.classList.toggle('overflow-hidden');
+        }
+
+        if (menuBtn) menuBtn.addEventListener('click', toggleMenu);
+        if (menuClose) menuClose.addEventListener('click', toggleMenu);
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+                document.body.classList.remove('overflow-hidden');
+            });
+        });
+    </script>
+
+    <main class="pt-28 pb-16 px-4 md:px-8 max-w-7xl mx-auto">
+        <nav class="flex items-center text-xs text-gray-400 mb-8 uppercase tracking-widest font-bold"
+            aria-label="Breadcrumb">
+            <a href="../" class="hover:text-primary transition-colors" title="SMDE Services - Precision Sheet Metal Design Home">Home</a><span class="mx-2">&gt;</span>
+            <a href="../blog" class="hover:text-primary transition-colors" title="Read Our Latest Engineering Insights &amp; DFM Strategies">Insights</a><span class="mx-2">&gt;</span>
+            <span class="text-white">Article</span>
+        </nav>
+
+        <header class="mb-12">
+            <span class="text-primary text-xs font-bold uppercase tracking-widest mb-4 block">GD&amp;T &amp; Weldment Engineering</span>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">The Tolerance Callout That Turns a $200 Bracket Into a $2,000 Rework</h1>
+            <div class="flex items-center text-sm text-gray-500 border-b border-white/10 pb-6 mb-8">
+                <span class="mr-6"><i class="fa-regular fa-calendar mr-1"></i> Oct 2, 2026</span>
+                <span><i class="fa-regular fa-user mr-1"></i> CAD Team</span>
+            </div>
+        </header>
+
+        <div class="flex flex-col md:flex-row gap-8 lg:gap-12 items-start">
+        <!-- Sidebar (Left) -->
+        <aside class="w-full md:w-64 lg:w-80 relative md:sticky md:top-32 shrink-0 md:pr-6 xl:pr-12 mb-8 md:mb-0 z-40">
+            <div class="bg-[#111] backdrop-blur-md border border-white/5 border-l-4 border-l-primary rounded-xl p-6 shadow-2xl relative overflow-hidden group">
+                <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                
+                <h3 class="text-xs font-bold uppercase tracking-widest mb-6 text-white flex items-center gap-3">
+                    <i class="fa-solid fa-list-ul text-primary"></i> 
+                    Table of Contents
+                </h3>
+                
+                <nav id="toc" class="flex flex-col space-y-4 relative z-10">
+                    <a href="#heading-0" class="hover:text-white hover:translate-x-1 transition-all duration-300 block font-medium leading-relaxed text-gray-300 border-l-2 border-transparent hover:border-primary pl-2 -ml-2">
+                        Where the Mismatch Actually Comes From
+                    </a>
+                    <a href="#heading-1" class="hover:text-white hover:translate-x-1 transition-all duration-300 block font-medium leading-relaxed text-gray-300 border-l-2 border-transparent hover:border-primary pl-2 -ml-2">
+                        Why the Cost Jumps the Way It Does
+                    </a>
+                    <a href="#heading-2" class="hover:text-white hover:translate-x-1 transition-all duration-300 block font-medium leading-relaxed text-gray-300 border-l-2 border-transparent hover:border-primary pl-2 -ml-2">
+                        The Standard That Actually Governs This
+                    </a>
+                    <a href="#heading-3" class="hover:text-white hover:translate-x-1 transition-all duration-300 block font-medium leading-relaxed text-gray-300 border-l-2 border-transparent hover:border-primary pl-2 -ml-2">
+                        The Actual Fix
+                    </a>
+                </nav>
+            </div>
+        </aside>
+            <div class="flex-1 min-w-0 w-full">
+                <div
+            class="aspect-video bg-surface rounded-custom mb-12 flex items-center justify-center border border-white/10 overflow-hidden">
+            <img src="../assets/the-tolerance-callout-that-turns-a-200-bracket-into-a-2000-rework.png"
+                alt="Welded steel bracket with GD&amp;T tolerance callout symbols showing position tolerance mismatch"
+                title="Weldment Tolerance Callout Leading to Costly Rework" loading="lazy" width="1280" height="720"
+                class="w-full h-full object-cover">
+        </div>
+
+        <article class="prose-dark max-w-none mt-8">
+            <p class="text-xl mb-8 text-white font-medium leading-relaxed">The drawing looked fine. A hole location requirement equivalent to a 0.005" positional accuracy requirement on the mounting holes, a standard title block, nothing that jumped out in review. The bracket itself was a simple weldment: three plates, four fillet welds, four tapped holes.</p>
+
+            <p>Then the first production batch came back from inspection with a 60% reject rate. Not because the welder did anything wrong. Because a weldment that's just been through a welding thermal cycle doesn't hold tight positional requirements without a secondary machining operation nobody budgeted for.</p>
+
+            <p>That's the failure mode worth naming directly: the tolerance was tighter than the process that was actually going to produce the part. On a drawing, that's a design decision, not a shop-floor mistake.</p>
+
+            <h2 id="heading-0">Where the Mismatch Actually Comes From</h2>
+            <p>Most of the time it isn't one bad number. It's a mismatch between what the callout says and what state the part is actually in when that feature gets measured. Three patterns account for most of it.</p>
+
+            <p><strong>No distinction between as-welded and finish-machined.</strong> If the mounting holes get drilled or reamed after welding, in a fixture, a tight position tolerance can be completely reasonable; that's a machined feature at that point, held to a rigid datum. If those same holes were created before welding, and the drawing applies that tolerance to the finished assembly, the requirement is now fighting heat distortion from every weld in the sequence. A tight location requirement on an as-welded feature can be significantly tighter than what many welding processes can achieve without secondary machining or controlled fixturing.</p>
+
+            <p><strong>Datums called out on features that move during welding.</strong> A thin-gauge tab or a cantilevered flange that isn't held in a weld fixture can shift enough during cooling to exceed a tolerance that would be trivial on a rigid, fixtured datum. Getting the datum scheme right on a weldment is its own discipline. Our guide on <a href="../blog/the-hidden-reasons-your-sheet-metal-parts-crack-at-the-bend" title="Hidden Reasons Sheet Metal Parts Crack at the Bend">choosing datums for weldment drawings</a> goes through how to pick reference features that actually hold still.</p>
+
+            <p><strong>The tolerance got copied from a machined-part template.</strong> It's common for a drawing to inherit a default title-block tolerance, or a GD&amp;T scheme, from a similar part that was never a weldment in the first place. Nobody re-evaluates whether the number still makes sense once the process changes from "machine the whole thing" to "weld it, then machine one feature."</p>
+
+            <p>None of these are exotic. They tend to be obvious in a design review with someone from the shop in the room, and easy to miss in a review that's purely engineering-to-engineering.</p>
+
+            <h2 id="heading-1">Why the Cost Jumps the Way It Does</h2>
+            <p>A weldment that's within spec as-welded is a $200 part: material, weld time, maybe a deburr pass. Once the shop can't hit the callout as drawn, there are really only a few ways forward, and none of them are cheap:</p>
+
+            <ul>
+                <li><strong>Add a secondary CNC operation</strong> to re-establish hole positions after welding: new fixture, new setup, new inspection step, on every unit going forward.</li>
+                <li><strong>Straighten or re-fixture the weldment</strong> before final machining to pull it back into tolerance, which adds labor and risks introducing its own residual stress.</li>
+                <li><strong>Scrap and re-run the batch,</strong> eating the reject rate plus the schedule hit.</li>
+            </ul>
+
+            <p>In some production environments, these added operations can increase the effective part cost by an order of magnitude once fixtures, setups, machining, inspection, and delays are included. The problem is not that the part is difficult to make; it is that the drawing specified a tolerance the as-welded process was never going to deliver on its own.</p>
+
+            <p>This is the same category of problem we've covered before in <a href="../blog/the-hidden-reasons-your-sheet-metal-parts-crack-at-the-bend" title="Why Sheet Metal Parts Fail at the Bend">why sheet metal parts fail at the bend</a>: a manufacturing constraint that was never checked against the drawing until the parts came back.</p>
+
+            <h2 id="heading-2">The Standard That Actually Governs This</h2>
+            <p>This isn't a judgment call made on the shop floor. <strong>ISO 13920</strong> welding general tolerances exist specifically to address welded construction accuracy. It defines general tolerances for linear and angular dimensions, and for shape and position, on welded structures, organized into tolerance classes based on realistic workshop accuracy rather than machined-part precision.</p>
+
+            <p>If ISO 13920 is referenced on a drawing, its tolerance classes provide a defined expectation for general welded construction accuracy. The tolerance class should be selected based on the actual functional requirement of the feature, not applied as a blanket default.</p>
+
+            <p>The practical implication: if a drawing does not define appropriate general tolerances or specific functional requirements, ambiguity can exist between design intent and manufacturing capability.</p>
+
+            <blockquote><strong>ASME Y14.5 note:</strong> If your organization uses ASME Y14.5 standard governing GD&amp;T principles, including feature control frames and datum reference frames, the same principle applies from that side: a position tolerance is supposed to reflect a functional requirement, not get inherited from wherever the drawing template came from. Neither standard assumes a weldment behaves like a solid, rigid, machined blank, and a tolerance scheme that quietly makes that assumption is working against the intent of proper design documentation.</blockquote>
+
+            <h2 id="heading-3">The Actual Fix</h2>
+            <p>Tie every tight tolerance to a real functional requirement: a mating fit, an alignment feature, a load path—and let everything else run on a general tolerance class appropriate for welded construction. If a feature genuinely needs to be tight after welding, say so explicitly: call it out as a post-weld machined feature, with its own datum scheme referencing a fixture or a machined surface, instead of assuming the same requirement applies to the raw weldment.</p>
+
+            <p>When a tolerance shows up that looks like it was copied from somewhere else, it's worth a five-minute gut check before the drawing goes out: does this part's actual process—welded then machined, or machined only—support this number, or is the number just along for the ride from an earlier revision?</p>
+
+            <p>In this kind of case, the reject rate isn't a fabrication problem. It's the drawing asking the process to do something it was never capable of doing, and nobody catching it until the parts came back from inspection.</p>
+
+            <p>If tolerance-driven reject rates on your weldments don't line up with what the shop should reasonably be able to hold, it's worth a second look at the drawing before the process.</p>
+        </article>
+
+        <!-- CTA -->
+        <div class="mt-16 p-8 bg-surface border border-white/10 rounded-custom text-center">
+            <p class="text-lg font-bold uppercase mb-2">Facing tolerance-driven rework on your weldments?</p>
+            <p class="text-gray-400 font-light mb-6">Connect with our engineering team today for a comprehensive DFM and GD&amp;T drawing review.</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="../contact" class="bg-primary hover:bg-red-700 text-white px-8 py-3 rounded-custom font-bold uppercase text-sm transition-all duration-300 shadow-lg shadow-primary/20" title="Contact SMDE Services to Discuss Your Sheet Metal Project">
+                    Request DFM Review
+                </a>
+                <a href="../blog" class="border border-white/10 hover:border-primary text-white hover:text-primary px-8 py-3 rounded-custom font-bold uppercase text-sm transition-all duration-300" title="Read Our Latest Engineering Insights &amp; DFM Strategies">
+                    More Insights
+                </a>
+            </div>
+            </div>
+            
+            <!-- Sidebar -->
+    </div>
+</main>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-darkBg py-12 thin-border-t mt-auto w-full" aria-label="Footer">
+        <div class="max-w-7xl mx-auto px-6  flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center space-x-2">
+                <span class="text-lg font-bold tracking-tight uppercase">SMDE <span
+                        class="text-primary">Services</span></span>
+                <span class="text-gray-600 ml-4 pl-4 border-l border-white/10 text-xs text-center">&copy;
+                    2026 Sheet Metal Design Experts </span>
+            </div>
+            <div class="flex space-x-6 text-xs uppercase tracking-widest text-gray-400 font-semibold">
+                <a href="../" class="hover:text-primary transition-colors" title="SMDE Services - Precision Sheet Metal Design Home">Home</a>
+                <a href="../blog" class="hover:text-primary transition-colors" title="Read Our Latest Engineering Insights &amp; DFM Strategies">Blog</a>
+                <a href="../contact" class="hover:text-primary transition-colors" title="Contact SMDE Services to Discuss Your Sheet Metal Project">Contact</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -8,7 +8,7 @@
   </url>
   <url>
     <loc>https://sheet-metal-design-alpha.vercel.app/blog</loc>
-    <lastmod>2026-05-27</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -63,6 +63,18 @@
   <url>
     <loc>https://sheet-metal-design-alpha.vercel.app/blog/5-questions-to-ask-engineering-design-outsourcing-partner-before-signing-an-nda</loc>
     <lastmod>2026-09-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sheet-metal-design-alpha.vercel.app/blog/the-tolerance-callout-that-turns-a-200-bracket-into-a-2000-rework</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sheet-metal-design-alpha.vercel.app/blog/10-design-decisions-that-reduce-manufacturing-cost</loc>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
