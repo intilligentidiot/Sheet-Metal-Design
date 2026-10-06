@@ -15,7 +15,7 @@
 
     <!-- Canonical URL -->
     <link rel="canonical"
-        href="https://sheet-metal-design-alpha.vercel.app/blog/10-design-decisions-that-reduce-manufacturing-cost">
+        href="https://sheet-metal-design-alpha.vercel.app/blog/design-decisions-that-reduce-manufacturing-cost">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:site_name" content="Sheet Metal Design Experts">
@@ -24,7 +24,7 @@
         content="Most fabrication costs are fixed on the drawing before a quote is requested. Nesting, bend radii, tolerances, and weld sizes determine it. Here is how.">
     <meta property="og:type" content="article">
     <meta property="og:url"
-        content="https://sheet-metal-design-alpha.vercel.app/blog/10-design-decisions-that-reduce-manufacturing-cost">
+        content="https://sheet-metal-design-alpha.vercel.app/blog/design-decisions-that-reduce-manufacturing-cost">
     <meta property="og:image" content="https://sheet-metal-design-alpha.vercel.app/assets/engineering-design-for-lower-costs-banner.png">
     <meta property="og:locale" content="en_US">
     <meta property="article:published_time" content="2026-10-05">
@@ -188,7 +188,7 @@
         },
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https://sheet-metal-design-alpha.vercel.app/blog/10-design-decisions-that-reduce-manufacturing-cost"
+            "@id": "https://sheet-metal-design-alpha.vercel.app/blog/design-decisions-that-reduce-manufacturing-cost"
         }
     }
     </script>
@@ -410,7 +410,7 @@
 
             <p>Most general fab shops air bend. With air bending, the inside radius comes from the punch and the V-die opening. Whatever radius is on the drawing, the part comes out with the radius that tooling makes. If the drawing asks for a radius the shop has no tooling for, they either buy tooling and put it in the price, bend it on what they have and send you a part whose flat pattern no longer matches, or ring you up and park the job until you answer.</p>
 
-            <p>None of that is necessary. Get the shop's tooling list, model the radius they will actually produce, and build the flat pattern on it. Take the K-factor from the shop's own test bends in that material and thickness rather than the CAD default. The DXF is only as accurate as the K-factor behind it, and springback varies enough between materials that a default will catch you out.</p>
+            <p>None of that is necessary. Get the shop's tooling list, model the radius they will actually produce, and build the flat pattern on it. Take the K-factor from the shop's own test bends in that material and thickness rather than the CAD default. (If you need to verify your numbers, use our <a href="../tools/bend-calculator" title="Sheet Metal Bend Calculator">bend allowance and deduction calculator</a>). The DXF is only as accurate as the K-factor behind it, and springback varies enough between materials that a default will catch you out.</p>
 
             <p>Then look at the part the way the brake operator will:</p>
 
@@ -511,7 +511,7 @@
             <p>Material belongs here as well. Specify thicknesses and grades the supplier keeps in stock. An odd gauge comes with a minimum order and a lead time, and both turn up in the quote.</p>
 
             <h2 id="heading-5">Send the Drawing to the Shop Before You Release It</h2>
-            <p>All of these are cheap to change before release and expensive after. Before a drawing goes out for quotation, ask the fabricator who will make it what sheet sizes they stock, what tooling is on their brake, and what tolerances they hold without a second operation. Then draw to the answers.</p>
+            <p>All of these are cheap to change before release and expensive after. Before a drawing goes out for quotation, ask the fabricator who will make it what sheet sizes they stock, what tooling is on their brake, and what tolerances they hold without a second operation. Then draw to the answers. For more background on these topics, see our <a href="../faq" title="Sheet Metal FAQ">common questions about sheet metal design</a>.</p>
 
             <p>A design that can be cut and formed on the shop's own kit, welded where the welder can reach, and toleranced for the process will rarely be the high quote. One that can't will stay expensive however hard purchasing pushes.</p>
         </article>
