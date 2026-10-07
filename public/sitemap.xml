@@ -8,7 +8,7 @@
   </url>
   <url>
     <loc>https://sheet-metal-design-alpha.vercel.app/blog</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -81,6 +81,12 @@
   <url>
     <loc>https://sheet-metal-design-alpha.vercel.app/blog/why-manufacturers-validate-designs-before-production</loc>
     <lastmod>2026-10-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sheet-metal-design-alpha.vercel.app/blog/simulation-analysis-in-product-development</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>

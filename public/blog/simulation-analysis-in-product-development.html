@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulation Analysis in Product Development | SMDE Services</title>
+    <meta name="description"
+        content="A motor base that runs fine on 50 Hz supply can sit near resonance on 60 Hz. How simulation analysis finds that risk before the first prototype is built.">
+    <meta name="keywords"
+        content="simulation analysis, product development, vibration analysis, resonance, engineering simulation services, FEA engineering, prototype validation">
+    <meta name="author" content="Sheet Metal Design Experts">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#c2410c">
+
+    <!-- Canonical URL -->
+    <link rel="canonical"
+        href="https://sheet-metal-design-alpha.vercel.app/blog/simulation-analysis-in-product-development">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:site_name" content="Sheet Metal Design Experts">
+    <meta property="og:title" content="Simulation Analysis in Product Development | SMDE Services">
+    <meta property="og:description"
+        content="A motor base that runs fine on 50 Hz supply can sit near resonance on 60 Hz. How simulation analysis finds that risk before the first prototype is built.">
+    <meta property="og:type" content="article">
+    <meta property="og:url"
+        content="https://sheet-metal-design-alpha.vercel.app/blog/simulation-analysis-in-product-development">
+    <meta property="og:image" content="https://sheet-metal-design-alpha.vercel.app/assets/02-banner-photo.png">
+    <meta property="og:locale" content="en_US">
+    <meta property="article:published_time" content="2026-10-07">
+    <meta property="article:author" content="Sheet Metal Design Experts">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Simulation Analysis in Product Development | SMDE Services">
+    <meta name="twitter:description"
+        content="A motor base that runs fine on 50 Hz supply can sit near resonance on 60 Hz. How simulation analysis finds that risk before the first prototype is built.">
+    <meta name="twitter:image" content="https://sheet-metal-design-alpha.vercel.app/assets/02-banner-photo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link class="rounded-custom" rel="apple-touch-icon" href="../apple-touch-icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script src="../assets/js/tailwind-config.js"></script>
+
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #fff;
+            font-family: "Space Grotesk", sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .thin-border-b {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .thin-border-t {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Prose overrides for dark mode article content */
+        .prose-dark h2 {
+            color: #ffffff;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .prose-dark h3 {
+            color: #e5e5e5;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .prose-dark p {
+            color: #a3a3a3;
+            font-weight: 300;
+            line-height: 1.85;
+            margin-bottom: 1.25rem;
+        }
+
+        .prose-dark strong {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .prose-dark ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .prose-dark ul li::before {
+            content: "▸ ";
+            color: #cc0000;
+            font-weight: bold;
+        }
+
+        .prose-dark ul li {
+            color: #a3a3a3;
+            margin-bottom: 0.5rem;
+        }
+
+        .prose-dark a {
+            color: #cc0000;
+            text-decoration: underline;
+        }
+
+        .prose-dark blockquote {
+            border-left: 3px solid #cc0000;
+            padding-left: 1.25rem;
+            color: #737373;
+            font-style: italic;
+        }
+
+        /* Table styles */
+        .prose-dark table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+            font-size: 0.875rem;
+        }
+
+        .prose-dark th {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.75rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: left;
+        }
+
+        .prose-dark td {
+            color: #a3a3a3;
+            padding: 0.65rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        .prose-dark tr:nth-child(even) td {
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+
+        .prose-dark em {
+            color: #737373;
+            font-style: italic;
+        }
+    </style>
+
+    <!-- Article Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Simulation Analysis in Product Development: How Manufacturers Reduce Risk Before the First Prototype",
+        "description": "A motor base that runs fine on 50 Hz supply can sit near resonance on 60 Hz. How simulation analysis finds that risk before the first prototype is built.",
+        "image": "https://sheet-metal-design-alpha.vercel.app/assets/02-banner-photo.png",
+        "datePublished": "2026-10-07",
+        "author": {
+            "@type": "Organization",
+            "name": "Sheet Metal Design Experts",
+            "url": "https://sheet-metal-design-alpha.vercel.app/"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Sheet Metal Design Experts",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://sheet-metal-design-alpha.vercel.app/apple-touch-icon.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://sheet-metal-design-alpha.vercel.app/blog/simulation-analysis-in-product-development"
+        }
+    }
+    </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://sheet-metal-design-alpha.vercel.app/" },
+            { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://sheet-metal-design-alpha.vercel.app/blog" },
+            { "@type": "ListItem", "position": 3, "name": "Simulation Analysis in Product Development" }
+        ]
+    }
+    </script>
+</head>
+
+<body class="font-sans text-gray-100 antialiased selection:bg-primary/30">
+    <nav class="fixed top-0 w-full z-50 bg-darkBg/80 backdrop-blur-md thin-border-b" aria-label="Main Navigation">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                    </path>
+                </svg>
+                <a href="../" class="text-xl font-bold tracking-tight uppercase" title="SMDE Services - Precision Sheet Metal Design Home">
+                    SMDE <span class="text-primary">Services</span>
+                </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 text-sm font-medium tracking-wide uppercase">
+                <a href="../index.html#services" class="hover:text-primary transition-colors" title="Explore Our Precision Sheet Metal Design &amp; Engineering Services">Services</a>
+                <a href="../faq" class="hover:text-primary transition-colors" title="Answers to Common Questions About Sheet Metal Design">FAQ</a>
+                <a href="../blog" class="text-primary transition-colors" title="Read Our Latest Engineering Insights &amp; DFM Strategies">Insights (Blog)</a>
+                <a href="../tools/bend-calculator" class="hover:text-primary transition-colors" title="Free Sheet Metal Bend Allowance &amp; Deduction Calculator">Tools</a>
+            </div>
+
+            <!-- Desktop CTA -->
+            <div class="hidden md:block">
+                <a href="../contact" class="inline-block bg-primary hover:bg-red-700 text-white px-6 py-2 rounded-custom text-sm font-bold uppercase transition-all duration-300" title="Contact SMDE Services to Discuss Your Sheet Metal Project">
+                    Contact Us
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none"
+                aria-label="Toggle Navigation Menu">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-darkBg z-[60] flex flex-col p-8 transition-transform duration-300 translate-x-full md:hidden">
+        <div class="flex justify-between items-center mb-12">
+            <span class="text-xl font-bold tracking-tight uppercase">SMDE <span
+                    class="text-primary">Services</span></span>
+            <button id="mobile-menu-close" class="text-white">
+                <span class="material-symbols-outlined text-3xl">close</span>
+            </button>
+        </div>
+        <nav class="flex flex-col space-y-8 text-2xl font-bold uppercase tracking-widest">
+            <a href="../index.html#services" class="hover:text-primary transition-colors mobile-menu-link" title="Explore Our Precision Sheet Metal Design &amp; Engineering Services">Services</a>
+            <a href="../faq" class="hover:text-primary transition-colors mobile-menu-link" title="Answers to Common Questions About Sheet Metal Design">FAQ</a>
+            <a href="../blog" class="hover:text-primary transition-colors mobile-menu-link" title="Read Our Latest Engineering Insights &amp; DFM Strategies">Insights</a>
+            <a href="../tools/bend-calculator" class="hover:text-primary transition-colors mobile-menu-link" title="Free Sheet Metal Bend Allowance &amp; Deduction Calculator">Tools</a>
+            <a href="../contact" class="text-primary hover:text-white transition-colors mobile-menu-link" title="Contact SMDE Services to Discuss Your Sheet Metal Project">Contact</a>
+        </nav>
+        <div class="mt-auto pb-12 border-t border-white/10 pt-8">
+            <p class="text-gray-500 text-xs uppercase tracking-[0.2em] mb-4 font-bold">Engineering Support</p>
+            <a href="mailto:modelingstructuralbim@gmail.com" class="text-lg text-white font-medium" title="Email SMDE Services Engineering Team Directly">modelingstructuralbim@gmail.com</a>
+        </div>
+    </div>
+    
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const menuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuLinks = document.querySelectorAll('.mobile-menu-link');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('translate-x-full');
+            document.body.classList.toggle('overflow-hidden');
+        }
+
+        if (menuBtn) menuBtn.addEventListener('click', toggleMenu);
+        if (menuClose) menuClose.addEventListener('click', toggleMenu);
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+                document.body.classList.remove('overflow-hidden');
+            });
+        });
+    </script>
+
+    <main class="pt-28 pb-16 px-4 md:px-8 max-w-7xl mx-auto">
+        <nav class="flex items-center text-xs text-gray-400 mb-8 uppercase tracking-widest font-bold"
+            aria-label="Breadcrumb">
+            <a href="../" class="hover:text-primary transition-colors" title="SMDE Services - Precision Sheet Metal Design Home">Home</a><span class="mx-2">&gt;</span>
+            <a href="../blog" class="hover:text-primary transition-colors" title="Read Our Latest Engineering Insights &amp; DFM Strategies">Insights</a><span class="mx-2">&gt;</span>
+            <span class="text-white">Article</span>
+        </nav>
+
+        <header class="mb-12">
+            <span class="text-primary text-xs font-bold uppercase tracking-widest mb-4 block">Engineering Validation</span>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Simulation Analysis in Product Development: How Manufacturers Reduce Risk Before the First Prototype</h1>
+            <div class="flex items-center text-sm text-gray-500 border-b border-white/10 pb-6 mb-8">
+                <span class="mr-6"><i class="fa-regular fa-calendar mr-1"></i> Oct 7, 2026</span>
+                <span><i class="fa-regular fa-user mr-1"></i> CAD Team</span>
+            </div>
+        </header>
+
+        <div class="flex flex-col md:flex-row gap-8 lg:gap-12 items-start">
+        <!-- Sidebar (Left) -->
+        <aside class="w-full md:w-64 lg:w-80 relative md:sticky md:top-32 shrink-0 md:pr-6 xl:pr-12 mb-8 md:mb-0 z-40">
+            <div class="bg-[#111] backdrop-blur-md border border-white/5 border-l-4 border-l-primary rounded-xl p-6 shadow-2xl relative overflow-hidden group">
+                <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                
+                <p class="text-xs font-bold uppercase tracking-widest mb-6 text-white flex items-center gap-3">
+                    <i class="fa-solid fa-list-ul text-primary"></i> 
+                    Table of Contents
+                </p>
+                
+                <nav id="toc" class="flex flex-col space-y-4 relative z-10">
+                    <a href="#heading-0" class="hover:text-white hover:translate-x-1 transition-all duration-300 block font-medium leading-relaxed text-gray-300 border-l-2 border-transparent hover:border-primary pl-2 -ml-2">
+                        The Drawing Didn't Change, the Product Did
+                    </a>
+                    <a href="#heading-1" class="hover:text-white hover:translate-x-1 transition-all duration-300 block font-medium leading-relaxed text-gray-300 border-l-2 border-transparent hover:border-primary pl-2 -ml-2">
+                        The Frame Is a Spring With a Motor on It
+                    </a>
+                    <a href="#heading-2" class="hover:text-white hover:translate-x-1 transition-all duration-300 block font-medium leading-relaxed text-gray-300 border-l-2 border-transparent hover:border-primary pl-2 -ml-2">
+                        The Same Frame at 50 Hz and at 60 Hz
+                    </a>
+                    <a href="#heading-3" class="hover:text-white hover:translate-x-1 transition-all duration-300 block font-medium leading-relaxed text-gray-300 border-l-2 border-transparent hover:border-primary pl-2 -ml-2 pl-6">
+                        A VFD turns one speed into a range
+                    </a>
+                    <a href="#heading-4" class="hover:text-white hover:translate-x-1 transition-all duration-300 block font-medium leading-relaxed text-gray-300 border-l-2 border-transparent hover:border-primary pl-2 -ml-2 pl-6">
+                        The aluminium version
+                    </a>
+                    <a href="#heading-5" class="hover:text-white hover:translate-x-1 transition-all duration-300 block font-medium leading-relaxed text-gray-300 border-l-2 border-transparent hover:border-primary pl-2 -ml-2">
+                        Why Prototype Testing Alone Can Be Too Late
+                    </a>
+                    <a href="#heading-6" class="hover:text-white hover:translate-x-1 transition-all duration-300 block font-medium leading-relaxed text-gray-300 border-l-2 border-transparent hover:border-primary pl-2 -ml-2">
+                        Where the Hand Calculation Stops and FEA Starts
+                    </a>
+                    <a href="#heading-7" class="hover:text-white hover:translate-x-1 transition-all duration-300 block font-medium leading-relaxed text-gray-300 border-l-2 border-transparent hover:border-primary pl-2 -ml-2">
+                        What the Model Doesn't Predict on Its Own
+                    </a>
+                    <a href="#heading-8" class="hover:text-white hover:translate-x-1 transition-all duration-300 block font-medium leading-relaxed text-gray-300 border-l-2 border-transparent hover:border-primary pl-2 -ml-2">
+                        Use Simulation to Decide What the Prototype Has to Prove
+                    </a>
+                    <a href="#heading-9" class="hover:text-white hover:translate-x-1 transition-all duration-300 block font-medium leading-relaxed text-gray-300 border-l-2 border-transparent hover:border-primary pl-2 -ml-2">
+                        Before the Next Market or Material Change
+                    </a>
+                </nav>
+            </div>
+        </aside>
+
+            <div class="flex-1 min-w-0 w-full">
+                <div class="aspect-video bg-surface rounded-custom mb-12 flex items-center justify-center border border-white/10 overflow-hidden">
+                    <img src="../assets/02-banner-photo.png"
+                        alt="Isometric fan and motor set on a fabricated rail frame between the two sides of a resonance curve, above the title Simulation Analysis in Product Development: How Manufacturers Reduce Risk Before the First Prototype"
+                        title="Simulation Analysis in Product Development" loading="eager" width="1280" height="720"
+                        class="w-full h-full object-cover">
+                </div>
+
+        <article class="prose-dark max-w-none mt-8">
+            <p class="text-xl mb-8 text-white font-medium leading-relaxed">Picture a fan and motor set on two steel rails that runs quietly in the UK. Ship the same design, on the same drawing at the same revision, to a site in the US, and it can come back with a vibration complaint. Nothing about the frame would have changed. The supply would. A four-pole induction motor has a synchronous speed of 1,500 rpm on 50 Hz and 1,800 rpm on 60 Hz, and runs a little below that because of slip. So the frame is now being shaken about 29 times a second instead of 24, and a simple bending model of it puts its first mode near 32.5 Hz.</p>
+
+            <p>That is a hypothetical worked example, not a real case, and every number in it is calculated below. It is also the kind of product development risk that simulation analysis is good at catching, because it sits in the operating conditions, which the CAD model doesn't record. A static or fatigue check asks whether a part will survive its load. This article is about a different question: whether the product will still behave when the conditions around it change.</p>
+
+            <blockquote>
+                <strong>Why this matters for manufacturers.</strong> A vibration problem found after the prototype means redesign, new parts and a delayed test. Found after shipping, it becomes a warranty claim, often on a variant nobody prototyped because only the market or a bought-in part changed. Checking those variants on paper first is cheap. Rebuilding them later is not.
+            </blockquote>
+
+            <h2 id="heading-0">The Drawing Didn't Change, the Product Did</h2>
+            <p>Release control tracks drawing revisions. A change to the geometry gets a new revision letter, a check and a signature. A change to how the product is used often gets none of that, because there is nothing to redraw.</p>
+
+            <p>Selling into a 60 Hz market is the obvious one. A variable frequency drive added for energy saving or process control is another, and it turns the motor's one speed into a range. Purchasing finds a cheaper motor from a different supplier with the same frame size and a different weight. A bearing type or housing changes, which alters how stiffly the shaft is held and what the rotating assembly passes into the frame. The machine that sat on a ground-floor slab gets installed on a steel mezzanine, or on anti-vibration mounts somebody picked from a catalogue. An acoustic hood or a guard is bolted on top, adding mass well above the rails.</p>
+
+            <p>None of these touches the frame drawing, and every one of them can change the frequency the frame is excited at, the frequency it responds at, or both. Our position is that validation should be triggered by a change in operating conditions as well as by a CAD revision. In practice it usually isn't, and the first anyone hears of it is a field report.</p>
+
+            <h2 id="heading-1">The Frame Is a Spring With a Motor on It</h2>
+            <p>Before any equations, the physical picture. Put a mass on a spring, push it and let go, and it bounces at one particular rate: its natural frequency. A stiffer spring raises it and a heavier mass lowers it. On a motor base the rails are the spring and the motor and fan are most of the mass. If the motor shakes the frame at or near that frequency, small forces produce large movements. That is resonance.</p>
+
+            <p>So the first check has three steps: how stiff the rails are under the motor, how much mass is moving, and what frequency those two give.</p>
+
+            <p>The example frame is two 100 × 50 × 4 mm cold-formed RHS rails, standing on their 100 mm face, spanning 1,500 mm between supports, with a 180 kg motor and fan set at mid-span shared equally between them. The section properties come from the EN 10219 tables: second moment of area 134 cm⁴, mass 8.59 kg/m. Steel's elastic modulus is 210,000 MPa (EN 1993-1-1).</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Step</th>
+                        <th>Working</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Stiffness of one rail at mid-span</td>
+                        <td>48*EI* ÷ *L*³ = 48 × 210,000 × 1,340,000 ÷ 1,500³</td>
+                        <td>4,002 N/mm</td>
+                    </tr>
+                    <tr>
+                        <td>Stiffness of both rails</td>
+                        <td>2 × 4,002</td>
+                        <td>8,004 N/mm</td>
+                    </tr>
+                    <tr>
+                        <td>Mass of the rails</td>
+                        <td>2 × 1.5 m × 8.59 kg/m</td>
+                        <td>25.8 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Effective moving mass</td>
+                        <td>180 + (17/35 × 25.8)</td>
+                        <td>192.5 kg</td>
+                    </tr>
+                    <tr>
+                        <td>First bending frequency</td>
+                        <td>(1 ÷ 2π) × √(8.004 × 10⁶ N/m ÷ 192.5 kg)</td>
+                        <td>32.5 Hz</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>The 17/35 comes from Rayleigh's method. A simply supported rail doesn't move uniformly: the middle travels with the motor and the ends stay put, so only about half its mass counts.</p>
+
+            <div class="my-8 rounded-custom overflow-hidden border border-white/10">
+                <img src="../assets/02-frame.png"
+                    alt="Isometric sketch of a fan and motor set on two 100 × 50 × 4 RHS rails spanning 1,500 mm, with callouts for the inputs and the result: 8,004 N/mm, 192.5 kg effective mass, first bending frequency 32.5 Hz"
+                    title="Hand calculation for the frame's bending frequency"
+                    loading="lazy" width="1200" height="660"
+                    class="w-full h-auto object-cover">
+            </div>
+
+            <p>Be clear about what this number is. It is the first bending frequency of a two-beam model with rigid supports and the motor as a point mass. The real frame will also have torsional and rocking modes, and its mounts and floor will usually pull the bending frequency down. It is still worth ten minutes in a spreadsheet before anything goes near FEA, because it tells you whether there is a problem worth modelling.</p>
+
+            <h2 id="heading-2">The Same Frame at 50 Hz and at 60 Hz</h2>
+            <p>The UK, the rest of Europe, India and Australia run their mains at 50 Hz. The US and Canada run at 60 Hz. A published datasheet for a 5.5 kW four-pole motor in a 132 frame gives its full-load speed as 1,447 rpm at 50 Hz and 1,765 rpm at 60 Hz. Those are the speeds used below: 24.1 Hz and 29.4 Hz.</p>
+
+            <p>What matters is how close the running speed sits to the natural frequency. The dynamic magnification factor shows how much larger the vibration is than the same force would produce if applied slowly. For an undamped single spring and mass it is 1 ÷ |1 − *r*²|, where *r* is running frequency over natural frequency.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Supply</th>
+                        <th>Running speed</th>
+                        <th>*r* = running ÷ 32.5 Hz</th>
+                        <th>Magnification (undamped model)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>50 Hz</td>
+                        <td>1,447 rpm = 24.1 Hz</td>
+                        <td>0.74</td>
+                        <td>2.2</td>
+                    </tr>
+                    <tr>
+                        <td>60 Hz</td>
+                        <td>1,765 rpm = 29.4 Hz</td>
+                        <td>0.91</td>
+                        <td>5.6</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>These are theoretical factors, used to show how sensitive the frame is to speed. They are not a prediction of measured vibration, which also depends on damping, joints, mounts and what the excitation actually looks like. But the direction is clear. Same frame, same drawing, same material, and a change in supply has moved the running speed most of the way to resonance.</p>
+
+            <p>The force goes up too. A rotor's residual out-of-balance force rises with the square of speed, so the same rotor pushes (29.4 ÷ 24.1)² = 1.49 times harder at 60 Hz. Combined, the simplified model predicts nearly four times the response on 60 Hz supply (5.6 × 1.49 ÷ 2.2 = 3.7).</p>
+
+            <p>On the shop floor that shows up as noise, fasteners working loose, a fan that won't stay in balance and bearings that wear early. It doesn't need a broken weld to become a warranty claim.</p>
+
+            <p>Damping lowers the peak, and how much depends on the build. A welded steel frame has limited damping of its own, while bolted joints and resilient mounts can add a good deal. Because it is hard to predict before the frame exists, we don't rely on it when deciding where the first mode should sit. We want the first mode clear of every speed the product will run at, in every market it will be sold into.</p>
+
+            <div class="my-8 rounded-custom overflow-hidden border border-white/10">
+                <img src="../assets/02-response-curve.png"
+                    alt="Curve of how much the motor's shaking is amplified against running speed: the steel frame model peaks at 32.5 Hz, the 50 Hz supply case at 24.1 Hz sits at 2.2× and the 60 Hz case at 29.4 Hz at 5.6×, with the aluminium frame's peak at 19.2 Hz shown dotted"
+                    title="Vibration amplification curve for 50 Hz vs 60 Hz"
+                    loading="lazy" width="1200" height="660"
+                    class="w-full h-auto object-cover">
+            </div>
+
+            <h3 id="heading-3">A VFD turns one speed into a range</h3>
+            <p>Fit a variable frequency drive and the motor no longer runs at one speed. It ramps from zero to the setpoint on every start, and process control may hold it anywhere in its range. A frame whose first mode sits just above full speed now has the drive sweeping up towards it every time.</p>
+
+            <p>There are two ways out. Stiffen the frame until the first mode is above the top of the speed range, or programme a skip frequency band into the drive so it never dwells near the frame's frequency. The second is cheaper, but it only works if it survives commissioning, so it belongs on the commissioning sheet and in the manual as well as in the analysis report.</p>
+
+            <h3 id="heading-4">The aluminium version</h3>
+            <p>Now someone proposes aluminium rails to save weight, same section, same span. Aluminium's modulus is 70,000 MPa (EN 1999-1-1), a third of steel's, so the rail stiffness drops to a third, 2,668 N/mm for the pair. The rails get lighter, but they were never the heavy part. The motor and fan still weigh 180 kg.</p>
+
+            <p>The model's first bending frequency falls to 19.2 Hz, below the running speed in both markets. Running above resonance is not a problem in itself. Getting there is: every start and stop takes the motor through 19.2 Hz, and with a slow drive ramp it spends time there. That can lead to hard shaking at each start and stop and, depending on stress levels and duty, loosening fasteners and cracking at brackets and welds.</p>
+
+            <p>A like-for-like swap is the worst case, and that is the point of showing it. In practice an aluminium frame would be resized with deeper sections, thicker walls or extra stiffeners, because for vibration it is stiffness, not strength, that usually governs. The model tells you how much deeper before anyone cuts metal.</p>
+
+            <h2 id="heading-5">Why Prototype Testing Alone Can Be Too Late</h2>
+            <p>A prototype will find a frequency problem. The question is what it costs to find it there. By the time a frame is on a test bed, the rails have been cut, the motor bought, the guard folded and the brackets welded. A problem found then means redesign, new parts, perhaps a different motor or drive, and a delay to everything that was waiting on the test. If the 60 Hz variant was never prototyped, because the only change was the market, the first test is the customer's installation.</p>
+
+            <p>This is where <a href="https://www.teslamechanicaldesigns.com/engineering-analysis-services.php">simulation analysis</a> pays for itself. The 50 Hz and 60 Hz cases, the VFD range and the aluminium option can be checked against each other while each of them is still a line in a spreadsheet or a property in CAD, and the prototype gets built to the one that passed.</p>
+
+            <h2 id="heading-6">Where the Hand Calculation Stops and FEA Starts</h2>
+            <p>The beam calculation finds the one mode it was set up to find: the rails bouncing up and down together. Hand calculations are good at showing the obvious risk quickly. FEA shows the behaviour a simplified model can't.</p>
+
+            <p>A real base frame has cross-members that let it twist, so there is a torsional mode with one rail going up while the other goes down. The motor sits on four feet above the rails, so there is a rocking mode where it tips about its shaft axis, and that can sit below the bounce mode. The frame stands on levelling feet or anti-vibration mounts, which are springs in their own right, on a floor that may have frequencies of its own.</p>
+
+            <p>A modal analysis in FEA gives the frame's first several mode shapes and frequencies with the motor feet, mounts and cross-members modelled as they are. The mode shapes also show which modes the motor can actually drive. A torsional mode near running speed matters if the out-of-balance force pushes on it. A local panel mode in the guard at the same frequency may not.</p>
+
+            <h2 id="heading-7">What the Model Doesn't Predict on Its Own</h2>
+            <p>A modal model gives frequencies and shapes. It does not know how hard the frame will be pushed, and several of the inputs that decide that are uncertain before the product exists.</p>
+
+            <p>The out-of-balance force depends on the balance grade the rotor and fan are actually built to, which is an input someone has to choose, usually from ISO 21940-11, not something the model works out. A motor also produces magnetic forces at twice line frequency, 100 Hz on 50 Hz supply and 120 Hz on 60 Hz, which can excite higher modes the running-speed check never looks at. Bearing defects produce frequencies of their own as they wear. Mount and floor stiffness are often guesses until the machine is installed, and real frames differ from the model through weld size, fit-up and bolt tension.</p>
+
+            <p>None of that makes the model less useful. It means the analysis report should say which of these were assumed and by how much, so the test can check them.</p>
+
+            <h2 id="heading-8">Use Simulation to Decide What the Prototype Has to Prove</h2>
+            <p>Simulation does not replace physical testing. It tells you what the test has to look for.</p>
+
+            <p>Good <a href="https://www.teslamechanicaldesigns.com/finite-element-analysis.php">FEA engineering</a> tells you before the first frame is built which frequency ranges matter, which mode shapes to look for, where on the frame they move most, and so where to put the accelerometer and which failure modes to watch. A tap test on the first frame built, striking it with an instrumented hammer and reading the response, then confirms whether the model's first frequency is real. That one measurement is worth more than a finer mesh.</p>
+
+            <p>If the test and the model disagree, fix the model before trusting anything else in it. The usual culprit is the supports: the mounts or the floor are softer than assumed, or a bolted joint is not as rigid as a merged mesh made it. Once the model's first frequency matches the frame, it can be used with some confidence for the variants nobody will prototype, such as the 60 Hz export build or the next motor substitution.</p>
+
+            <h2 id="heading-9">Before the Next Market or Material Change</h2>
+            <p>Keep the frequency calculation with the drawing, and write next to it the supply frequency, the speed range, the motor mass, the mounts and the material it was done for. When any of those changes, re-run it before the change ships, even if the drawing stays at the same revision.</p>
+
+            <p>The prototype is still the final check. The point of doing the analysis first is that the frame you build to test has already been checked against everything you could have calculated, so the test is confirming a model rather than finding a problem.</p>
+
+            <p class="text-sm italic text-gray-500 mt-8">The frame, motor and figures in this article are an illustrative example. They show the method, not design values for any particular machine, which needs its own analysis.</p>
+
+        </article>
+
+        <!-- CTA -->
+        <div class="mt-16 p-8 bg-surface border border-white/10 rounded-custom text-center">
+            <p class="text-lg font-bold uppercase mb-2">Want to reduce validation risks before the first prototype?</p>
+            <p class="text-gray-400 font-light mb-6">Our engineering team provides comprehensive structural analysis, FEA, and fatigue verification to ensure your designs withstand real-world loads.</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="../contact" class="bg-primary hover:bg-red-700 text-white px-8 py-3 rounded-custom font-bold uppercase text-sm transition-all duration-300 shadow-lg shadow-primary/20" title="Contact SMDE Services to Discuss Your Project">
+                    Request Engineering Review
+                </a>
+                <a href="../blog" class="border border-white/10 hover:border-primary text-white hover:text-primary px-8 py-3 rounded-custom font-bold uppercase text-sm transition-all duration-300" title="Read Our Latest Engineering Insights">
+                    More Insights
+                </a>
+            </div>
+            </div>
+            
+            <!-- Sidebar -->
+    </div>
+</main>
+
+    <!-- Footer -->
+    <footer class="bg-darkBg py-12 thin-border-t mt-auto w-full" aria-label="Footer">
+        <div class="max-w-7xl mx-auto px-6  flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center space-x-2">
+                <span class="text-lg font-bold tracking-tight uppercase">SMDE <span
+                        class="text-primary">Services</span></span>
+                <span class="text-gray-600 ml-4 pl-4 border-l border-white/10 text-xs text-center">&copy;
+                    2026 Sheet Metal Design Experts </span>
+            </div>
+            <div class="flex space-x-6 text-xs uppercase tracking-widest text-gray-400 font-semibold">
+                <a href="../" class="hover:text-primary transition-colors" title="SMDE Services - Precision Sheet Metal Design Home">Home</a>
+                <a href="../blog" class="hover:text-primary transition-colors" title="Read Our Latest Engineering Insights &amp; DFM Strategies">Blog</a>
+                <a href="../contact" class="hover:text-primary transition-colors" title="Contact SMDE Services to Discuss Your Sheet Metal Project">Contact</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
