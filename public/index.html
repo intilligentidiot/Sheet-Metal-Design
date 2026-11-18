@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="dark">
 
 <head>
@@ -284,12 +284,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </button>
         </div>
         <nav class="flex flex-col space-y-8 text-2xl font-bold uppercase tracking-widest">
-            <a href="index.html#services" class="hover:text-primary transition-colors mobile-menu-link"
+            <a href="index.html#services" class="text-primary hover:text-white transition-colors mobile-menu-link"
                 title="Explore Our Precision Sheet Metal Design & Engineering Services">Services</a>
             <a href="faq" class="hover:text-primary transition-colors mobile-menu-link"
                 title="Answers to Common Questions About Sheet Metal Design">FAQ</a>
-            <a href="blog" class="hover:text-primary transition-colors mobile-menu-link"
-                title="Read Our Latest Engineering Insights & DFM Strategies">Insights</a>
+            <a href="blog" class="hover:text-primary transition-colors mobile-menu-link flex items-center gap-3"
+                title="Read Our Latest Engineering Insights &amp; DFM Strategies">Insights <span class="text-xs font-bold bg-primary text-white px-2 py-0.5 rounded-full tracking-widest normal-case">New</span></a>
             <a href="tools/bend-calculator" class="hover:text-primary transition-colors mobile-menu-link"
                 title="Free Sheet Metal Bend Allowance & Deduction Calculator">Tools</a>
             <a href="contact" class="text-primary hover:text-white transition-colors mobile-menu-link"
@@ -365,13 +365,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         title="Contact SMDE Services to Discuss Your Sheet Metal Project">
                         Get a Quote
                     </a>
-                    <a href="tools/bend-calculator"
-                        class="w-full sm:w-auto border border-brand hover:border-brand/50 bg-brand/5 backdrop-blur-sm text-brand hover:text-white px-10 py-5 rounded-custom text-lg font-bold uppercase transition-all duration-300"
-                        title="Free Sheet Metal Bend Allowance & Deduction Calculator">
-                        Bend Allowance Calculator
+                    <a href="blog"
+                        class="w-full sm:w-auto border border-white/30 hover:border-primary bg-white/5 backdrop-blur-sm text-white hover:text-primary px-10 py-5 rounded-custom text-lg font-bold uppercase transition-all duration-300"
+                        title="Read Our Latest Engineering Insights &amp; DFM Strategies">
+                        Read Insights
                     </a>
                 </div>
             </div>
+                <!-- Mobile-only Services shortcut -->
+                <div class="mt-6 flex justify-center md:hidden">
+                    <a href="#services"
+                        class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-gray-400 hover:text-primary transition-colors"
+                        title="Explore Our Sheet Metal Design Services">
+                        <span>View Services</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </a>
+                </div>
             <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -379,6 +388,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </svg>
             </div>
         </header>
+
+
+        <!-- Insights Teaser Bar (above-fold anchor for desktop users) -->
+        <div class="bg-primary/10 border-y border-primary/20 py-4 hidden md:block">
+            <div class="max-w-7xl mx-auto px-6 flex items-center justify-between gap-6">
+                <div class="flex items-center gap-3">
+                    <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+                    <span class="text-xs font-bold uppercase tracking-widest text-primary">Latest From Our Blog</span>
+                </div>
+                <div class="flex items-center gap-8 overflow-hidden">
+                    <a href="blog/simulation-analysis-in-product-development" class="text-sm text-gray-300 hover:text-white transition-colors truncate max-w-xs" title="Simulation Analysis in Product Development">Simulation Analysis in Product Development &rarr;</a>
+                    <a href="blog/why-manufacturers-validate-designs-before-production" class="text-sm text-gray-300 hover:text-white transition-colors truncate max-w-xs hidden lg:block" title="Why Manufacturers Validate Designs Before Production">Why Manufacturers Validate Designs Before Production &rarr;</a>
+                </div>
+                <a href="blog" class="text-xs font-bold uppercase tracking-widest text-white bg-primary hover:bg-red-700 px-4 py-2 rounded-custom transition-colors shrink-0" title="View All Engineering Insights">View All</a>
+            </div>
+        </div>
 
         <section class="py-16 md:py-24 bg-darkBg thin-border-t" id="services">
             <div class="max-w-7xl mx-auto px-6">
